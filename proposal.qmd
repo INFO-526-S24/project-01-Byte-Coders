@@ -1,6 +1,7 @@
 ---
-title: "Proposal title"
+title: "Psychometric Analysis"
 subtitle: "Proposal"
+author: "Byte Coders"
 format: html
 editor: visual
 warning : FALSE
