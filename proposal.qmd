@@ -39,7 +39,7 @@ pacman::p_load(tidyverse,
 
 ```
 
-```{r}
+```{r characters table}
 #| message: false
 #| warning: false
 
@@ -79,7 +79,7 @@ tab_style(
 )
 ```
 
-```{r}
+```{r myers-briggs table}
 
 myers_briggsTop %>% gt() %>%
 tab_header(title = "Myers-Briggs Dataframe") %>%
@@ -94,7 +94,7 @@ tab_style(
 )
 ```
 
-```{r}
+```{r psych evaluation table}
 psych_statsTop %>% gt() %>%
 tab_header(title = "Psych Evaluation Dataframe") %>%
 tab_style(
