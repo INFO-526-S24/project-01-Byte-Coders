@@ -5,10 +5,29 @@ format: html
 editor: visual
 ---
 
-```{r}
-#| label: load-pkgs
+```{r package installation}
 #| message: false
-library(tidyverse)
+#| if (!require("pacman")) 
+  install.packages("pacman")
+
+# use this line for installing/loading
+pacman::p_load(devtools) 
+
+pacman::p_load(tidyverse,
+           openintro,
+           gridextra,
+           dsbox,
+           gtable,
+           ggpubr,
+           ggrepel,
+           patchwork,
+           units,
+           lubridate,
+           pander,
+           gridExtra,
+           ggrepel,
+           glue,
+           here)
 ```
 
 ## Dataset
@@ -18,14 +37,56 @@ library(tidyverse)
 #| message: false
 ```
 
-A brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.
+\[Part 1 - Info on dataset\]
 
-Make sure to load the data and use inline code for some of this information.
+\[Part 2 - Why this dataset\]
 
 ## Questions
 
-The two questions you want to answer.
+1.  How do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?
+
+2.  What is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?
 
 ## Analysis plan
 
--   A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).
+**Question 1:-**
+
+-   **Variables:**
+
+    -   'Myers-Briggs' dataframe:
+
+        -   **`myers_briggs`**: Myers-Briggs Type
+
+        -   **`avg_match_perc`**: Average Match Percentage
+
+    -   'Characters' dataframe:
+
+        -   **`uni_name`**: Universe Name
+
+        -   **`notability`**: Notability Score
+
+-   **Planning:**
+
+    -   Merge the 'Myers-Briggs' dataframe with the 'Characters' dataframe using the common column 'char_id' to get the 'Myers-Briggs' type and average match percentage for each character.
+
+    -   Group the data by 'uni_name' to analyze the distribution across different universes.
+
+**Question 2:-**
+
+-   **Variables:**
+
+    -   'Psychology Stats' dataframe:
+
+        -   **`personality`**: Character Personality
+
+        -   **`avg_rating`**: Average Rating
+
+    -   'Characters' dataframe:
+
+        -   **`notability`**: Notability Score
+
+-   **Planning:**
+
+    -   Group the data by 'personality' to analyze the frequency distribution of character personality traits.
+
+    -   Merge the 'Psychology Stats' dataframe with the 'Characters' dataframe using the common column 'char_id' to get the average rating for each character.
