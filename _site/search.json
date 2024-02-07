@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "proposal.html",
+    "href": "proposal.html",
+    "title": "Psychometric Analysis",
+    "section": "",
+    "text": "if (!require(\"pacman\")) \n  install.packages(\"pacman\")\n\n# use this line for installing/loading\npacman::p_load(devtools) \n\npacman::p_load(tidyverse,\n           openintro,\n           gridextra,\n           gtable,\n           ggrepel,\n           patchwork,\n           units)"
+  },
+  {
+    "objectID": "proposal.html#introduction",
+    "href": "proposal.html#introduction",
+    "title": "Psychometric Analysis",
+    "section": "Introduction",
+    "text": "Introduction\nThis project leverages data collected by the Open-Source Pyschometrics Project to reveal the relationship between popular culture and psychology. Through non-orthodox data analysis methods, 890 characters from 100 different universes could be compared and contrasted for their personalities. Each fictional universe denotes a different tv show or movie with popular characters within. While the characters used are fictional, the methods produced by this project will be re-usable and, in theory, applicable to collections of real-world people."
+  },
+  {
+    "objectID": "proposal.html#dataset",
+    "href": "proposal.html#dataset",
+    "title": "Psychometric Analysis",
+    "section": "Dataset",
+    "text": "Dataset\n\nif(!require(\"readr\"))\n  install.packages(\"readr\")\n\nif(!require(\"gt\"))\n  install.packages(\"gt\")\n\nlibrary(readr)\nlibrary(gt)\n\ncharacters &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv')\n\nmyers_briggs &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv')\n\npsych_stats &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv')\n\n\ncharactersTop &lt;- head(characters)\nmyers_briggsTop &lt;- head(myers_briggs)\npsych_statsTop &lt;- head(psych_stats)\n\n\n\ncharactersTop %&gt;%gt() %&gt;%\ntab_header(title = \"Characters Dataframe\") %&gt;%\n  \ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n  \n    \n      Characters Dataframe\n    \n    \n    \n      id\n      name\n      uni_id\n      uni_name\n      notability\n      link\n      image_link\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\n79.7\nhttps://openpsychometrics.org/tests/characters/stats/F/2\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/2.jpg\n    F1\nRachel Green\nF\nFriends\n76.7\nhttps://openpsychometrics.org/tests/characters/stats/F/1\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/1.jpg\n    F5\nChandler Bing\nF\nFriends\n74.4\nhttps://openpsychometrics.org/tests/characters/stats/F/5\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/5.jpg\n    F4\nJoey Tribbiani\nF\nFriends\n74.3\nhttps://openpsychometrics.org/tests/characters/stats/F/4\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/4.jpg\n    F3\nPhoebe Buffay\nF\nFriends\n72.6\nhttps://openpsychometrics.org/tests/characters/stats/F/3\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/3.jpg\n    F6\nRoss Geller\nF\nFriends\n51.6\nhttps://openpsychometrics.org/tests/characters/stats/F/6\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/6.jpg\n  \n  \n  \n\n\n\n\n\nmyers_briggsTop %&gt;% gt() %&gt;%\ntab_header(title = \"Myers-Briggs Dataframe\") %&gt;%\ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = char_id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n  \n    \n      Myers-Briggs Dataframe\n    \n    \n    \n      char_id\n      char_name\n      uni_id\n      uni_name\n      myers_briggs\n      avg_match_perc\n      number_users\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\nESTJ\n66.8\n547\n    F2\nMonica Geller\nF\nFriends\nISTJ\n63.3\n1475\n    F2\nMonica Geller\nF\nFriends\nENTJ\n63.1\n2286\n    F2\nMonica Geller\nF\nFriends\nESFJ\n62.8\n592\n    F2\nMonica Geller\nF\nFriends\nENFJ\n61.0\n3842\n    F2\nMonica Geller\nF\nFriends\nISFJ\n60.7\n1602\n  \n  \n  \n\n\n\n\n\npsych_statsTop %&gt;% gt() %&gt;%\ntab_header(title = \"Psych Evaluation Dataframe\") %&gt;%\ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = char_id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n  \n    \n      Psych Evaluation Dataframe\n    \n    \n    \n      char_id\n      char_name\n      uni_id\n      uni_name\n      question\n      personality\n      avg_rating\n      rank\n      rating_sd\n      number_ratings\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\nmessy/neat\nneat\n95.7\n9\n11.7\n1079\n    F2\nMonica Geller\nF\nFriends\ndisorganized/self-disciplined\nself-disciplined\n95.2\n27\n11.2\n1185\n    F2\nMonica Geller\nF\nFriends\ndiligent/lazy\ndiligent\n93.9\n87\n10.4\n1166\n    F2\nMonica Geller\nF\nFriends\non-time/tardy\non-time\n93.8\n34\n14.3\n236\n    F2\nMonica Geller\nF\nFriends\ncompetitive/cooperative\ncompetitive\n93.6\n56\n13.4\n1168\n    F2\nMonica Geller\nF\nFriends\nscheduled/spontaneous\nscheduled\n93.4\n23\n14.5\n1173"
+  },
+  {
+    "objectID": "proposal.html#a-brief-description-of-the-dataset",
+    "href": "proposal.html#a-brief-description-of-the-dataset",
+    "title": "Psychometric Analysis",
+    "section": "A brief description of the dataset",
+    "text": "A brief description of the dataset\nThe complete psychometric dataset [1] is a combination of about 890 characters from 100 different universes across pop culture, media and entertainment.\nThe dataset “character.csv” consists of all these character’s names and IDs; the universes they are from (via a unique ID and name); their notability scores and; a link to a page that displays information about said characters. Additionally, there is a link to their picture to identify them.\nThe “psych_stats.csv” is made up of: characters names and IDs; their universe names and IDs; the juxtaposed personality traits (i.e. messy/neat or motivated/unmotivated). The next variable holds one of the two opposing traits: showing which one is more dominant. After this, three relevant numerical variables are present:\n\nThe average rating out of 100 of the dominant personality trait - based on survey responses\nThe rank for that personality trait, in comparison with all other characters\nThe standard deviation - calculated based on average rating\n\nThe “myers_briggs.csv” file consists of the character’s IDs and names as well as their universe names and IDs. It also displays a Myers-Briggs personality type then, that character’s percentage match with the aforementioned type.\nTo give context: each personality type is an ancronym of four parts of a personality - ESTJ stands for Extroverted, Observant, Thinking and Judging.\nSo for instance, Monica Geller has a 66.8% match wih the ESTJ type and 49.4% match with the INFP type. This implies that Monica is more extroverted than introverted."
+  },
+  {
+    "objectID": "proposal.html#choosing-this-dataset",
+    "href": "proposal.html#choosing-this-dataset",
+    "title": "Psychometric Analysis",
+    "section": "Choosing this dataset",
+    "text": "Choosing this dataset\nWe chose this dataset because it would be more interesting to work on and visualize data that we can understand easily, are familiar with and can even relate with partially. Also, the topic on which this dataset is based is very engaging and we reckon it would attract more people to be interested in it. Since quite a number of fictional characters from different universes are used, it expands our dataset and adds more diversity to it, letting us make different types of plots to visualize the characters, their traits and the number of people that identify with them. Moreover, since fictional characters are not bound by real-world constraints, we have more freedom to explore unconventional or extreme personality traits (especially in our case) to use for data analysis in an engaging and accessible way. Using data based on fictional characters that represent personality types and personality traits is a unique way to portray what we have learnt about data visualization so far. Fusing our ‘after-study’ forms of entertainment with our academic subjects will make working on this project more interesting."
+  },
+  {
+    "objectID": "proposal.html#questions",
+    "href": "proposal.html#questions",
+    "title": "Psychometric Analysis",
+    "section": "Questions",
+    "text": "Questions\n\nHow do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?\nWhat is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?"
+  },
+  {
+    "objectID": "proposal.html#analysis-plan",
+    "href": "proposal.html#analysis-plan",
+    "title": "Psychometric Analysis",
+    "section": "Analysis plan",
+    "text": "Analysis plan\nQuestion 1:-\n\nVariables:\n\n‘Myers-Briggs’ dataframe:\n\nmyers_briggs: Myers-Briggs Type\navg_match_perc: Average Match Percentage\n\n‘Characters’ dataframe:\n\nuni_name: Universe Name\nnotability: Notability Score\n\n\nPlanning:\n\nUsing the common column ‘char_id’ between ‘Myers-Briggs’ dataframe and the ‘Characters’ dataframe, merge both the dataframes to get the ‘Myers-Briggs’ type and average match percentage for each character and drop all the unnecessary columns.\nGroup the data by ‘uni_name’ to analyze the distribution across different universes.\n\n\nQuestion 2:-\n\nVariables:\n\n‘Psychology Stats’ dataframe:\n\npersonality: Character Personality\navg_rating: Average Rating\n\n‘Characters’ dataframe:\n\nnotability: Notability Score\n\n\nPlanning:\n\nGroup the data by ‘personality’ to analyze the frequency distribution of character personality traits.\nMerge the ‘Psychology Stats’ dataframe with the ‘Characters’ dataframe using the common column ‘char_id’ to get the average rating for each character."
+  },
+  {
+    "objectID": "proposal.html#references",
+    "href": "proposal.html#references",
+    "title": "Psychometric Analysis",
+    "section": "References:",
+    "text": "References:\n\nTitle: Open Psychometrics\nAuthor: jonthegeek\nDate: 2022-08-16\nSource: tidytuesday\nLink: https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-08-16\n\nAmerican Psychological Association. (n.d.). Definition of Psychometrics. American Psychological Association. https://dictionary.apa.org/psychometrics"
+  },
+  {
+    "objectID": "data/README 2.html",
+    "href": "data/README 2.html",
+    "title": "Data",
+    "section": "",
+    "text": "[Dataset]: Description of the dataset"
+  },
+  {
+    "objectID": "data/README 2.html#variable-names-and-descriptions",
+    "href": "data/README 2.html#variable-names-and-descriptions",
+    "title": "Data",
+    "section": "Variable Names and Descriptions:",
+    "text": "Variable Names and Descriptions:\n\nvariable: Description"
+  },
+  {
+    "objectID": "data/README 2.html#data-types",
+    "href": "data/README 2.html#data-types",
+    "title": "Data",
+    "section": "Data Types:",
+    "text": "Data Types:\n\nColumn: data type"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This project was developed by [Team Name] For INFO 526 - Data Analysis and Visualization at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project title",
+    "section": "",
+    "text": "Add project abstract here."
+  },
+  {
+    "objectID": "index.html#abstract",
+    "href": "index.html#abstract",
+    "title": "Project title",
+    "section": "",
+    "text": "Add project abstract here."
+  },
+  {
+    "objectID": "presentation.html#quarto",
+    "href": "presentation.html#quarto",
+    "title": "Project title",
+    "section": "Quarto",
+    "text": "Quarto\n\nThe presentation is created using the Quarto CLI\n## sets the start of a new slide"
+  },
+  {
+    "objectID": "presentation.html#layouts",
+    "href": "presentation.html#layouts",
+    "title": "Project title",
+    "section": "Layouts",
+    "text": "Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\nAnd add footnotes"
+  },
+  {
+    "objectID": "presentation.html#code",
+    "href": "presentation.html#code",
+    "title": "Project title",
+    "section": "Code",
+    "text": "Code\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
+  },
+  {
+    "objectID": "presentation.html#plots",
+    "href": "presentation.html#plots",
+    "title": "Project title",
+    "section": "Plots",
+    "text": "Plots"
+  },
+  {
+    "objectID": "presentation.html#plot-and-text",
+    "href": "presentation.html#plot-and-text",
+    "title": "Project title",
+    "section": "Plot and text",
+    "text": "Plot and text\n\n\n\nSome text\ngoes here"
+  },
+  {
+    "objectID": "presentation.html#tables",
+    "href": "presentation.html#tables",
+    "title": "Project title",
+    "section": "Tables",
+    "text": "Tables\nIf you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale"
+  },
+  {
+    "objectID": "presentation.html#images",
+    "href": "presentation.html#images",
+    "title": "Project title",
+    "section": "Images",
+    "text": "Images\n\nImage credit: Danielle Navarro, Percolate."
+  },
+  {
+    "objectID": "presentation.html#math-expressions",
+    "href": "presentation.html#math-expressions",
+    "title": "Project title",
+    "section": "Math Expressions",
+    "text": "Math Expressions\nYou can write LaTeX math expressions inside a pair of dollar signs, e.g. $\\alpha+\\beta$ renders \\(\\alpha + \\beta\\). You can use the display style with double dollar signs:\n$$\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i$$\n\\[\n\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i\n\\]\nLimitations:\n\nThe source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting $$ must appear in the very beginning of a line, followed immediately by a non-space character, and the ending $$ must be at the end of a line, led by a non-space character;\nThere should not be spaces after the opening $ or before the closing $."
+  },
+  {
+    "objectID": "presentation.html#feeling-adventurous",
+    "href": "presentation.html#feeling-adventurous",
+    "title": "Project title",
+    "section": "Feeling adventurous?",
+    "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
+  }
+]
