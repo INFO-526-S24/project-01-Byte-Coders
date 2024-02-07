@@ -67,7 +67,7 @@ pacman::p_load(tidyverse,
 
 -   **Planning:**
 
-    -   Merge the 'Myers-Briggs' dataframe with the 'Characters' dataframe using the common column 'char_id' to get the 'Myers-Briggs' type and average match percentage for each character.
+    -   Using the common column 'char_id' between 'Myers-Briggs' dataframe and the 'Characters' dataframe, merge both the dataframes to get the 'Myers-Briggs' type and average match percentage for each character and drop all the unnecessary columns.
 
     -   Group the data by 'uni_name' to analyze the distribution across different universes.
 
