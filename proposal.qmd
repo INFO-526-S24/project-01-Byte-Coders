@@ -90,3 +90,15 @@ pacman::p_load(tidyverse,
     -   Group the data by 'personality' to analyze the frequency distribution of character personality traits.
 
     -   Merge the 'Psychology Stats' dataframe with the 'Characters' dataframe using the common column 'char_id' to get the average rating for each character.
+
+## References:
+
+1.  Title: Open Psychometrics
+
+    Author: [jonthegeek](https://github.com/jonthegeek "Github")
+
+    Date: 2022-08-16
+
+    Source: tidytuesday
+
+    Link: <https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-08-16>
