@@ -7,7 +7,7 @@ editor: visual
 
 ```{r package installation}
 #| message: false
-#| if (!require("pacman")) 
+if (!require("pacman")) 
   install.packages("pacman")
 
 # use this line for installing/loading
@@ -35,6 +35,79 @@ pacman::p_load(tidyverse,
 ```{r}
 #| label: load-dataset
 #| message: false
+
+
+```
+
+```{r}
+#| message: false
+#| warning: false
+
+if(!require("readr"))
+  install.packages("readr")
+
+if(!require("gt"))
+  install.packages("gt")
+
+library(readr)
+library(gt)
+
+characters <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv')
+
+myers_briggs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv')
+
+psych_stats <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv')
+
+
+charactersTop <- head(characters)
+myers_briggsTop <- head(myers_briggs)
+psych_statsTop <- head(psych_stats)
+
+
+
+charactersTop %>%gt() %>%
+tab_header(title = "Characters Dataframe") %>%
+  
+tab_style(
+  style = list(cell_fill(color = "#b2f7ef"),
+  cell_text(weight = "bold")),
+locations = cells_body(columns = id)) %>% 
+  
+tab_style(
+  style = cell_text(weight = "bold"),
+  locations = cells_column_labels()
+)
+```
+
+```{r}
+
+myers_briggsTop %>% gt() %>%
+tab_header(title = "Myers-Briggs Dataframe") %>%
+tab_style(
+  style = list(cell_fill(color = "#b2f7ef"),
+  cell_text(weight = "bold")),
+locations = cells_body(columns = char_id)) %>% 
+  
+tab_style(
+  style = cell_text(weight = "bold"),
+  locations = cells_column_labels()
+)
+```
+
+```{r}
+psych_statsTop %>% gt() %>%
+tab_header(title = "Psych Evaluation Dataframe") %>%
+tab_style(
+  style = list(cell_fill(color = "#b2f7ef"),
+  cell_text(weight = "bold")),
+locations = cells_body(columns = char_id)) %>% 
+  
+tab_style(
+  style = cell_text(weight = "bold"),
+  locations = cells_column_labels()
+)
+
+
 ```
 
 \[Part 1 - Info on dataset\]
