@@ -4,7 +4,7 @@
     "href": "proposal.html",
     "title": "Psychometric Analysis",
     "section": "",
-    "text": "if (!require(\"pacman\")) \n  install.packages(\"pacman\")\n\n# use this line for installing/loading\npacman::p_load(devtools) \n\npacman::p_load(tidyverse,\n           openintro,\n           gridextra,\n           gtable,\n           ggrepel,\n           patchwork,\n           units)"
+    "text": "Code\nif (!require(\"pacman\")) \n  install.packages(\"pacman\")\n\n# use this line for installing/loading\npacman::p_load(devtools) \n\npacman::p_load(tidyverse,\n           openintro,\n           gtable,\n           ggrepel,\n           patchwork,\n           units)"
   },
   {
     "objectID": "proposal.html#introduction",
@@ -18,14 +18,14 @@
     "href": "proposal.html#dataset",
     "title": "Psychometric Analysis",
     "section": "Dataset",
-    "text": "Dataset\n\nif(!require(\"readr\"))\n  install.packages(\"readr\")\n\nif(!require(\"gt\"))\n  install.packages(\"gt\")\n\nlibrary(readr)\nlibrary(gt)\n\ncharacters &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv')\n\nmyers_briggs &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv')\n\npsych_stats &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv')\n\n\ncharactersTop &lt;- head(characters)\nmyers_briggsTop &lt;- head(myers_briggs)\npsych_statsTop &lt;- head(psych_stats)\n\n\n\ncharactersTop %&gt;%gt() %&gt;%\ntab_header(title = \"Characters Dataframe\") %&gt;%\n  \ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n  \n    \n      Characters Dataframe\n    \n    \n    \n      id\n      name\n      uni_id\n      uni_name\n      notability\n      link\n      image_link\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\n79.7\nhttps://openpsychometrics.org/tests/characters/stats/F/2\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/2.jpg\n    F1\nRachel Green\nF\nFriends\n76.7\nhttps://openpsychometrics.org/tests/characters/stats/F/1\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/1.jpg\n    F5\nChandler Bing\nF\nFriends\n74.4\nhttps://openpsychometrics.org/tests/characters/stats/F/5\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/5.jpg\n    F4\nJoey Tribbiani\nF\nFriends\n74.3\nhttps://openpsychometrics.org/tests/characters/stats/F/4\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/4.jpg\n    F3\nPhoebe Buffay\nF\nFriends\n72.6\nhttps://openpsychometrics.org/tests/characters/stats/F/3\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/3.jpg\n    F6\nRoss Geller\nF\nFriends\n51.6\nhttps://openpsychometrics.org/tests/characters/stats/F/6\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/6.jpg\n  \n  \n  \n\n\n\n\n\nmyers_briggsTop %&gt;% gt() %&gt;%\ntab_header(title = \"Myers-Briggs Dataframe\") %&gt;%\ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = char_id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n  \n    \n      Myers-Briggs Dataframe\n    \n    \n    \n      char_id\n      char_name\n      uni_id\n      uni_name\n      myers_briggs\n      avg_match_perc\n      number_users\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\nESTJ\n66.8\n547\n    F2\nMonica Geller\nF\nFriends\nISTJ\n63.3\n1475\n    F2\nMonica Geller\nF\nFriends\nENTJ\n63.1\n2286\n    F2\nMonica Geller\nF\nFriends\nESFJ\n62.8\n592\n    F2\nMonica Geller\nF\nFriends\nENFJ\n61.0\n3842\n    F2\nMonica Geller\nF\nFriends\nISFJ\n60.7\n1602\n  \n  \n  \n\n\n\n\n\npsych_statsTop %&gt;% gt() %&gt;%\ntab_header(title = \"Psych Evaluation Dataframe\") %&gt;%\ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = char_id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n  \n    \n      Psych Evaluation Dataframe\n    \n    \n    \n      char_id\n      char_name\n      uni_id\n      uni_name\n      question\n      personality\n      avg_rating\n      rank\n      rating_sd\n      number_ratings\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\nmessy/neat\nneat\n95.7\n9\n11.7\n1079\n    F2\nMonica Geller\nF\nFriends\ndisorganized/self-disciplined\nself-disciplined\n95.2\n27\n11.2\n1185\n    F2\nMonica Geller\nF\nFriends\ndiligent/lazy\ndiligent\n93.9\n87\n10.4\n1166\n    F2\nMonica Geller\nF\nFriends\non-time/tardy\non-time\n93.8\n34\n14.3\n236\n    F2\nMonica Geller\nF\nFriends\ncompetitive/cooperative\ncompetitive\n93.6\n56\n13.4\n1168\n    F2\nMonica Geller\nF\nFriends\nscheduled/spontaneous\nscheduled\n93.4\n23\n14.5\n1173"
+    "text": "Dataset\n\n\nCode\nif(!require(\"readr\"))\n  install.packages(\"readr\")\n\nif(!require(\"gt\"))\n  install.packages(\"gt\")\n\nlibrary(readr)\nlibrary(gt)\n\ncharacters &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv')\n\nmyers_briggs &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv')\n\npsych_stats &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv')\n\n\ncharactersTop &lt;- head(characters)\nmyers_briggsTop &lt;- head(myers_briggs)\npsych_statsTop &lt;- head(psych_stats)\n\n\n\ncharactersTop %&gt;%gt() %&gt;%\ntab_header(title = \"Characters Dataframe\") %&gt;%\n  \ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n\n  \n    \n      Characters Dataframe\n    \n    \n    \n      id\n      name\n      uni_id\n      uni_name\n      notability\n      link\n      image_link\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\n79.7\nhttps://openpsychometrics.org/tests/characters/stats/F/2\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/2.jpg\n    F1\nRachel Green\nF\nFriends\n76.7\nhttps://openpsychometrics.org/tests/characters/stats/F/1\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/1.jpg\n    F5\nChandler Bing\nF\nFriends\n74.4\nhttps://openpsychometrics.org/tests/characters/stats/F/5\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/5.jpg\n    F4\nJoey Tribbiani\nF\nFriends\n74.3\nhttps://openpsychometrics.org/tests/characters/stats/F/4\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/4.jpg\n    F3\nPhoebe Buffay\nF\nFriends\n72.6\nhttps://openpsychometrics.org/tests/characters/stats/F/3\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/3.jpg\n    F6\nRoss Geller\nF\nFriends\n51.6\nhttps://openpsychometrics.org/tests/characters/stats/F/6\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/6.jpg\n  \n  \n  \n\n\n\n\n\n\nCode\nmyers_briggsTop %&gt;% gt() %&gt;%\ntab_header(title = \"Myers-Briggs Dataframe\") %&gt;%\ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = char_id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n\n  \n    \n      Myers-Briggs Dataframe\n    \n    \n    \n      char_id\n      char_name\n      uni_id\n      uni_name\n      myers_briggs\n      avg_match_perc\n      number_users\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\nESTJ\n66.8\n547\n    F2\nMonica Geller\nF\nFriends\nISTJ\n63.3\n1475\n    F2\nMonica Geller\nF\nFriends\nENTJ\n63.1\n2286\n    F2\nMonica Geller\nF\nFriends\nESFJ\n62.8\n592\n    F2\nMonica Geller\nF\nFriends\nENFJ\n61.0\n3842\n    F2\nMonica Geller\nF\nFriends\nISFJ\n60.7\n1602\n  \n  \n  \n\n\n\n\n\n\nCode\npsych_statsTop %&gt;% gt() %&gt;%\ntab_header(title = \"Psych Evaluation Dataframe\") %&gt;%\ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = char_id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n\n  \n    \n      Psych Evaluation Dataframe\n    \n    \n    \n      char_id\n      char_name\n      uni_id\n      uni_name\n      question\n      personality\n      avg_rating\n      rank\n      rating_sd\n      number_ratings\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\nmessy/neat\nneat\n95.7\n9\n11.7\n1079\n    F2\nMonica Geller\nF\nFriends\ndisorganized/self-disciplined\nself-disciplined\n95.2\n27\n11.2\n1185\n    F2\nMonica Geller\nF\nFriends\ndiligent/lazy\ndiligent\n93.9\n87\n10.4\n1166\n    F2\nMonica Geller\nF\nFriends\non-time/tardy\non-time\n93.8\n34\n14.3\n236\n    F2\nMonica Geller\nF\nFriends\ncompetitive/cooperative\ncompetitive\n93.6\n56\n13.4\n1168\n    F2\nMonica Geller\nF\nFriends\nscheduled/spontaneous\nscheduled\n93.4\n23\n14.5\n1173"
   },
   {
     "objectID": "proposal.html#a-brief-description-of-the-dataset",
     "href": "proposal.html#a-brief-description-of-the-dataset",
     "title": "Psychometric Analysis",
     "section": "A brief description of the dataset",
-    "text": "A brief description of the dataset\nThe complete psychometric dataset [1] is a combination of about 890 characters from 100 different universes across pop culture, media and entertainment.\nThe dataset “character.csv” consists of all these character’s names and IDs; the universes they are from (via a unique ID and name); their notability scores and; a link to a page that displays information about said characters. Additionally, there is a link to their picture to identify them.\nThe “psych_stats.csv” is made up of: characters names and IDs; their universe names and IDs; the juxtaposed personality traits (i.e. messy/neat or motivated/unmotivated). The next variable holds one of the two opposing traits: showing which one is more dominant. After this, three relevant numerical variables are present:\n\nThe average rating out of 100 of the dominant personality trait - based on survey responses\nThe rank for that personality trait, in comparison with all other characters\nThe standard deviation - calculated based on average rating\n\nThe “myers_briggs.csv” file consists of the character’s IDs and names as well as their universe names and IDs. It also displays a Myers-Briggs personality type then, that character’s percentage match with the aforementioned type.\nTo give context: each personality type is an ancronym of four parts of a personality - ESTJ stands for Extroverted, Observant, Thinking and Judging.\nSo for instance, Monica Geller has a 66.8% match wih the ESTJ type and 49.4% match with the INFP type. This implies that Monica is more extroverted than introverted."
+    "text": "A brief description of the dataset\nThe complete psychometric dataset [1] is a combination of about 890 characters from 100 different universes across pop culture, media and entertainment.\nThe dataset “character.csv” consists of all these character’s names and IDs; the universes they are from (via a unique ID and name); their notability scores and; a link to a page that displays information about said characters. Additionally, there is a link to their picture to identify them.\nThe “psych_stats.csv” is made up of: characters names and IDs; their universe names and IDs; the juxtaposed personality traits (i.e. messy/neat or motivated/unmotivated). The next variable holds one of the two opposing traits: showing which one is more dominant. After this, three relevant numerical variables are present:\n\nThe average rating out of 100 of the dominant personality trait - based on survey responses\nThe rank for that personality trait, in comparison with all other characters\nThe standard deviation - calculated based on average rating\n\nThe “myers_briggs.csv” file consists of the character’s IDs and names as well as their universe names and IDs. It also displays a Myers-Briggs personality type then, that character’s percentage match with the aforementioned type.\nTo give context: each personality type is an ancronym of four parts of a personality - ESTJ stands for Extroverted, Observant, Thinking and Judging.\nSo for instance, Monica Geller has a 66.8% match wih the ESTJ type and 49.4% match with the INFP type. This implies that Monica is more extroverted than introverted.\nThe purpose of using this dataset is to validate a person’s Myers Briggs personality type by looking into their different character traits and determining how each trait contributes and affects a person’s behavior/personality accordingly."
   },
   {
     "objectID": "proposal.html#choosing-this-dataset",
@@ -101,22 +101,22 @@
     "objectID": "presentation.html#quarto",
     "href": "presentation.html#quarto",
     "title": "Project title",
-    "section": "Quarto",
-    "text": "Quarto\n\nThe presentation is created using the Quarto CLI\n## sets the start of a new slide"
+    "section": "",
+    "text": "The presentation is created using the Quarto CLI\n## sets the start of a new slide"
   },
   {
     "objectID": "presentation.html#layouts",
     "href": "presentation.html#layouts",
     "title": "Project title",
-    "section": "Layouts",
-    "text": "Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\nAnd add footnotes"
+    "section": "",
+    "text": "You can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis"
   },
   {
     "objectID": "presentation.html#code",
     "href": "presentation.html#code",
     "title": "Project title",
-    "section": "Code",
-    "text": "Code\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
+    "section": "",
+    "text": "# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
   },
   {
     "objectID": "presentation.html#plots",
@@ -129,8 +129,8 @@
     "objectID": "presentation.html#plot-and-text",
     "href": "presentation.html#plot-and-text",
     "title": "Project title",
-    "section": "Plot and text",
-    "text": "Plot and text\n\n\n\nSome text\ngoes here"
+    "section": "",
+    "text": "Some text\ngoes here"
   },
   {
     "objectID": "presentation.html#tables",
@@ -144,7 +144,7 @@
     "href": "presentation.html#images",
     "title": "Project title",
     "section": "Images",
-    "text": "Images\n\nImage credit: Danielle Navarro, Percolate."
+    "text": "Images\n\n\n\nImage credit: Danielle Navarro, Percolate."
   },
   {
     "objectID": "presentation.html#math-expressions",
@@ -159,5 +159,19 @@
     "title": "Project title",
     "section": "Feeling adventurous?",
     "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
+  },
+  {
+    "objectID": "presentation.html",
+    "href": "presentation.html",
+    "title": "Project title",
+    "section": "",
+    "text": "The presentation is created using the Quarto CLI\n## sets the start of a new slide\n\n\n\n\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\n\n\n\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSome text\ngoes here"
+  },
+  {
+    "objectID": "presentation.html#footnotes",
+    "href": "presentation.html#footnotes",
+    "title": "Project title",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAnd add footnotes↩︎"
   }
 ]

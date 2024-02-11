@@ -2,7 +2,9 @@
 title: "Psychometric Analysis"
 subtitle: "Proposal"
 author: "Byte Coders"
-format: html
+format:
+  html:
+    code-fold: true
 editor: visual
 warning : FALSE
 message: FALSE
@@ -19,7 +21,6 @@ pacman::p_load(devtools)
 
 pacman::p_load(tidyverse,
            openintro,
-           gridextra,
            gtable,
            ggrepel,
            patchwork,
@@ -77,6 +78,7 @@ tab_style(
   style = cell_text(weight = "bold"),
   locations = cells_column_labels()
 )
+
 ```
 
 ```{r myers-briggs table}
@@ -130,9 +132,15 @@ To give context: each personality type is an ancronym of four parts of a persona
 
 So for instance, Monica Geller has a 66.8% match wih the [ESTJ]{.underline} type and 49.4% match with the [INFP]{.underline} type. This implies that Monica is more extroverted than introverted.
 
+The purpose of using this dataset is to validate a person's Myers Briggs personality type by looking into their different character traits and determining how each trait contributes and affects a person's behavior/personality accordingly.
+
 ## Choosing this dataset
 
 We chose this dataset because it would be more interesting to work on and visualize data that we can understand easily, are familiar with and can even relate with partially. Also, the topic on which this dataset is based is very engaging and we reckon it would attract more people to be interested in it. Since quite a number of fictional characters from different universes are used, it expands our dataset and adds more diversity to it, letting us make different types of plots to visualize the characters, their traits and the number of people that identify with them. Moreover, since fictional characters are not bound by real-world constraints, we have more freedom to explore unconventional or extreme personality traits (especially in our case) to use for data analysis in an engaging and accessible way. Using data based on fictional characters that represent personality types and personality traits is a unique way to portray what we have learnt about data visualization so far. Fusing our 'after-study' forms of entertainment with our academic subjects will make working on this project more interesting.
+
+![Jon Snow from the Game of Thrones Television Series](https://openpsychometrics.org/tests/characters/test-resources/pics/GOT/1.jpg){fig-align="center" width="313"}
+
+To exemplify the use of this dataset: many real-world people identify with the Game of Thrones character Jon Snow. According to the *personality* analysis of Snow: he is more persistent than quitter; more diligent than lazy; more honourable than cunning; etc... Combining this with the information from the *myers-briggs* analysis **might** highlight a correlation between said data and his most dominant personality style: [ISFJ]{.underline}. The real-world implication is that one who identifies with the same personality style, may then have statistical data to support the likelihood of being more diligent than lazy or; more persistent, etc...
 
 ## Questions
 
@@ -183,6 +191,22 @@ We chose this dataset because it would be more interesting to work on and visual
     -   Group the data by 'personality' to analyze the frequency distribution of character personality traits.
 
     -   Merge the 'Psychology Stats' dataframe with the 'Characters' dataframe using the common column 'char_id' to get the average rating for each character.
+
+**Potential Plots**
+
+-   **Bar Charts and Histograms:** these are the foundation, providing a solid groundwork for understanding the distribution of test scores or personality traits across different cohorts.
+
+-   **Scatter Plots:** Scatter Plots helps to relate between different personality traits like plotting coordinates on a map it also explains the correlations and clusters within the data patterns
+
+-   **Radar Charts:** Radar Charts Plots individual profiles across multiple dimensions of personality, scanning the horizon, these visualizations provide a comprehensive overview of strengths and weaknesses.
+
+-   **Box Plots:** Visualizes these as distribution of test scores within specific categories or groups and examining the box plots and violin plots uncover outlines within the data.
+
+-   **Network Graphs:** Picture network graphs provides interaction the connections between different personality types or traits between various elements of the dataset.
+
+-   **Heatmaps:** These Heatmaps are used for thermal detecting patterns and correlations within vast datasets visualizing into similarities and differences across different groups or individuals.
+
+-   **Tree Maps**: It explains the hierarchical organization within personality frameworks much like branches and leaves in a tree that shows the representation of the data.
 
 ## References:
 
