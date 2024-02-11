@@ -6,9 +6,10 @@ format:
   html:
     code-fold: true
 editor: visual
-warning : FALSE
-message: FALSE
-error : FALSE
+execute:
+  warning : FALSE
+  message: FALSE
+  error : FALSE
 ---
 
 ```{r package installation}
@@ -24,7 +25,9 @@ pacman::p_load(tidyverse,
            gtable,
            ggrepel,
            patchwork,
-           units)
+           units,
+           readr,
+           gt)
 ```
 
 ## Introduction
@@ -36,28 +39,31 @@ This project leverages data collected by the Open-Source Pyschometrics Project t
 ```{r}
 #| label: load-dataset
 #| message: false
-
-
-```
-
-```{r characters table}
-#| message: false
 #| warning: false
 
-if(!require("readr"))
-  install.packages("readr")
-
-if(!require("gt"))
-  install.packages("gt")
-
-library(readr)
-library(gt)
 
 characters <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv')
 
 myers_briggs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv')
 
 psych_stats <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv')
+
+
+```
+
+The three datasets can be located on their host pages:
+
+-   [Characters](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv)
+
+-   [Myers-Briggs](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv)
+
+-   [Psych-Stats](https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv)
+
+```{r characters table}
+#| message: false
+#| warning: false
+
+
 
 
 charactersTop <- head(characters)
@@ -81,6 +87,18 @@ tab_style(
 
 ```
 
+| **variable** | **type** | **description**                     |
+|--------------|----------|-------------------------------------|
+| id           | varchar  | Character ID                        |
+| name         | varchar  | Character Name                      |
+| uni_id       | varchar  | Universe ID, e.g. GOT               |
+| uni_name     | varchar  | Universe Name, e.g. Game of Thrones |
+| notability   | num      | Notability Score                    |
+| link         | varchar  | Link to Character Page              |
+| image_link   | varchar  | Link to Character Image             |
+
+: characters.csv
+
 ```{r myers-briggs table}
 
 myers_briggsTop %>% gt() %>%
@@ -95,6 +113,18 @@ tab_style(
   locations = cells_column_labels()
 )
 ```
+
+| **variable**   | **type** | **description**                     |
+|----------------|----------|-------------------------------------|
+| char_id        | varchar  | Character ID                        |
+| char_name      | varchar  | Character Name                      |
+| uni_id         | varchar  | Universe ID, e.g. GOT               |
+| uni_name       | varchar  | Universe Name, e.g. Game of Thrones |
+| myers_briggs   | varchar  | Myers Briggs Type, e.g. ENFP        |
+| avg_match_perc | num      | Percentage match                    |
+| number_users   | int      | number of user respondents          |
+
+: myers_briggs.csv
 
 ```{r psych evaluation table}
 psych_statsTop %>% gt() %>%
@@ -111,6 +141,21 @@ tab_style(
 
 
 ```
+
+| **variable**   | **type** | **description**                        |
+|----------------|----------|----------------------------------------|
+| char_id        | varchar  | Character ID                           |
+| char_name      | varchar  | Character Name                         |
+| uni_id         | varchar  | Universe ID, e.g. GOT                  |
+| uni_name       | varchar  | Universe Name, e.g. Game of Thrones    |
+| question       | varchar  | Personality Question - e.g. messy/neat |
+| personality    | varchar  | Character Personality, e.g. neat       |
+| avg_rating     | num      | Score out of 100                       |
+| rank           | int      | Rank                                   |
+| rating_sd      | num      | Rating Standard Deviation              |
+| number_ratings | int      | Number of Ratings (Responses)          |
+
+: psych_stats.csv
 
 ## A brief description of the dataset
 
@@ -150,7 +195,13 @@ To exemplify the use of this dataset: many real-world people identify with the G
 
 ## Analysis plan
 
-**Question 1:-**
+[**Question 1:**]{.underline}
+
+**Introduction**
+
+Question one is primarily an exploration of the varying personality types that exist across cultural media. It looks to investigate the differences in character personalities and motivations across differing universes, potentially identifying correlations between genres or settings. Additionally, an attempt to uncover a relationship between popular opinion of characters and their in-universe personas will be made: are anti-heroes liked more? Are villains viewed more negatively than heroes? These questions will be answered providing information about the prevalence and celebration of particular personality types, which enhance our comprehension of audience engagement and storytelling dynamics.
+
+In conjunction, analysing the distribution of Myers-Briggs personality types in fictional worlds offers important insights about the variety and growth of characters. We will learn more about consistency in portrayal by examining the relationship between the match percentages and the identified categories of the characters.
 
 -   **Variables:**
 
@@ -172,7 +223,17 @@ To exemplify the use of this dataset: many real-world people identify with the G
 
     -   Group the data by 'uni_name' to analyze the distribution across different universes.
 
-**Question 2:-**
+**Discussion**
+
+External context and understanding of the genres and settings of the various universes will be brought in intuitively to aid understanding of character motivations and subsequent personality types. Following the visualisation of data, clear trends or a lack thereof will be available to educate us on whether personality types have an impact on audience engagement and/or likability of certain characters, or universes as a whole.
+
+[**Question 2:**]{.underline}
+
+**Introduction**
+
+Intriguing insights into the dynamics of character perception and storytelling impact can be gained by examining the frequency distribution of personality qualities in characters and how they relate to average ratings. One could explore whether a character that is commonly perceived as honourable or righteous has a resonance with the audience, or even a more fulfilling character arc. Tying this to the real-world it could be utilised to determine whether traits such as lazy correlate to a lesser perception of an individual from their peers.
+
+Through exploring the characteristics that characters share the most and analyzing user acceptance, we may learn a great deal about audience involvement and story resonance. Furthermore, investigating whether personality traits have an impact on character notability scores deepens our understanding of character portrayal and how it affects the potency of storytelling. Once again, the real-world implications are varied, with positive character portrayals potentially having tangible influence on the actions of people in everyday walks of life.
 
 -   **Variables:**
 
@@ -192,7 +253,11 @@ To exemplify the use of this dataset: many real-world people identify with the G
 
     -   Merge the 'Psychology Stats' dataframe with the 'Characters' dataframe using the common column 'char_id' to get the average rating for each character.
 
-**Potential Plots**
+**Discussion**
+
+The data will provide insights into the interrelationships between differing personality traits. Would one's honor counter their villainy? Does the kind-heartedness of a side character offset their evil actions? A number of relationships will be identified and scrutinized to conclude on how the traits alter public perception and if some hold more weight than others when deciding upon one's opinions on a character - or person in general.
+
+[**Potential Plots**]{.underline}
 
 -   **Bar Charts and Histograms:** these are the foundation, providing a solid groundwork for understanding the distribution of test scores or personality traits across different cohorts.
 
