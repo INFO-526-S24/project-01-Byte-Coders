@@ -1,61 +1,5 @@
 [
   {
-    "objectID": "proposal.html",
-    "href": "proposal.html",
-    "title": "Psychometric Analysis",
-    "section": "",
-    "text": "if (!require(\"pacman\")) \n  install.packages(\"pacman\")\n\n# use this line for installing/loading\npacman::p_load(devtools) \n\npacman::p_load(tidyverse,\n           openintro,\n           gridextra,\n           gtable,\n           ggrepel,\n           patchwork,\n           units)"
-  },
-  {
-    "objectID": "proposal.html#introduction",
-    "href": "proposal.html#introduction",
-    "title": "Psychometric Analysis",
-    "section": "Introduction",
-    "text": "Introduction\nThis project leverages data collected by the Open-Source Pyschometrics Project to reveal the relationship between popular culture and psychology. Through non-orthodox data analysis methods, 890 characters from 100 different universes could be compared and contrasted for their personalities. Each fictional universe denotes a different tv show or movie with popular characters within. While the characters used are fictional, the methods produced by this project will be re-usable and, in theory, applicable to collections of real-world people."
-  },
-  {
-    "objectID": "proposal.html#dataset",
-    "href": "proposal.html#dataset",
-    "title": "Psychometric Analysis",
-    "section": "Dataset",
-    "text": "Dataset\n\nif(!require(\"readr\"))\n  install.packages(\"readr\")\n\nif(!require(\"gt\"))\n  install.packages(\"gt\")\n\nlibrary(readr)\nlibrary(gt)\n\ncharacters &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv')\n\nmyers_briggs &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv')\n\npsych_stats &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv')\n\n\ncharactersTop &lt;- head(characters)\nmyers_briggsTop &lt;- head(myers_briggs)\npsych_statsTop &lt;- head(psych_stats)\n\n\n\ncharactersTop %&gt;%gt() %&gt;%\ntab_header(title = \"Characters Dataframe\") %&gt;%\n  \ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n  \n    \n      Characters Dataframe\n    \n    \n    \n      id\n      name\n      uni_id\n      uni_name\n      notability\n      link\n      image_link\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\n79.7\nhttps://openpsychometrics.org/tests/characters/stats/F/2\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/2.jpg\n    F1\nRachel Green\nF\nFriends\n76.7\nhttps://openpsychometrics.org/tests/characters/stats/F/1\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/1.jpg\n    F5\nChandler Bing\nF\nFriends\n74.4\nhttps://openpsychometrics.org/tests/characters/stats/F/5\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/5.jpg\n    F4\nJoey Tribbiani\nF\nFriends\n74.3\nhttps://openpsychometrics.org/tests/characters/stats/F/4\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/4.jpg\n    F3\nPhoebe Buffay\nF\nFriends\n72.6\nhttps://openpsychometrics.org/tests/characters/stats/F/3\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/3.jpg\n    F6\nRoss Geller\nF\nFriends\n51.6\nhttps://openpsychometrics.org/tests/characters/stats/F/6\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/6.jpg\n  \n  \n  \n\n\n\n\n\nmyers_briggsTop %&gt;% gt() %&gt;%\ntab_header(title = \"Myers-Briggs Dataframe\") %&gt;%\ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = char_id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n  \n    \n      Myers-Briggs Dataframe\n    \n    \n    \n      char_id\n      char_name\n      uni_id\n      uni_name\n      myers_briggs\n      avg_match_perc\n      number_users\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\nESTJ\n66.8\n547\n    F2\nMonica Geller\nF\nFriends\nISTJ\n63.3\n1475\n    F2\nMonica Geller\nF\nFriends\nENTJ\n63.1\n2286\n    F2\nMonica Geller\nF\nFriends\nESFJ\n62.8\n592\n    F2\nMonica Geller\nF\nFriends\nENFJ\n61.0\n3842\n    F2\nMonica Geller\nF\nFriends\nISFJ\n60.7\n1602\n  \n  \n  \n\n\n\n\n\npsych_statsTop %&gt;% gt() %&gt;%\ntab_header(title = \"Psych Evaluation Dataframe\") %&gt;%\ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = char_id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n  \n    \n      Psych Evaluation Dataframe\n    \n    \n    \n      char_id\n      char_name\n      uni_id\n      uni_name\n      question\n      personality\n      avg_rating\n      rank\n      rating_sd\n      number_ratings\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\nmessy/neat\nneat\n95.7\n9\n11.7\n1079\n    F2\nMonica Geller\nF\nFriends\ndisorganized/self-disciplined\nself-disciplined\n95.2\n27\n11.2\n1185\n    F2\nMonica Geller\nF\nFriends\ndiligent/lazy\ndiligent\n93.9\n87\n10.4\n1166\n    F2\nMonica Geller\nF\nFriends\non-time/tardy\non-time\n93.8\n34\n14.3\n236\n    F2\nMonica Geller\nF\nFriends\ncompetitive/cooperative\ncompetitive\n93.6\n56\n13.4\n1168\n    F2\nMonica Geller\nF\nFriends\nscheduled/spontaneous\nscheduled\n93.4\n23\n14.5\n1173"
-  },
-  {
-    "objectID": "proposal.html#a-brief-description-of-the-dataset",
-    "href": "proposal.html#a-brief-description-of-the-dataset",
-    "title": "Psychometric Analysis",
-    "section": "A brief description of the dataset",
-    "text": "A brief description of the dataset\nThe complete psychometric dataset [1] is a combination of about 890 characters from 100 different universes across pop culture, media and entertainment.\nThe dataset “character.csv” consists of all these character’s names and IDs; the universes they are from (via a unique ID and name); their notability scores and; a link to a page that displays information about said characters. Additionally, there is a link to their picture to identify them.\nThe “psych_stats.csv” is made up of: characters names and IDs; their universe names and IDs; the juxtaposed personality traits (i.e. messy/neat or motivated/unmotivated). The next variable holds one of the two opposing traits: showing which one is more dominant. After this, three relevant numerical variables are present:\n\nThe average rating out of 100 of the dominant personality trait - based on survey responses\nThe rank for that personality trait, in comparison with all other characters\nThe standard deviation - calculated based on average rating\n\nThe “myers_briggs.csv” file consists of the character’s IDs and names as well as their universe names and IDs. It also displays a Myers-Briggs personality type then, that character’s percentage match with the aforementioned type.\nTo give context: each personality type is an ancronym of four parts of a personality - ESTJ stands for Extroverted, Observant, Thinking and Judging.\nSo for instance, Monica Geller has a 66.8% match wih the ESTJ type and 49.4% match with the INFP type. This implies that Monica is more extroverted than introverted."
-  },
-  {
-    "objectID": "proposal.html#choosing-this-dataset",
-    "href": "proposal.html#choosing-this-dataset",
-    "title": "Psychometric Analysis",
-    "section": "Choosing this dataset",
-    "text": "Choosing this dataset\nWe chose this dataset because it would be more interesting to work on and visualize data that we can understand easily, are familiar with and can even relate with partially. Also, the topic on which this dataset is based is very engaging and we reckon it would attract more people to be interested in it. Since quite a number of fictional characters from different universes are used, it expands our dataset and adds more diversity to it, letting us make different types of plots to visualize the characters, their traits and the number of people that identify with them. Moreover, since fictional characters are not bound by real-world constraints, we have more freedom to explore unconventional or extreme personality traits (especially in our case) to use for data analysis in an engaging and accessible way. Using data based on fictional characters that represent personality types and personality traits is a unique way to portray what we have learnt about data visualization so far. Fusing our ‘after-study’ forms of entertainment with our academic subjects will make working on this project more interesting."
-  },
-  {
-    "objectID": "proposal.html#questions",
-    "href": "proposal.html#questions",
-    "title": "Psychometric Analysis",
-    "section": "Questions",
-    "text": "Questions\n\nHow do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?\nWhat is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?"
-  },
-  {
-    "objectID": "proposal.html#analysis-plan",
-    "href": "proposal.html#analysis-plan",
-    "title": "Psychometric Analysis",
-    "section": "Analysis plan",
-    "text": "Analysis plan\nQuestion 1:-\n\nVariables:\n\n‘Myers-Briggs’ dataframe:\n\nmyers_briggs: Myers-Briggs Type\navg_match_perc: Average Match Percentage\n\n‘Characters’ dataframe:\n\nuni_name: Universe Name\nnotability: Notability Score\n\n\nPlanning:\n\nUsing the common column ‘char_id’ between ‘Myers-Briggs’ dataframe and the ‘Characters’ dataframe, merge both the dataframes to get the ‘Myers-Briggs’ type and average match percentage for each character and drop all the unnecessary columns.\nGroup the data by ‘uni_name’ to analyze the distribution across different universes.\n\n\nQuestion 2:-\n\nVariables:\n\n‘Psychology Stats’ dataframe:\n\npersonality: Character Personality\navg_rating: Average Rating\n\n‘Characters’ dataframe:\n\nnotability: Notability Score\n\n\nPlanning:\n\nGroup the data by ‘personality’ to analyze the frequency distribution of character personality traits.\nMerge the ‘Psychology Stats’ dataframe with the ‘Characters’ dataframe using the common column ‘char_id’ to get the average rating for each character."
-  },
-  {
-    "objectID": "proposal.html#references",
-    "href": "proposal.html#references",
-    "title": "Psychometric Analysis",
-    "section": "References:",
-    "text": "References:\n\nTitle: Open Psychometrics\nAuthor: jonthegeek\nDate: 2022-08-16\nSource: tidytuesday\nLink: https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-08-16\n\nAmerican Psychological Association. (n.d.). Definition of Psychometrics. American Psychological Association. https://dictionary.apa.org/psychometrics"
-  },
-  {
     "objectID": "data/README 2.html",
     "href": "data/README 2.html",
     "title": "Data",
@@ -82,20 +26,6 @@
     "title": "About",
     "section": "",
     "text": "This project was developed by [Team Name] For INFO 526 - Data Analysis and Visualization at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.\n\nTeam member 1: One sentence description of Team member 1 (e.g., year, major, etc.).\nTeam member 2: One sentence description of Team member 2 (e.g., year, major, etc.).\nTeam member 3: One sentence description of Team member 3 (e.g., year, major, etc.).\nTeam member 4: One sentence description of Team member 4 (e.g., year, major, etc.)."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Project title",
-    "section": "",
-    "text": "Add project abstract here."
-  },
-  {
-    "objectID": "index.html#abstract",
-    "href": "index.html#abstract",
-    "title": "Project title",
-    "section": "",
-    "text": "Add project abstract here."
   },
   {
     "objectID": "presentation.html#quarto",
@@ -159,5 +89,75 @@
     "title": "Project title",
     "section": "Feeling adventurous?",
     "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project title",
+    "section": "",
+    "text": "Add project abstract here."
+  },
+  {
+    "objectID": "index.html#abstract",
+    "href": "index.html#abstract",
+    "title": "Project title",
+    "section": "",
+    "text": "Add project abstract here."
+  },
+  {
+    "objectID": "proposal.html",
+    "href": "proposal.html",
+    "title": "Psychometric Analysis",
+    "section": "",
+    "text": "Code\nif (!require(\"pacman\")) \n  install.packages(\"pacman\")\n\n# use this line for installing/loading\npacman::p_load(devtools) \n\npacman::p_load(tidyverse,\n           openintro,\n           gtable,\n           ggrepel,\n           patchwork,\n           units,\n           readr,\n           gt)"
+  },
+  {
+    "objectID": "proposal.html#introduction",
+    "href": "proposal.html#introduction",
+    "title": "Psychometric Analysis",
+    "section": "Introduction",
+    "text": "Introduction\nThis project leverages data collected by the Open-Source Pyschometrics Project to reveal the relationship between popular culture and psychology. Through non-orthodox data analysis methods, 890 characters from 100 different universes could be compared and contrasted for their personalities. Each fictional universe denotes a different tv show or movie with popular characters within. While the characters used are fictional, the methods produced by this project will be re-usable and, in theory, applicable to collections of real-world people."
+  },
+  {
+    "objectID": "proposal.html#dataset",
+    "href": "proposal.html#dataset",
+    "title": "Psychometric Analysis",
+    "section": "Dataset",
+    "text": "Dataset\n\n\nCode\ncharacters &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv')\n\nmyers_briggs &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv')\n\npsych_stats &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv')\n\n\nThe three datasets can be located on their host pages:\n\nCharacters\nMyers-Briggs\nPsych-Stats\n\n\n\nCode\ncharactersTop &lt;- head(characters)\nmyers_briggsTop &lt;- head(myers_briggs)\npsych_statsTop &lt;- head(psych_stats)\n\n\n\ncharactersTop %&gt;%gt() %&gt;%\ntab_header(title = \"Characters Dataframe\") %&gt;%\n  \ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n\n  \n    \n      Characters Dataframe\n    \n    \n    \n      id\n      name\n      uni_id\n      uni_name\n      notability\n      link\n      image_link\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\n79.7\nhttps://openpsychometrics.org/tests/characters/stats/F/2\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/2.jpg\n    F1\nRachel Green\nF\nFriends\n76.7\nhttps://openpsychometrics.org/tests/characters/stats/F/1\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/1.jpg\n    F5\nChandler Bing\nF\nFriends\n74.4\nhttps://openpsychometrics.org/tests/characters/stats/F/5\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/5.jpg\n    F4\nJoey Tribbiani\nF\nFriends\n74.3\nhttps://openpsychometrics.org/tests/characters/stats/F/4\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/4.jpg\n    F3\nPhoebe Buffay\nF\nFriends\n72.6\nhttps://openpsychometrics.org/tests/characters/stats/F/3\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/3.jpg\n    F6\nRoss Geller\nF\nFriends\n51.6\nhttps://openpsychometrics.org/tests/characters/stats/F/6\nhttps://openpsychometrics.org/tests/characters/test-resources/pics/F/6.jpg\n  \n  \n  \n\n\n\n\n\ncharacters.csv\n\n\nvariable\ntype\ndescription\n\n\n\n\nid\nvarchar\nCharacter ID\n\n\nname\nvarchar\nCharacter Name\n\n\nuni_id\nvarchar\nUniverse ID, e.g. GOT\n\n\nuni_name\nvarchar\nUniverse Name, e.g. Game of Thrones\n\n\nnotability\nnum\nNotability Score\n\n\nlink\nvarchar\nLink to Character Page\n\n\nimage_link\nvarchar\nLink to Character Image\n\n\n\n\n\nCode\nmyers_briggsTop %&gt;% gt() %&gt;%\ntab_header(title = \"Myers-Briggs Dataframe\") %&gt;%\ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = char_id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n\n  \n    \n      Myers-Briggs Dataframe\n    \n    \n    \n      char_id\n      char_name\n      uni_id\n      uni_name\n      myers_briggs\n      avg_match_perc\n      number_users\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\nESTJ\n66.8\n547\n    F2\nMonica Geller\nF\nFriends\nISTJ\n63.3\n1475\n    F2\nMonica Geller\nF\nFriends\nENTJ\n63.1\n2286\n    F2\nMonica Geller\nF\nFriends\nESFJ\n62.8\n592\n    F2\nMonica Geller\nF\nFriends\nENFJ\n61.0\n3842\n    F2\nMonica Geller\nF\nFriends\nISFJ\n60.7\n1602\n  \n  \n  \n\n\n\n\n\nmyers_briggs.csv\n\n\nvariable\ntype\ndescription\n\n\n\n\nchar_id\nvarchar\nCharacter ID\n\n\nchar_name\nvarchar\nCharacter Name\n\n\nuni_id\nvarchar\nUniverse ID, e.g. GOT\n\n\nuni_name\nvarchar\nUniverse Name, e.g. Game of Thrones\n\n\nmyers_briggs\nvarchar\nMyers Briggs Type, e.g. ENFP\n\n\navg_match_perc\nnum\nPercentage match\n\n\nnumber_users\nint\nnumber of user respondents\n\n\n\n\n\nCode\npsych_statsTop %&gt;% gt() %&gt;%\ntab_header(title = \"Psych Evaluation Dataframe\") %&gt;%\ntab_style(\n  style = list(cell_fill(color = \"#b2f7ef\"),\n  cell_text(weight = \"bold\")),\nlocations = cells_body(columns = char_id)) %&gt;% \n  \ntab_style(\n  style = cell_text(weight = \"bold\"),\n  locations = cells_column_labels()\n)\n\n\n\n\n\n\n  \n    \n      Psych Evaluation Dataframe\n    \n    \n    \n      char_id\n      char_name\n      uni_id\n      uni_name\n      question\n      personality\n      avg_rating\n      rank\n      rating_sd\n      number_ratings\n    \n  \n  \n    F2\nMonica Geller\nF\nFriends\nmessy/neat\nneat\n95.7\n9\n11.7\n1079\n    F2\nMonica Geller\nF\nFriends\ndisorganized/self-disciplined\nself-disciplined\n95.2\n27\n11.2\n1185\n    F2\nMonica Geller\nF\nFriends\ndiligent/lazy\ndiligent\n93.9\n87\n10.4\n1166\n    F2\nMonica Geller\nF\nFriends\non-time/tardy\non-time\n93.8\n34\n14.3\n236\n    F2\nMonica Geller\nF\nFriends\ncompetitive/cooperative\ncompetitive\n93.6\n56\n13.4\n1168\n    F2\nMonica Geller\nF\nFriends\nscheduled/spontaneous\nscheduled\n93.4\n23\n14.5\n1173\n  \n  \n  \n\n\n\n\n\npsych_stats.csv\n\n\nvariable\ntype\ndescription\n\n\n\n\nchar_id\nvarchar\nCharacter ID\n\n\nchar_name\nvarchar\nCharacter Name\n\n\nuni_id\nvarchar\nUniverse ID, e.g. GOT\n\n\nuni_name\nvarchar\nUniverse Name, e.g. Game of Thrones\n\n\nquestion\nvarchar\nPersonality Question - e.g. messy/neat\n\n\npersonality\nvarchar\nCharacter Personality, e.g. neat\n\n\navg_rating\nnum\nScore out of 100\n\n\nrank\nint\nRank\n\n\nrating_sd\nnum\nRating Standard Deviation\n\n\nnumber_ratings\nint\nNumber of Ratings (Responses)"
+  },
+  {
+    "objectID": "proposal.html#a-brief-description-of-the-dataset",
+    "href": "proposal.html#a-brief-description-of-the-dataset",
+    "title": "Psychometric Analysis",
+    "section": "A brief description of the dataset",
+    "text": "A brief description of the dataset\nThe complete psychometric dataset [1] is a combination of about 890 characters from 100 different universes across pop culture, media and entertainment.\nThe dataset “character.csv” consists of all these character’s names and IDs; the universes they are from (via a unique ID and name); their notability scores and; a link to a page that displays information about said characters. Additionally, there is a link to their picture to identify them.\nThe “psych_stats.csv” is made up of: characters names and IDs; their universe names and IDs; the juxtaposed personality traits (i.e. messy/neat or motivated/unmotivated). The next variable holds one of the two opposing traits: showing which one is more dominant. After this, three relevant numerical variables are present:\n\nThe average rating out of 100 of the dominant personality trait - based on survey responses\nThe rank for that personality trait, in comparison with all other characters\nThe standard deviation - calculated based on average rating\n\nThe “myers_briggs.csv” file consists of the character’s IDs and names as well as their universe names and IDs. It also displays a Myers-Briggs personality type then, that character’s percentage match with the aforementioned type.\nTo give context: each personality type is an ancronym of four parts of a personality - ESTJ stands for Extroverted, Observant, Thinking and Judging.\nSo for instance, Monica Geller has a 66.8% match wih the ESTJ type and 49.4% match with the INFP type. This implies that Monica is more extroverted than introverted.\nThe purpose of using this dataset is to validate a person’s Myers Briggs personality type by looking into their different character traits and determining how each trait contributes and affects a person’s behavior/personality accordingly."
+  },
+  {
+    "objectID": "proposal.html#choosing-this-dataset",
+    "href": "proposal.html#choosing-this-dataset",
+    "title": "Psychometric Analysis",
+    "section": "Choosing this dataset",
+    "text": "Choosing this dataset\nWe chose this dataset because it would be more interesting to work on and visualize data that we can understand easily, are familiar with and can even relate with partially. Also, the topic on which this dataset is based is very engaging and we reckon it would attract more people to be interested in it. Since quite a number of fictional characters from different universes are used, it expands our dataset and adds more diversity to it, letting us make different types of plots to visualize the characters, their traits and the number of people that identify with them. Moreover, since fictional characters are not bound by real-world constraints, we have more freedom to explore unconventional or extreme personality traits (especially in our case) to use for data analysis in an engaging and accessible way. Using data based on fictional characters that represent personality types and personality traits is a unique way to portray what we have learnt about data visualization so far. Fusing our ‘after-study’ forms of entertainment with our academic subjects will make working on this project more interesting.\n\n\n\nJon Snow from the Game of Thrones Television Series\n\n\nTo exemplify the use of this dataset: many real-world people identify with the Game of Thrones character Jon Snow. According to the personality analysis of Snow: he is more persistent than quitter; more diligent than lazy; more honourable than cunning; etc… Combining this with the information from the myers-briggs analysis might highlight a correlation between said data and his most dominant personality style: ISFJ. The real-world implication is that one who identifies with the same personality style, may then have statistical data to support the likelihood of being more diligent than lazy or; more persistent, etc…"
+  },
+  {
+    "objectID": "proposal.html#questions",
+    "href": "proposal.html#questions",
+    "title": "Psychometric Analysis",
+    "section": "Questions",
+    "text": "Questions\n\nHow do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?\nWhat is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?"
+  },
+  {
+    "objectID": "proposal.html#analysis-plan",
+    "href": "proposal.html#analysis-plan",
+    "title": "Psychometric Analysis",
+    "section": "Analysis plan",
+    "text": "Analysis plan\nQuestion 1:\nIntroduction\nQuestion one is primarily an exploration of the varying personality types that exist across cultural media. It looks to investigate the differences in character personalities and motivations across differing universes, potentially identifying correlations between genres or settings. Additionally, an attempt to uncover a relationship between popular opinion of characters and their in-universe personas will be made: are anti-heroes liked more? Are villains viewed more negatively than heroes? These questions will be answered providing information about the prevalence and celebration of particular personality types, which enhance our comprehension of audience engagement and storytelling dynamics.\nIn conjunction, analysing the distribution of Myers-Briggs personality types in fictional worlds offers important insights about the variety and growth of characters. We will learn more about consistency in portrayal by examining the relationship between the match percentages and the identified categories of the characters.\n\nVariables:\n\n‘Myers-Briggs’ dataframe:\n\nmyers_briggs: Myers-Briggs Type\navg_match_perc: Average Match Percentage\n\n‘Characters’ dataframe:\n\nuni_name: Universe Name\nnotability: Notability Score\n\n\nPlanning:\n\nUsing the common column ‘char_id’ between ‘Myers-Briggs’ dataframe and the ‘Characters’ dataframe, merge both the dataframes to get the ‘Myers-Briggs’ type and average match percentage for each character and drop all the unnecessary columns.\nGroup the data by ‘uni_name’ to analyze the distribution across different universes.\n\n\nDiscussion\nExternal context and understanding of the genres and settings of the various universes will be brought in intuitively to aid understanding of character motivations and subsequent personality types. Following the visualisation of data, clear trends or a lack thereof will be available to educate us on whether personality types have an impact on audience engagement and/or likability of certain characters, or universes as a whole.\nQuestion 2:\nIntroduction\nIntriguing insights into the dynamics of character perception and storytelling impact can be gained by examining the frequency distribution of personality qualities in characters and how they relate to average ratings. One could explore whether a character that is commonly perceived as honourable or righteous has a resonance with the audience, or even a more fulfilling character arc. Tying this to the real-world it could be utilised to determine whether traits such as lazy correlate to a lesser perception of an individual from their peers.\nThrough exploring the characteristics that characters share the most and analyzing user acceptance, we may learn a great deal about audience involvement and story resonance. Furthermore, investigating whether personality traits have an impact on character notability scores deepens our understanding of character portrayal and how it affects the potency of storytelling. Once again, the real-world implications are varied, with positive character portrayals potentially having tangible influence on the actions of people in everyday walks of life.\n\nVariables:\n\n‘Psychology Stats’ dataframe:\n\npersonality: Character Personality\navg_rating: Average Rating\n\n‘Characters’ dataframe:\n\nnotability: Notability Score\n\n\nPlanning:\n\nGroup the data by ‘personality’ to analyze the frequency distribution of character personality traits.\nMerge the ‘Psychology Stats’ dataframe with the ‘Characters’ dataframe using the common column ‘char_id’ to get the average rating for each character.\n\n\nDiscussion\nThe data will provide insights into the interrelationships between differing personality traits. Would one’s honor counter their villainy? Does the kind-heartedness of a side character offset their evil actions? A number of relationships will be identified and scrutinized to conclude on how the traits alter public perception and if some hold more weight than others when deciding upon one’s opinions on a character - or person in general.\nPotential Plots\n\nBar Charts and Histograms: these are the foundation, providing a solid groundwork for understanding the distribution of test scores or personality traits across different cohorts.\nScatter Plots: Scatter Plots helps to relate between different personality traits like plotting coordinates on a map it also explains the correlations and clusters within the data patterns\nRadar Charts: Radar Charts Plots individual profiles across multiple dimensions of personality, scanning the horizon, these visualizations provide a comprehensive overview of strengths and weaknesses.\nBox Plots: Visualizes these as distribution of test scores within specific categories or groups and examining the box plots and violin plots uncover outlines within the data.\nNetwork Graphs: Picture network graphs provides interaction the connections between different personality types or traits between various elements of the dataset.\nHeatmaps: These Heatmaps are used for thermal detecting patterns and correlations within vast datasets visualizing into similarities and differences across different groups or individuals.\nTree Maps: It explains the hierarchical organization within personality frameworks much like branches and leaves in a tree that shows the representation of the data."
+  },
+  {
+    "objectID": "proposal.html#references",
+    "href": "proposal.html#references",
+    "title": "Psychometric Analysis",
+    "section": "References:",
+    "text": "References:\n\nTitle: Open Psychometrics\nAuthor: jonthegeek\nDate: 2022-08-16\nSource: tidytuesday\nLink: https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-08-16\n\nAmerican Psychological Association. (n.d.). Definition of Psychometrics. American Psychological Association. https://dictionary.apa.org/psychometrics"
   }
 ]
