@@ -6,6 +6,183 @@ format: html
 editor: visual
 ---
 
+```{r package installation}
+#| message: false
+if (!require("pacman")) 
+  install.packages("pacman")
+
+# use this line for installing/loading
+pacman::p_load(devtools) 
+
+pacman::p_load(tidyverse,
+           openintro,
+           gtable,
+           ggrepel,
+           patchwork,
+           units,
+           readr,
+           gt)
+```
+
+```{r load dataset}
+
+characters <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv')
+
+myers_briggs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv')
+
+psych_stats <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv')
+
+
+```
+
 ## Abstract
 
 Add project abstract here.
+
+What is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?
+
+```{r}
+categorize_personality <- function(personality_trait) {
+  # Convert personality trait to lowercase
+  personality_trait <- tolower(personality_trait)
+  
+  # Define categories and corresponding personality traits
+  categories <- c(
+    "Social Traits",
+    "Emotional Traits",
+    "Intellectual Traits",
+    "Assertive Traits",
+    "Adventurous Traits",
+    "Balanced Traits",
+    "Other Traits"
+  )
+  category_map <- list(
+    "Social Traits" = c(
+      "friendly", "sociable", "warm-hearted", "kind", "sympathetic", 
+      "compassionate", "understanding", "tolerant", "patient", "generous", 
+      "helpful", "considerate", "cooperative", "empathetic", "supportive", 
+      "cheerful", "humorous", "optimistic", "enthusiastic", "affectionate"
+    ),
+    "Emotional Traits" = c(
+      "calm", "confident", "self-confident", "self-disciplined", "patient", 
+      "perceptive", "sensitive", "thoughtful", "insightful", "intuitive", 
+      "open-minded", "honest", "trustworthy", "dependable", "reliable", 
+      "responsible", "mature", "modest", "humble", "sincere"
+    ),
+    "Intellectual Traits" = c(
+      "analytical", "creative", "innovative", "intelligent", "curious", 
+      "imaginative", "logical", "rational", "thoughtful", "knowledgeable", 
+      "insightful", "wise", "intellectual", "independent", "introspective", 
+      "methodical", "organized", "practical", "resourceful"
+    ),
+    "Assertive Traits" = c(
+      "assertive", "determined", "ambitious", "tenacious", "resilient", 
+      "goal-oriented", "driven", "confident", "courageous"
+    ),
+    "Adventurous Traits" = c(
+      "adventurous", "daring", "bold", "risk-taker", "spontaneous", "energetic"
+    ),
+    "Balanced Traits" = c(
+      "balanced", "flexible", "adaptable", "versatile", "well-rounded"
+    ),
+    "Other Traits" = c(
+      "eccentric", "quirky", "unique", "eccentric", "unconventional", "nonconformist"
+    )
+  )
+  
+  # Find the category for the given personality trait
+  for (category in categories) {
+    if (personality_trait %in% category_map[[category]]) {
+      return(category)
+    }
+  }
+  
+  return("Unknown")  # Return "Unknown" if the personality trait doesn't match any category
+}
+```
+
+```{r question 2}
+
+# characters
+# psych_stats
+
+
+characters$char_id = characters$id
+
+psych_stats$personality_category <- sapply(psych_stats$personality, categorize_personality)
+
+personalityDistribution <- psych_stats |>
+  count(personality_category)
+
+personalityDistribution = subset(personalityDistribution, personality_category != "Unknown")
+
+charactersFiltered = characters |>
+  select(char_id, notability)
+
+psychStatsFiltered = psych_stats |>
+  select(char_id, personality_category, avg_rating)
+
+psychStatsCharacters = merge(charactersFiltered, psychStatsFiltered, by = "char_id")
+
+psychStatsCharactersSubset = subset(psychStatsCharacters, personality_category != "Unknown")
+
+avgRating = psychStatsCharacters |>
+  group_by(personality_category) |>
+  summarise(avg_rating = mean(avg_rating))
+
+avgNotability = psychStatsCharacters |>
+  group_by(personality_category) |>
+  summarise(avg_notability = mean(notability))
+
+
+psychStatsCharactersMerged = merge(personalityDistribution, 
+                                   avgRating, 
+                                   by = "personality_category")
+
+psychStatsCharactersMerged = merge(psychStatsCharactersMerged,
+                                   avgNotability,
+                                   by = "personality_category")
+
+
+ggplot(personalityDistribution, aes(x = reorder(personality_category, -n), 
+                                    y = n)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Frequency Distribution of Character Personality Traits",
+       x = "Personality Traits",
+       y = "Frequency") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(hjust = 0.5)) +
+  coord_flip() +
+  theme_minimal()
+
+
+ggplot(avgRating, aes(x = reorder(personality_category, -avg_rating), y = avg_rating)) +
+  geom_bar(stat = "identity", fill = "lightgreen") +
+  labs(title = "Average Rating by Character Personality Traits",
+       x = "Personality Traits",
+       y = "Average Rating") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(hjust = 0.5)) +
+  coord_flip() +
+  theme_minimal()
+
+
+ggplot(avgNotability, aes(x = reorder(personality_category, -avg_notability), y = avg_notability)) +
+  geom_bar(stat = "identity", fill = "pink2") +
+  labs(title = "Average Notability by Character Personality Traits",
+       x = "Personality Traits",
+       y = "Average Notability") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(hjust = 0.5)) +
+  coord_flip() +
+  theme_minimal()
+
+ggplot(psych_stats, aes(x = avg_rating)) +
+  geom_density() +
+  facet_wrap(~personality_category, dir = "v") +
+  theme_minimal()
+
+
+  
+
+```
