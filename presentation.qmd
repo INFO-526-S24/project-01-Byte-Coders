@@ -46,9 +46,6 @@ knitr::opts_chunk$set(
   )
 ```
 
-
-
-
 ```{r}
 #| label: load-data
 #| include: false
@@ -92,6 +89,7 @@ How do Myers-Briggs personality types distribute across different universes, and
 ![Image Credit: Byte Coders.](data/universePlot.png){fig-align="center" width="500"}
 
 # Insights
+
 -   The plot highlights the vast differences between Myers-Briggs personality type occurrences in different universes.
 -   To exemplify, "Buffy the Vampire Slayer" has a larger amount of introverted characters than extroverted which contrasts with "Downton Abbey" which appears to contain more extroverted characters than introverted.
 -   This could allow for inferences concerning whether specific genres of media are inherently built with introverted or extroverted characters (i.e. action should presumably comprise of more extroverts).
@@ -114,7 +112,6 @@ What is the frequency distribution of character personality traits across all ch
 
 # Plot 1
 
-
 ## 
 
 # Insights
@@ -129,7 +126,7 @@ What is the frequency distribution of character personality traits across all ch
 
 ## Conclusion
 
-## \##
+## \#
 
 # Using Quarto for presentations
 
