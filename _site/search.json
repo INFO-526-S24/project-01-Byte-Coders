@@ -39,7 +39,7 @@
     "href": "presentation.html#layouts",
     "title": "Psychometric Analysis",
     "section": "Layouts",
-    "text": "Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis"
+    "text": "Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\nAnd add footnotes"
   },
   {
     "objectID": "presentation.html#code",
@@ -67,14 +67,14 @@
     "href": "presentation.html#tables",
     "title": "Psychometric Analysis",
     "section": "Tables",
-    "text": "Tables\nIf you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale"
+    "text": "Tables\nIf you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale"
   },
   {
     "objectID": "presentation.html#images",
     "href": "presentation.html#images",
     "title": "Psychometric Analysis",
     "section": "Images",
-    "text": "Images\n\n\n\nImage credit: Danielle Navarro, Percolate."
+    "text": "Images\n\nImage credit: Danielle Navarro, Percolate."
   },
   {
     "objectID": "presentation.html#math-expressions",
@@ -185,8 +185,8 @@
     "objectID": "presentation.html#question-1",
     "href": "presentation.html#question-1",
     "title": "Psychometric Analysis",
-    "section": "",
-    "text": "‎\nHow do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?"
+    "section": "Question 1:",
+    "text": "Question 1:\n‎\nHow do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?"
   },
   {
     "objectID": "presentation.html#section-3",
@@ -241,8 +241,8 @@
     "objectID": "presentation.html#section-6",
     "href": "presentation.html#section-6",
     "title": "Psychometric Analysis",
-    "section": "",
-    "text": "#Plot 2"
+    "section": "#",
+    "text": "#"
   },
   {
     "objectID": "presentation.html#section-8",
@@ -278,5 +278,61 @@
     "title": "Data",
     "section": "Data Types:",
     "text": "Data Types:\n\nchar_id: varchar\nchar_name: varchar\nuni_id: varchar\nuni_name: varchar\nquestion: varchar\npersonality: varchar\navg_rating: num\nrank: int\nrating_sd: num\nnumber_ratings: int"
+  },
+  {
+    "objectID": "presentation.html#section-1",
+    "href": "presentation.html#section-1",
+    "title": "Psychometric Analysis",
+    "section": "",
+    "text": "The whole dataset consists of three DataFrames:\n\n“character”: Includes high level information including a notability score about each character.\n“psych_stats”: Consist data on personality/psychometric stats per character.\n“myers_briggs”: Test users self-identified their Myers-Briggs types."
+  },
+  {
+    "objectID": "presentation.html#section-4",
+    "href": "presentation.html#section-4",
+    "title": "Psychometric Analysis",
+    "section": "#",
+    "text": "#"
+  },
+  {
+    "objectID": "presentation.html#plot-1-1",
+    "href": "presentation.html#plot-1-1",
+    "title": "Psychometric Analysis",
+    "section": "Plot 1",
+    "text": "Plot 1\n\nTab ATab B\n\n\n\n\n\nQuestion 2 Plot 1\n\n\n\n\n\n\n\nQuestion 2 Plot 2"
+  },
+  {
+    "objectID": "presentation.html#section-5",
+    "href": "presentation.html#section-5",
+    "title": "Psychometric Analysis",
+    "section": "#",
+    "text": "#"
+  },
+  {
+    "objectID": "presentation.html#part-1-of-question-2",
+    "href": "presentation.html#part-1-of-question-2",
+    "title": "Psychometric Analysis",
+    "section": "Part 1 of Question 2",
+    "text": "Part 1 of Question 2\n\nPlot APlot B"
+  },
+  {
+    "objectID": "presentation.html#question-2---part-1",
+    "href": "presentation.html#question-2---part-1",
+    "title": "Psychometric Analysis",
+    "section": "Question 2 - Part 1",
+    "text": "Question 2 - Part 1\n\nPlot APlot BInsights\n\n\n\n\n\n\n\n\n\nDifferent personality traits have been classified into different groups.\nThe frequency distribution of characters across multiple universes have been plotted along with their average rating from a score out of 100.\nRegardless of the type of personality traits, the average rating remains similar.\nThe correlation between"
+  },
+  {
+    "objectID": "presentation.html#question-2---part-1-1",
+    "href": "presentation.html#question-2---part-1-1",
+    "title": "Psychometric Analysis",
+    "section": "Question 2 - Part 1",
+    "text": "Question 2 - Part 1\n\nPlot CInsights\n\n\n\n\n\n\nkjscnsjknj\nvndkkj"
+  },
+  {
+    "objectID": "presentation.html#question-2---part-2",
+    "href": "presentation.html#question-2---part-2",
+    "title": "Psychometric Analysis",
+    "section": "Question 2 - Part 2",
+    "text": "Question 2 - Part 2\n\nPlotInsights"
   }
 ]

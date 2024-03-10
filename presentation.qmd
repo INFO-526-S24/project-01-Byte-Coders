@@ -57,10 +57,10 @@ mtcars$speed <- mtcars$hp / mtcars$wt
 data("penguins")
 ```
 
-
 # Understanding the Dataset
 
-#
+# 
+
 -   It is a combination of about 890 characters from 100 different universes across pop culture, media and entertainment.
 -   The dataset is a compilation of the results of several personality tests taken by different users.
 -   It consists of a total of 400 different personality questions out of which, the most commonly occurring ones have been categorized into groups.
@@ -80,7 +80,7 @@ How do Myers-Briggs personality types distribute across different universes, and
 
 # Plot 1
 
-The number of characters that hold the highest correlation to a respective Myers-Briggs personality type: 
+The number of characters that hold the highest correlation to a respective Myers-Briggs personality type:
 
 ![Image Credit: Byte Coders.](data/universePlot.png){fig-align="center" width="500"}
 
@@ -102,25 +102,58 @@ The number of characters that hold the highest correlation to a respective Myers
 
 What is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?
 
-## 
+## Question 2 - Part 1
 
-# Plot 1
+::: {.panel-tabset}
 
-## 
+#### Plot A
 
-# Insights
+![ ](images/question2Part1Plot1.png){width="850"}
 
-## 
+#### Plot B
 
-#Plot 2
+![ ](images/question2Part1Plot2.png){width="850"}
 
-## 
+#### Insights
 
-# Insights
+- Different personality traits have been classified into different groups.
+- The frequency distribution of characters across multiple universes have been plotted along with their average rating from a score out of 100.
+- Regardless of the type of personality traits, the average rating remains similar.
+- The correlation between 
+
+:::
+
+## Question 2 - Part 1
+
+::: {.panel-tabset}
+
+#### Plot C
+
+![ ](images/question2Part1Plot3.png){width="850"}
+
+#### Insights
+
+- kjscnsjknj
+- vndkkj
+
+::: 
+
+## Question 2 - Part 2
+
+::: {.panel-tabset}
+
+#### Plot 
+
+![ ](images/question2Part2Plot1.png){width="850"}
+
+#### Insights
+
+:::
+
 
 ## Conclusion
 
-## \#
+## 
 
 # Using Quarto for presentations
 
