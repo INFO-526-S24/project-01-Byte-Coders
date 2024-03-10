@@ -60,14 +60,10 @@ mtcars$speed <- mtcars$hp / mtcars$wt
 data("penguins")
 ```
 
-# Psychometric Analysis
 
-## INFO 526- Fall 2023- Project 1
+# Understanding the Dataset
 
-Team Byte Coders: Mobolaji Adewale, Srinivasan Poonkundran, Tanya Evita George, Rohit Vatsava Kalakala, Noureen Mithaigar
-
-## Understanding the Dataset
-
+#
 -   It is a combination of about 890 characters from 100 different universes across pop culture, media and entertainment.
 -   The dataset is a compilation of the results of several personality tests taken by different users.
 -   It consists of a total of 400 different personality questions out of which, the most commonly occurring ones have been categorized into groups.
@@ -87,7 +83,9 @@ How do Myers-Briggs personality types distribute across different universes, and
 
 # Plot 1
 
-The number of characters that hold the highest correlation to a respective Myers-Briggs personality type: ![Image Credit: Byte Coders.](data/universePlot.png){fig-align="center" width="500"}
+The number of characters that hold the highest correlation to a respective Myers-Briggs personality type: 
+
+![Image Credit: Byte Coders.](data/universePlot.png){fig-align="center" width="500"}
 
 # Insights
 

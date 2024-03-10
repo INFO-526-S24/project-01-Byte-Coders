@@ -232,7 +232,7 @@ categorize_personality <- function(personality_trait) {
   personality_trait <- tolower(personality_trait)
   
   # Define categories and corresponding personality traits
-  categories <- c(
+  categories = c(
     "Social Traits",
     "Emotional Traits",
     "Intellectual Traits",
