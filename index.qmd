@@ -46,6 +46,168 @@ Add project abstract here.
 What is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?
 
 ```{r}
+#| label: Question-One-A
+
+#plotA <- ggplot(data = myers_briggs) + geom_density(aes( group = uni_name, x = avg_match_perc, ))
+
+#plotA
+
+#unique(myers_briggs$uni_name)
+
+pacman::p_load(viridis, RColorBrewer)
+pacman::p_load(magick, nflplotR)
+
+
+
+
+
+myers_briggs_grouped <- myers_briggs %>%
+  group_by(char_name) %>%
+    #summarise(max = max(avg_match_perc, na.rm=TRUE))
+    slice_max(avg_match_perc)
+
+
+
+# introverted versus extroverted; sensing versus intuitive; thinking versus feeling; and perceiving versus judging.
+
+myers_briggs_grouped <- myers_briggs_grouped %>%
+  mutate(
+    socialisation = case_when(
+      substr(myers_briggs, 1, 1) == "E" ~ "Extroverted",
+      substr(myers_briggs, 1, 1) == "I" ~ "Introverted"
+    ),
+    empiricism = case_when(
+      substr(myers_briggs, 2, 2) == "N" ~ "Intuitive",
+      substr(myers_briggs, 2, 2) == "S" ~ "Sensing"
+    )
+  )
+
+
+
+
+myers_briggs_linked <- left_join(myers_briggs_grouped, characters, by=c("char_name" = "name", "char_id" = "id", "uni_id" = "uni_id", "uni_name" = "uni_name"))
+
+myers_briggs_linked <- myers_briggs_linked %>%
+  arrange(by = uni_name)
+
+
+
+
+
+
+
+
+
+
+myersBriggsUniversePlot1 <- ggplot(myers_briggs_linked[starts_with(LETTERS[1:6], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled A - F") + coord_polar() + facet_wrap2(vars(uni_name))
+
+
+myersBriggsUniversePlot2 <- ggplot(myers_briggs_linked[starts_with(LETTERS[7:13], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled G - M") + coord_polar() + facet_wrap2(vars(uni_name))
+
+
+myersBriggsUniversePlot3 <- ggplot(myers_briggs_linked[starts_with(LETTERS[14:19], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled N - S") + coord_polar() + facet_wrap2(vars(uni_name))
+
+
+myersBriggsUniversePlot4 <- ggplot(myers_briggs_linked[starts_with(LETTERS[20:26], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled T - Z") + coord_polar() + facet_wrap2(vars(uni_name))
+
+
+
+
+
+ggsave("plot.png", myersBriggsUniversePlot1, width = 20, height = 15, units = c("in"))
+ggsave("plot2.png", myersBriggsUniversePlot2, width = 20, height = 15, units = c("in"))
+ggsave("plo3.png", myersBriggsUniversePlot3, width = 20, height = 15, units = c("in"))
+ggsave("plot4.png", myersBriggsUniversePlot4, width = 20, height = 15, units = c("in"))
+
+
+
+
+
+
+
+
+notabilityScores_TheWalkingDead <- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c("The Walking Dead"),], aes()) + geom_jitter(aes(x = myers_briggs, y = notability, pch=socialisation), position = position_jitter(seed=3))  + theme( axis.text = element_text(size=6), panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text.x = element_text(), panel.grid.major.x = element_blank(), legend.position = "none") + scale_y_continuous(breaks = scales::breaks_width(10)) + labs(title="Sums of the number of characters that are predominantly of a chosen Personality Type: ", subtitle="From the Game of Thrones Universe, with percentage match to said personality type highlighted", x = "Myers Briggs Personality Type", y = "Notability Score") + geom_text( aes( label=paste("n=",avg_match_perc), x = myers_briggs, y = notability), size=1.3, vjust=-1, position = position_jitter(seed=3)) +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5)
+
+
+notabilityScores_TheWalkingDead
+
+
+notabilityMeans_TheWalkingDead <- ggplot(filter(myers_briggs_linked, uni_name == "The Walking Dead"), aes(group = myers_briggs, x = myers_briggs)) + geom_bar(aes( y = notability, fill = myers_briggs), width=.4, stat="summary", fun="mean") + theme(  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=6), panel.grid.major.x = element_blank(), legend.position = "none") + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,20))) + labs(title="Sums of the number of characters that are predominantly of a chosen Personality Type: ", subtitle="From The Walking Dead Universe, with percentage match to said personality type highlighted", x = "Myers Briggs Personality Type", y = "Notability Score") +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5) + stat_summary(geom="text", fun = "mean", aes(label=floor(after_stat(y)), x = myers_briggs, y = notability), size = 2, vjust= -2) + geom_from_path(aes(x = myers_briggs, y=95, path = image_link, group=myers_briggs), width = .2, height = .2) 
+
+notabilityMeans_TheWalkingDead
+
+ 
+
+
+
+
+notabilityScores_GameOfThrones <- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c("Game of Thrones"),], aes()) + geom_jitter(aes(x = myers_briggs, y = notability, pch=socialisation), position = position_jitter(seed=3))  + theme( axis.text = element_text(size=6), panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text.x = element_text(), panel.grid.major.x = element_blank(), legend.position = "none") + scale_y_continuous(breaks = scales::breaks_width(10)) + labs(title="Sums of the number of characters that are predominantly of a chosen Personality Type: ", subtitle="From the Game of Thrones Universe, with percentage match to said personality type highlighted", x = "Myers Briggs Personality Type", y = "Notability Score") + geom_text( aes( label=paste("n=",avg_match_perc), x = myers_briggs, y = notability), size=1.3, vjust=-1, position = position_jitter(seed=3)) +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5)
+
+
+notabilityScores_GameOfThrones
+
+
+
+
+notabilityMeans_GameOfThrones<- ggplot(filter(myers_briggs_linked, uni_name == "Game of Thrones"), aes(group = myers_briggs, x = myers_briggs)) + geom_bar(aes( y = notability, fill = myers_briggs), width=.4, stat="summary", fun="mean") + theme(  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=6), panel.grid.major.x = element_blank(), legend.position = "none") + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,20))) + labs(title="Sums of the number of characters that are predominantly of a chosen Personality Type: ", subtitle="From the Game of Thrones Universe, with percentage match to said personality type highlighted", x = "Myers Briggs Personality Type", y = "Notability Score") +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5) + stat_summary(geom="text", fun = "mean", aes(label=floor(after_stat(y)), x = myers_briggs, y = notability), size = 2, vjust= -2) + geom_from_path(aes(x = myers_briggs, y=95, path = image_link, group=myers_briggs), width = .2, height = .2) 
+
+
+notabilityMeans_GameOfThrones
+
+
+
+
+
+
+
+myers_briggs_mean_notability <- myers_briggs_linked %>%
+ group_by(uni_name, myers_briggs) %>%
+  summarise(
+      mean = mean(notability),
+      socialisation = socialisation,
+      empiricism = empiricism
+  ) %>%
+  filter(mean == max(mean))
+
+
+
+#g11 <- ggplot(myers_briggs_mean_notability) + geom_bar(aes(x = myers_briggs, fill = myers_briggs)) + theme(  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=6), panel.grid.major.x = element_blank(), legend.position = "none") + scale_y_continuous(breaks = scales::breaks_width(2), expand = expand_scale(c(0,0), c(0,4))) + labs(title="Count of the myers-briggs type correlated to the highest mean notability scores", subtitle="From every universe", x = "Myers Briggs Personality Type", y = "Count") + geom_text( aes( label=after_stat(count), x = myers_briggs, y = after_stat(count)), vjust=-1, size = 3, stat="count")
+#g11
+
+
+myers_briggs_mean_notability <- myers_briggs_mean_notability %>%
+  mutate(Network = case_when(
+    uni_name %in% c("Game of Thrones", "True Detective", "Euphoria", "The Sopranos", "Westworld", "The Wire", "Watchmen", "Succession", "Silicon Valley") ~ "HBO",
+    uni_name %in% c("Breaking Bad", "Better Call Saul", "Mad Men", "The Walking Dead", "") ~ "AMC",
+    TRUE ~ "Other"
+  ))
+
+
+
+myers_briggs_grouped_notability <- myers_briggs_linked %>%
+ group_by(uni_name, myers_briggs) %>%
+  summarise(
+      notability = (notability),
+      socialisation = socialisation,
+      empiricism = empiricism
+  )
+
+myers_briggs_grouped_notability <- myers_briggs_grouped_notability %>%
+  mutate(Network = case_when(
+    uni_name %in% c("Game of Thrones", "True Detective", "Euphoria", "The Sopranos", "Westworld", "The Wire", "Watchmen", "Succession", "Silicon Valley") ~ "HBO",
+    uni_name %in% c("Breaking Bad", "Better Call Saul", "Mad Men", "The Walking Dead") ~ "AMC",
+    TRUE ~ "Other"
+  ))
+
+
+
+g12 <- ggplot(myers_briggs_grouped_notability) + geom_bar(aes(x = myers_briggs, fill = Network, y = notability), stat="summary", fun = "mean", position = position_dodge(.9), width = .5) + theme(  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=6), panel.grid.major.x = element_blank()) + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,4))) + labs(title="Count of the myers-briggs type correlated to the highest mean notability scores", subtitle="From every universe", x = "Myers Briggs Personality Type", y = "Mean notability") + facet_wrap2(vars(socialisation), scales = "free_x") + scale_fill_brewer(palette = "YlOrRd") + scale_x_discrete(expand=(c(.1,.1))) + geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5)
+g12
+
+
+```
+
+```{r}
 categorize_personality <- function(personality_trait) {
   # Convert personality trait to lowercase
   personality_trait <- tolower(personality_trait)
@@ -147,43 +309,44 @@ psychStatsCharactersMerged = merge(psychStatsCharactersMerged,
                                    avgNotability,
                                    by = "personality_category")
 
+pacman::p_load(RColorBrewer)
+
 
 ggplot(personalityDistribution, aes(x = reorder(personality_category, -n), 
                                     y = n)) +
-  geom_bar(stat = "identity", fill = "skyblue") +
-  labs(title = "Frequency Distribution of Character Personality Traits",
+  geom_bar(stat = "identity", aes(fill=reorder(personality_category, -n)), color = "black") + scale_fill_brewer(palette = "Reds") + labs(title = "Frequency Distribution of Character Personality Traits",
        x = "Personality Traits",
-       y = "Frequency") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1),
-        plot.title = element_text(hjust = 0.5)) +
+       y = "Frequency")  +
   coord_flip() +
-  theme_minimal()
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(hjust = 0.5), legend.position = "none")
 
 
 ggplot(avgRating, aes(x = reorder(personality_category, -avg_rating), y = avg_rating)) +
-  geom_bar(stat = "identity", fill = "lightgreen") +
+  geom_bar(stat = "identity", aes(fill=reorder(personality_category, -avg_rating)), color = "black") +
   labs(title = "Average Rating by Character Personality Traits",
        x = "Personality Traits",
-       y = "Average Rating") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1),
-        plot.title = element_text(hjust = 0.5)) +
+       y = "Average Rating")  +
   coord_flip() +
-  theme_minimal()
+  theme_minimal() + scale_fill_brewer(palette = "YlOrBr")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(hjust = 0.5), legend.position = "none")
 
 
 ggplot(avgNotability, aes(x = reorder(personality_category, -avg_notability), y = avg_notability)) +
-  geom_bar(stat = "identity", fill = "pink2") +
+  geom_bar(stat = "identity", aes(fill=reorder(personality_category, -avg_notability)), color = "black") +
   labs(title = "Average Notability by Character Personality Traits",
        x = "Personality Traits",
-       y = "Average Notability") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1),
-        plot.title = element_text(hjust = 0.5)) +
+       y = "Average Notability")  +
   coord_flip() +
-  theme_minimal()
+  theme_minimal() + scale_fill_brewer(palette = "Purples")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(hjust = 0.5), legend.position = "none")
 
 ggplot(psychStatsCharactersSubset, aes(x = avg_rating)) +
   geom_density() +
   facet_wrap(~personality_category, dir = "v") +
-  theme_minimal() 
+  theme_minimal() + scale_fill_brewer(palette = "Greens")
 
 ```
