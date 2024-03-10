@@ -1,7 +1,7 @@
 ---
 title: "Psychometric Analysis"
 subtitle: "INFO 526 - Fall 2023 - Project 1"
-author: "Byte Coders- Mobolaji Adewale, Srinivasan Poonkundran, Tanya Evita George, Rohit Vatsava Kalakala, Noureen Mithaigar"
+author: "Team Byte Coders- Mobolaji Adewale, Srinivasan Poonkundran, Tanya Evita George, Rohit Vatsava Kalakala, Noureen Mithaigar"
 title-slide-attributes:
   data-background-image: images/brain-2062057_1280.jpg
   data-background-size: stretch
@@ -82,22 +82,19 @@ Team Byte Coders: Mobolaji Adewale, Srinivasan Poonkundran, Tanya Evita George, 
 
 How do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?
 
-## 
-
 # Plot 1
 
-![Image Credit: Byte Coders.](data/universePlot.png){fig-align="center" width="500"}
+The number of characters that hold the highest correlation to a respective Myers-Briggs personality type: ![Image Credit: Byte Coders.](data/universePlot.png){fig-align="center" width="500"}
 
 # Insights
+
 -   The plot highlights the vast differences between Myers-Briggs personality type occurrences in different universes.
 -   To exemplify, "Buffy the Vampire Slayer" has a larger amount of introverted characters than extroverted which contrasts with "Downton Abbey" which appears to contain more extroverted characters than introverted.
 -   This could allow for inferences concerning whether specific genres of media are inherently built with introverted or extroverted characters (i.e. action should presumably comprise of more extroverts).
 
 ## 
 
-#Plot 2
-
-## 
+# Plot 2
 
 # Insights
 
@@ -110,7 +107,6 @@ What is the frequency distribution of character personality traits across all ch
 ## 
 
 # Plot 1
-
 
 ## 
 
@@ -126,7 +122,7 @@ What is the frequency distribution of character personality traits across all ch
 
 ## Conclusion
 
-## \##
+## \#
 
 # Using Quarto for presentations
 
