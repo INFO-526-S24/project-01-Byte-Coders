@@ -1,30 +1,26 @@
 ---
-title: "Project title"
+title: "Psychometric Analysis"
 subtitle: "INFO 526 - Fall 2023 - Project 1"
-author: "Author names"
+author: "Byte Coders- Mobolaji Adewale, Srinivasan Poonkundran, Tanya Evita George, Rohit Vatsava Kalakala, Noureen Mithaigar"
 title-slide-attributes:
-  data-background-image: images/watercolour_sys02_img34_teacup-ocean.jpg
+  data-background-image: images/brain-2062057_1280.jpg
   data-background-size: stretch
   data-background-opacity: "0.7"
   data-slide-number: none
 format:
   revealjs:
     theme:  ['data/customtheming.scss']
+    transition: concave
+    background-transition: fade
   
 editor: visual
-execute:
+execute: 
+  warning: false
+  message: false
   echo: false
 ---
 
-```{r}
-#| label: load-packages
-#| include: false
 
-# Load packages here
-pacman::p_load(tidymodels,
-               tidyverse)
-
-```
 
 ```{r}
 #| label: setup
@@ -42,15 +38,81 @@ knitr::opts_chunk$set(
   )
 ```
 
+<<<<<<< HEAD
 ```{r}
 #| label: load-data
 #| include: false
+#| message: false
 # Load data here
 data(mtcars)
 mtcars$speed <- mtcars$hp / mtcars$wt
+=======
+>>>>>>> 613d62445cf845f0a716b8c30c3e5ff72ad096f2
 
-data("penguins")
-```
+
+
+# Psychometric Analysis
+
+## INFO 526- Fall 2023- Project 1
+
+Team Byte Coders: Mobolaji Adewale, Srinivasan Poonkundran, Tanya Evita George, Rohit Vatsava Kalakala, Noureen Mithaigar
+
+## Understanding the Dataset
+
+-   It is a combination of about 890 characters from 100 different universes across pop culture, media and entertainment.
+-   The dataset is a compilation of the results of several personality tests taken by different users.
+-   It consists of a total of 400 different personality questions out of which, the most commonly occurring ones have been categorized into groups.
+
+## 
+
+-   The whole dataset consists of three DataFrames:
+    -   "character": Includes high level information including a notability score about each character.
+    -   "psych_stats": Consist data on personality/psychometric stats per character.
+    -   "myers_briggs": Test users self-identified their Myers-Briggs types.
+
+## Question 1:
+
+‎
+
+How do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?
+
+## 
+# Plot 1
+
+##
+# Insights
+
+##
+#Plot 2
+
+##
+# Insights
+
+## Question 2:
+
+‎
+
+What is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?
+
+## 
+# Plot 1
+
+
+##
+# Insights
+
+
+##
+#Plot 2
+
+##
+# Insights
+
+
+## Conclusion
+
+##
+-   
 
 # Using Quarto for presentations
 
@@ -160,6 +222,6 @@ Limitations:
 
 ## Feeling adventurous?
 
--   You are welcomed to use the default styling of the slides. In fact, that\'s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
+-   You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
 
 -   But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs.
