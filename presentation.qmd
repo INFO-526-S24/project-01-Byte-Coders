@@ -38,7 +38,6 @@ knitr::opts_chunk$set(
   )
 ```
 
-<<<<<<< HEAD
 ```{r}
 #| label: load-data
 #| include: false
@@ -46,10 +45,9 @@ knitr::opts_chunk$set(
 # Load data here
 data(mtcars)
 mtcars$speed <- mtcars$hp / mtcars$wt
-=======
->>>>>>> 613d62445cf845f0a716b8c30c3e5ff72ad096f2
 
 
+```
 
 # Psychometric Analysis
 
