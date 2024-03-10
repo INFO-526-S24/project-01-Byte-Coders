@@ -21,7 +21,11 @@ pacman::p_load(tidyverse,
            patchwork,
            units,
            readr,
-           gt)
+           gt,         
+           gganimate, 
+           gifski,
+           png,
+           ggplot2)
 ```
 
 ```{r load dataset}
@@ -177,12 +181,9 @@ ggplot(avgNotability, aes(x = reorder(personality_category, -avg_notability), y 
   coord_flip() +
   theme_minimal()
 
-ggplot(psych_stats, aes(x = avg_rating)) +
+ggplot(psychStatsCharactersSubset, aes(x = avg_rating)) +
   geom_density() +
   facet_wrap(~personality_category, dir = "v") +
-  theme_minimal()
-
-
-  
+  theme_minimal() 
 
 ```
