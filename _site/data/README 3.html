@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project Title – readme-2</title>
+<title>Project Title – readme-3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a></li>
-  <li><a href="#codebook-for-myers-briggs-dataset" id="toc-codebook-for-myers-briggs-dataset" class="nav-link" data-scroll-target="#codebook-for-myers-briggs-dataset">Codebook for [<strong>myers-briggs</strong>] Dataset</a>
+  <li><a href="#codebook-for-psych-stats-dataset" id="toc-codebook-for-psych-stats-dataset" class="nav-link" data-scroll-target="#codebook-for-psych-stats-dataset">Codebook for [<strong>psych-stats</strong>] Dataset</a>
   <ul class="collapse">
   <li><a href="#variable-names-and-descriptions" id="toc-variable-names-and-descriptions" class="nav-link" data-scroll-target="#variable-names-and-descriptions">Variable Names and Descriptions:</a></li>
   <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types">Data Types:</a></li>
@@ -135,11 +135,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="data" class="level1">
 <h1>Data</h1>
 <ul>
-<li><strong>[myers_briggs.csv]</strong>: Users who took the personal personality assessment tests were subsequently asked to self-identify their Myers-Briggs types. Dataset contains results.</li>
+<li><strong>[psych_stats.csv]</strong>: Personality/Psychometric Stats per character.</li>
 </ul>
 </section>
-<section id="codebook-for-myers-briggs-dataset" class="level1">
-<h1>Codebook for [<strong>myers-briggs</strong>] Dataset</h1>
+<section id="codebook-for-psych-stats-dataset" class="level1">
+<h1>Codebook for [<strong>psych-stats</strong>] Dataset</h1>
 <section id="variable-names-and-descriptions" class="level2">
 <h2 class="anchored" data-anchor-id="variable-names-and-descriptions">Variable Names and Descriptions:</h2>
 <ul>
@@ -147,21 +147,27 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>char_name</strong>: Character Name</li>
 <li><strong>uni_id</strong>: Universe ID, e.g.&nbsp;GOT</li>
 <li><strong>uni_name</strong>: Universe Name, e.g.&nbsp;Game of Thrones</li>
-<li><strong>myers_briggs</strong>: Myers Briggs Type, e.g.&nbsp;ENFP</li>
-<li><strong>avg_match_perc</strong>: Percentage match</li>
-<li><strong>number_users</strong>: number of user respondents</li>
+<li><strong>question</strong>: Personality Question - e.g.&nbsp;messy/neat</li>
+<li><strong>personality</strong>: Character Personality, e.g.&nbsp;neat</li>
+<li><strong>avg_rating</strong>: Score out of 100</li>
+<li><strong>rank</strong>: Rank</li>
+<li><strong>rating_sd</strong>: Standard Deviation</li>
+<li><strong>number_ratings</strong>: Number of Ratings (Responses)</li>
 </ul>
 </section>
 <section id="data-types" class="level2">
 <h2 class="anchored" data-anchor-id="data-types">Data Types:</h2>
 <ul>
-<li><strong>id</strong>: varchar</li>
-<li><strong>name</strong>: varchar</li>
+<li><strong>char_id</strong>: varchar</li>
+<li><strong>char_name</strong>: varchar</li>
 <li><strong>uni_id</strong>: varchar</li>
 <li><strong>uni_name</strong>: varchar</li>
-<li><strong>myers_briggs</strong>: varchar</li>
-<li><strong>avg_match_perc</strong>: num</li>
-<li><strong>number_users</strong>: int</li>
+<li><strong>question</strong>: varchar</li>
+<li><strong>personality</strong>: varchar</li>
+<li><strong>avg_rating</strong>: num</li>
+<li><strong>rank</strong>: int</li>
+<li><strong>rating_sd</strong>: num</li>
+<li><strong>number_ratings</strong>: int</li>
 </ul>
 
 

@@ -11,6 +11,7 @@ execute:
 editor: visual
 ---
 
+
 ```{r package installation}
 #| message: false
 if (!require("pacman")) 
@@ -49,9 +50,27 @@ psych_stats <- readr::read_csv('https://raw.githubusercontent.com/rfordatascienc
 
 ## Abstract
 
-Add project abstract here.
+The Psychometrics Analysis Project offers a diverse array of interactive Myer Brigs personality tests for fictional characters designed for personal entertainment, these tests aim to provide insights into various aspects of personality assessment It's primary focus is on presenting the types defined by ISTJ and ENFP by understanding these personalities types individuals can gain insights into their own behaviors, preferences and interpersonal dynamics the key traits are associated with each type, emphasizing the diverse ways in which individual interact with the world based on the personality prefrences.
 
-What is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?
+## Introduction
+
+This project leverages data collected by the Open-Source Pyschometrics Project to reveal the relationship between popular culture and psychology. Through non-orthodox data analysis methods, 890 characters from 100 different universes could be compared and contrasted for their personalities. Each fictional universe denotes a different tv show or movie with popular characters within. While the characters used are fictional, the methods produced by this project will be re-usable and, in theory, applicable to collections of real-world people.
+
+## Question 1:
+
+How do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?
+
+###Introduction
+
+Question one is primarily an exploration of the varying personality types that exist across cultural media. It looks to investigate the differences in character personalities and motivations across differing universes, potentially identifying correlations between genres or settings. Additionally, an attempt to uncover a relationship between popular opinion of characters and their in-universe personas will be made: are anti-heroes liked more? Are villains viewed more negatively than heroes? These questions will be answered providing information about the prevalence and celebration of particular personality types, which enhance our comprehension of audience engagement and storytelling dynamics.
+
+
+**Approach**
+
+
+
+
+
 
 ```{r}
 #| label: Question-One-A

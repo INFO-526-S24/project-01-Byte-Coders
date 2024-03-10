@@ -4,21 +4,21 @@
     "href": "data/README 2.html",
     "title": "Data",
     "section": "",
-    "text": "[Dataset]: Description of the dataset"
+    "text": "[myers_briggs.csv]: Users who took the personal personality assessment tests were subsequently asked to self-identify their Myers-Briggs types. Dataset contains results."
   },
   {
     "objectID": "data/README 2.html#variable-names-and-descriptions",
     "href": "data/README 2.html#variable-names-and-descriptions",
     "title": "Data",
     "section": "Variable Names and Descriptions:",
-    "text": "Variable Names and Descriptions:\n\nvariable: Description"
+    "text": "Variable Names and Descriptions:\n\nchar_id: Character ID\nchar_name: Character Name\nuni_id: Universe ID, e.g. GOT\nuni_name: Universe Name, e.g. Game of Thrones\nmyers_briggs: Myers Briggs Type, e.g. ENFP\navg_match_perc: Percentage match\nnumber_users: number of user respondents"
   },
   {
     "objectID": "data/README 2.html#data-types",
     "href": "data/README 2.html#data-types",
     "title": "Data",
     "section": "Data Types:",
-    "text": "Data Types:\n\nColumn: data type"
+    "text": "Data Types:\n\nid: varchar\nname: varchar\nuni_id: varchar\nuni_name: varchar\nmyers_briggs: varchar\navg_match_perc: num\nnumber_users: int"
   },
   {
     "objectID": "about.html",
@@ -30,79 +30,79 @@
   {
     "objectID": "presentation.html#quarto",
     "href": "presentation.html#quarto",
-    "title": "Project title",
+    "title": "Psychometric Analysis",
     "section": "Quarto",
     "text": "Quarto\n\nThe presentation is created using the Quarto CLI\n## sets the start of a new slide"
   },
   {
     "objectID": "presentation.html#layouts",
     "href": "presentation.html#layouts",
-    "title": "Project title",
+    "title": "Psychometric Analysis",
     "section": "Layouts",
     "text": "Layouts\nYou can use plain text\n\n\n\nor bullet points1\n\n\nor in two columns\n\n\n\nlike\nthis\n\nAnd add footnotes"
   },
   {
     "objectID": "presentation.html#code",
     "href": "presentation.html#code",
-    "title": "Project title",
+    "title": "Psychometric Analysis",
     "section": "Code",
     "text": "Code\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic       p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;\n1 (Intercept)   25.3      3.08        8.22 0.00000000358\n2 speed         -0.116    0.0642     -1.81 0.0806       \n\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    0.0983        0.0682  5.82      3.27  0.0806     1  -101.  207.  212.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;"
   },
   {
     "objectID": "presentation.html#plots",
     "href": "presentation.html#plots",
-    "title": "Project title",
+    "title": "Psychometric Analysis",
     "section": "Plots",
     "text": "Plots"
   },
   {
     "objectID": "presentation.html#plot-and-text",
     "href": "presentation.html#plot-and-text",
-    "title": "Project title",
+    "title": "Psychometric Analysis",
     "section": "Plot and text",
     "text": "Plot and text\n\n\n\nSome text\ngoes here"
   },
   {
     "objectID": "presentation.html#tables",
     "href": "presentation.html#tables",
-    "title": "Project title",
+    "title": "Psychometric Analysis",
     "section": "Tables",
     "text": "Tables\nIf you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale"
   },
   {
     "objectID": "presentation.html#images",
     "href": "presentation.html#images",
-    "title": "Project title",
+    "title": "Psychometric Analysis",
     "section": "Images",
     "text": "Images\n\nImage credit: Danielle Navarro, Percolate."
   },
   {
     "objectID": "presentation.html#math-expressions",
     "href": "presentation.html#math-expressions",
-    "title": "Project title",
+    "title": "Psychometric Analysis",
     "section": "Math Expressions",
     "text": "Math Expressions\nYou can write LaTeX math expressions inside a pair of dollar signs, e.g. $\\alpha+\\beta$ renders \\(\\alpha + \\beta\\). You can use the display style with double dollar signs:\n$$\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i$$\n\\[\n\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i\n\\]\nLimitations:\n\nThe source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting $$ must appear in the very beginning of a line, followed immediately by a non-space character, and the ending $$ must be at the end of a line, led by a non-space character;\nThere should not be spaces after the opening $ or before the closing $."
   },
   {
     "objectID": "presentation.html#feeling-adventurous",
     "href": "presentation.html#feeling-adventurous",
-    "title": "Project title",
+    "title": "Psychometric Analysis",
     "section": "Feeling adventurous?",
-    "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
+    "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that’s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Project title",
     "section": "",
-    "text": "Add project abstract here."
+    "text": "Code\nif (!require(\"pacman\")) \n  install.packages(\"pacman\")\n\n# use this line for installing/loading\npacman::p_load(devtools) \n\npacman::p_load(tidyverse,\n           openintro,\n           gtable,\n           ggrepel,\n           patchwork,\n           units,\n           readr,\n           gt,         \n           gganimate, \n           gifski,\n           png,\n           ggplot2,\n           ggh4x,\n           ggrepel,\n           ggridges)"
   },
   {
     "objectID": "index.html#abstract",
     "href": "index.html#abstract",
     "title": "Project title",
-    "section": "",
-    "text": "Add project abstract here."
+    "section": "Abstract",
+    "text": "Abstract\nThe Psychometrics Analysis Project offers a diverse array of interactive Myer Brigs personality tests for fictional characters designed for personal entertainment, these tests aim to provide insights into various aspects of personality assessment It’s primary focus is on presenting the types defined by ISTJ and ENFP by understanding these personalities types individuals can gain insights into their own behaviors, preferences and interpersonal dynamics the key traits are associated with each type, emphasizing the diverse ways in which individual interact with the world based on the personality prefrences."
   },
   {
     "objectID": "proposal.html",
@@ -159,5 +159,103 @@
     "title": "Psychometric Analysis",
     "section": "References:",
     "text": "References:\n\nTitle: Open Psychometrics\nAuthor: jonthegeek\nDate: 2022-08-16\nSource: tidytuesday\nLink: https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-08-16\n\nAmerican Psychological Association. (n.d.). Definition of Psychometrics. American Psychological Association. https://dictionary.apa.org/psychometrics"
+  },
+  {
+    "objectID": "presentation.html#info-526--fall-2023--project-1",
+    "href": "presentation.html#info-526--fall-2023--project-1",
+    "title": "Psychometric Analysis",
+    "section": "INFO 526- Fall 2023- Project 1",
+    "text": "INFO 526- Fall 2023- Project 1\nTeam Byte Coders: Mobolaji Adewale, Srinivasan Poonkundran, Tanya Evita George, Rohit Vatsava Kalakala, Noureen Mithaigar"
+  },
+  {
+    "objectID": "presentation.html#understanding-the-dataset",
+    "href": "presentation.html#understanding-the-dataset",
+    "title": "Psychometric Analysis",
+    "section": "Understanding the Dataset",
+    "text": "Understanding the Dataset\n\nIt is a combination of about 890 characters from 100 different universes across pop culture, media and entertainment.\nThe dataset is a compilation of the results of several personality tests taken by different users.\nIt consists of a total of 400 different personality questions out of which, the most commonly occurring ones have been categorized into groups."
+  },
+  {
+    "objectID": "presentation.html#section",
+    "href": "presentation.html#section",
+    "title": "Psychometric Analysis",
+    "section": "",
+    "text": "The whole dataset consists of three DataFrames:\n\n“character”: Includes high level information including a notability score about each character.\n“psych_stats”: Consist data on personality/psychometric stats per character.\n“myers_briggs”: Test users self-identified their Myers-Briggs types."
+  },
+  {
+    "objectID": "presentation.html#question-1",
+    "href": "presentation.html#question-1",
+    "title": "Psychometric Analysis",
+    "section": "Question 1:",
+    "text": "Question 1:\n‎\nHow do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?"
+  },
+  {
+    "objectID": "presentation.html#section-2",
+    "href": "presentation.html#section-2",
+    "title": "Psychometric Analysis",
+    "section": "",
+    "text": "#Plot 2"
+  },
+  {
+    "objectID": "presentation.html#question-2",
+    "href": "presentation.html#question-2",
+    "title": "Psychometric Analysis",
+    "section": "Question 2:",
+    "text": "Question 2:\n‎\nWhat is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?"
+  },
+  {
+    "objectID": "presentation.html#section-6",
+    "href": "presentation.html#section-6",
+    "title": "Psychometric Analysis",
+    "section": "",
+    "text": "#Plot 2"
+  },
+  {
+    "objectID": "presentation.html#conclusion",
+    "href": "presentation.html#conclusion",
+    "title": "Psychometric Analysis",
+    "section": "Conclusion",
+    "text": "Conclusion"
+  },
+  {
+    "objectID": "presentation.html#section-8",
+    "href": "presentation.html#section-8",
+    "title": "Psychometric Analysis",
+    "section": "#",
+    "text": "#"
+  },
+  {
+    "objectID": "data/README 3.html",
+    "href": "data/README 3.html",
+    "title": "Data",
+    "section": "",
+    "text": "[psych_stats.csv]: Personality/Psychometric Stats per character."
+  },
+  {
+    "objectID": "data/README 3.html#variable-names-and-descriptions",
+    "href": "data/README 3.html#variable-names-and-descriptions",
+    "title": "Data",
+    "section": "Variable Names and Descriptions:",
+    "text": "Variable Names and Descriptions:\n\nchar_id: Character ID\nchar_name: Character Name\nuni_id: Universe ID, e.g. GOT\nuni_name: Universe Name, e.g. Game of Thrones\nquestion: Personality Question - e.g. messy/neat\npersonality: Character Personality, e.g. neat\navg_rating: Score out of 100\nrank: Rank\nrating_sd: Standard Deviation\nnumber_ratings: Number of Ratings (Responses)"
+  },
+  {
+    "objectID": "data/README 3.html#data-types",
+    "href": "data/README 3.html#data-types",
+    "title": "Data",
+    "section": "Data Types:",
+    "text": "Data Types:\n\nchar_id: varchar\nchar_name: varchar\nuni_id: varchar\nuni_name: varchar\nquestion: varchar\npersonality: varchar\navg_rating: num\nrank: int\nrating_sd: num\nnumber_ratings: int"
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Project title",
+    "section": "Introduction",
+    "text": "Introduction\nThis project leverages data collected by the Open-Source Pyschometrics Project to reveal the relationship between popular culture and psychology. Through non-orthodox data analysis methods, 890 characters from 100 different universes could be compared and contrasted for their personalities. Each fictional universe denotes a different tv show or movie with popular characters within. While the characters used are fictional, the methods produced by this project will be re-usable and, in theory, applicable to collections of real-world people."
+  },
+  {
+    "objectID": "index.html#question-1",
+    "href": "index.html#question-1",
+    "title": "Project title",
+    "section": "Question 1:",
+    "text": "Question 1:\nHow do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?\n###Introduction\nQuestion one is primarily an exploration of the varying personality types that exist across cultural media. It looks to investigate the differences in character personalities and motivations across differing universes, potentially identifying correlations between genres or settings. Additionally, an attempt to uncover a relationship between popular opinion of characters and their in-universe personas will be made: are anti-heroes liked more? Are villains viewed more negatively than heroes? These questions will be answered providing information about the prevalence and celebration of particular personality types, which enhance our comprehension of audience engagement and storytelling dynamics.\nApproach\n\n\nCode\n#plotA &lt;- ggplot(data = myers_briggs) + geom_density(aes( group = uni_name, x = avg_match_perc, ))\n\n#plotA\n\n#unique(myers_briggs$uni_name)\n\npacman::p_load(viridis, RColorBrewer)\npacman::p_load(magick, nflplotR)\n\n\n\n\n\nmyers_briggs_grouped &lt;- myers_briggs %&gt;%\n  group_by(char_name) %&gt;%\n    #summarise(max = max(avg_match_perc, na.rm=TRUE))\n    slice_max(avg_match_perc)\n\n\n\n# introverted versus extroverted; sensing versus intuitive; thinking versus feeling; and perceiving versus judging.\n\nmyers_briggs_grouped &lt;- myers_briggs_grouped %&gt;%\n  mutate(\n    socialisation = case_when(\n      substr(myers_briggs, 1, 1) == \"E\" ~ \"Extroverted\",\n      substr(myers_briggs, 1, 1) == \"I\" ~ \"Introverted\"\n    ),\n    empiricism = case_when(\n      substr(myers_briggs, 2, 2) == \"N\" ~ \"Intuitive\",\n      substr(myers_briggs, 2, 2) == \"S\" ~ \"Sensing\"\n    )\n  )\n\n\n\n\nmyers_briggs_linked &lt;- left_join(myers_briggs_grouped, characters, by=c(\"char_name\" = \"name\", \"char_id\" = \"id\", \"uni_id\" = \"uni_id\", \"uni_name\" = \"uni_name\"))\n\nmyers_briggs_linked &lt;- myers_briggs_linked %&gt;%\n  arrange(by = uni_name)\n\n\n\n\n\n\n\n\n\n\nmyersBriggsUniversePlot1 &lt;- ggplot(myers_briggs_linked[starts_with(LETTERS[1:6], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = \"white\"), legend.text = element_blank(), legend.position = \"none\", panel.spacing.x = unit(4, \"lines\"), strip.clip = \"off\") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title=\"The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: \", subtitle=\"Per universe, from universes titled A - F\") + coord_polar() + facet_wrap2(vars(uni_name))\n\n\nmyersBriggsUniversePlot2 &lt;- ggplot(myers_briggs_linked[starts_with(LETTERS[7:13], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = \"white\"), legend.text = element_blank(), legend.position = \"none\", panel.spacing.x = unit(4, \"lines\"), strip.clip = \"off\") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title=\"The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: \", subtitle=\"Per universe, from universes titled G - M\") + coord_polar() + facet_wrap2(vars(uni_name))\n\n\nmyersBriggsUniversePlot3 &lt;- ggplot(myers_briggs_linked[starts_with(LETTERS[14:19], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = \"white\"), legend.text = element_blank(), legend.position = \"none\", panel.spacing.x = unit(4, \"lines\"), strip.clip = \"off\") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title=\"The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: \", subtitle=\"Per universe, from universes titled N - S\") + coord_polar() + facet_wrap2(vars(uni_name))\n\n\nmyersBriggsUniversePlot4 &lt;- ggplot(myers_briggs_linked[starts_with(LETTERS[20:26], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = \"white\"), legend.text = element_blank(), legend.position = \"none\", panel.spacing.x = unit(4, \"lines\"), strip.clip = \"off\") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title=\"The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: \", subtitle=\"Per universe, from universes titled T - Z\") + coord_polar() + facet_wrap2(vars(uni_name))\n\n\n\n\n\nggsave(\"data/universePlot.png\", myersBriggsUniversePlot1, width = 20, height = 15, units = c(\"in\"))\nggsave(\"data/universePlot2.png\", myersBriggsUniversePlot2, width = 20, height = 15, units = c(\"in\"))\nggsave(\"data/universePlot3.png\", myersBriggsUniversePlot3, width = 20, height = 15, units = c(\"in\"))\nggsave(\"data/universePlot4.png\", myersBriggsUniversePlot4, width = 20, height = 15, units = c(\"in\"))\n\n\n\n\n\n\n\n\nnotabilityScores_TheWalkingDead &lt;- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c(\"The Walking Dead\"),], aes()) + theme_minimal() + geom_jitter(aes(x = myers_briggs, y = notability, pch=socialisation), position = position_jitter(seed=3))  + theme(plot.background = element_rect(color = \"white\"), axis.text = element_text(size=6), panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text.x = element_text(), panel.grid.major.x = element_blank()) + scale_y_continuous(breaks = scales::breaks_width(10)) + labs(title=\"Plot of the number of characters that are\\npredominantly of a chosen personality type: \", subtitle=\"From The Walking Dead universe, with percentage match to said personality type highlighted\", x = \"Myers Briggs Personality Type\", y = \"Notability Score\", caption=\"pm = Percentage match for that character\", pch = \"Socialisation\") + geom_text_repel( aes( label=paste(\"pm=\",avg_match_perc), x = myers_briggs, y = notability), size=3, vjust=-1, position = position_jitter(seed=3)) +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color=\"#FFAAFF\", alpha = .5)\n\n\nnotabilityScores_TheWalkingDead\n\n\n\n\n\nCode\nnotabilityMeans_TheWalkingDead &lt;- ggplot(filter(myers_briggs_linked, uni_name == \"The Walking Dead\"), aes(group = myers_briggs, x = myers_briggs)) + theme_minimal() + geom_bar(aes( y = notability, fill = myers_briggs), width=.4, stat=\"summary\", fun=\"mean\", colour=\"black\", size = 0.2) + theme(plot.background = element_rect(color = \"white\"),  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=6), panel.grid.major.x = element_blank(), legend.position = \"none\") + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,35))) + labs(title=\"Plot of the number of characters that are\\npredominantly of a chosen personality type: \", subtitle=\"From The Walking Dead universe, with mean notability score for said personality type highlighted\", x = \"Myers Briggs Personality Type\", y = \"Notability Score\") +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color=\"#FFAAFF\", alpha = .5) + stat_summary(geom=\"text\", fun = \"mean\", aes(label=floor(after_stat(y)), x = myers_briggs, y = notability), size = 2, vjust= -2) + geom_from_path(aes(x = myers_briggs, y=95, path = image_link, group=myers_briggs), width = .2, height = .2, vjust= -.2) + scale_fill_brewer(palette = \"YlOrBr\")\n\nnotabilityMeans_TheWalkingDead\n\n\n\n\n\nCode\nnotabilityScores_GameOfThrones &lt;- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c(\"Game of Thrones\"),], aes()) + theme_minimal() + geom_jitter(aes(x = myers_briggs, y = notability, pch=socialisation), position = position_jitter(seed=3))  + theme(plot.background = element_rect(color = \"white\"), axis.text = element_text(size=6), panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text.x = element_text(), panel.grid.major.x = element_blank()) + scale_y_continuous(breaks = scales::breaks_width(10)) + labs(title=\"Plot of the number of characters that are\\npredominantly of a chosen personality type: \", subtitle=\"From the Game of Thrones universe, with percentage match to said personality type highlighted\", x = \"Myers Briggs Personality Type\", y = \"Notability Score\", caption=\"pm = Percentage match for that character\", pch = \"Socialisation\") + geom_text_repel( aes( label=paste(\"pm=\",avg_match_perc), x = myers_briggs, y = notability), size=3, vjust=-1, position = position_jitter(seed=3)) +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color=\"#FFAAFF\", alpha = .5)\n\n\nnotabilityScores_GameOfThrones\n\n\n\n\n\nCode\nnotabilityMeans_GameOfThrones&lt;- ggplot(filter(myers_briggs_linked, uni_name == \"Game of Thrones\"), aes(group = myers_briggs, x = myers_briggs)) + geom_bar(aes( y = notability, fill = myers_briggs), width=.4, stat=\"summary\", fun=\"mean\", colour=\"black\", size = 0.2) + theme_minimal() + theme(plot.background = element_rect(color = \"white\"),  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=6), panel.grid.major.x = element_blank(), legend.position = \"none\") + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,20))) + labs(title=\"Plot of the number of characters that are\\npredominantly of a chosen personality type: \", subtitle=\"From the Game of Thrones universe, with mean notability score for said personality type highlighted\", x = \"Myers Briggs Personality Type\", y = \"Notability Score\") +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color=\"#FFAAFF\", alpha = .5) + stat_summary(geom=\"text\", fun = \"mean\", aes(label=floor(after_stat(y)), x = myers_briggs, y = notability), size = 2, vjust= -2) + geom_from_path(aes(x = myers_briggs, y=95, path = image_link, group=myers_briggs), width = .2, height = .2) + scale_fill_brewer(palette = \"Blues\")\n\n\nnotabilityMeans_GameOfThrones\n\n\n\n\n\nCode\nggsave(\"data/notabilityScores_TheWalkingDead.png\", notabilityScores_TheWalkingDead, width = 9, height = 5, units = c(\"in\"))\nggsave(\"data/notabilityMeans_TheWalkingDead.png\", notabilityMeans_TheWalkingDead, width = 9, height = 5, units = c(\"in\"))\nggsave(\"data/notabilityScores_GameOfThrones.png\", notabilityScores_GameOfThrones,width = 9, height = 5, units = c(\"in\"))\nggsave(\"data/notabilityMeans_GameOfThrones.png\", notabilityMeans_GameOfThrones, width = 9, height = 5, units = c(\"in\"))\n\n\n\n\nCode\nmyers_briggs_mean_notability &lt;- myers_briggs_linked %&gt;%\n group_by(uni_name, myers_briggs) %&gt;%\n  summarise(\n      mean = mean(notability),\n      socialisation = socialisation,\n      empiricism = empiricism\n  ) %&gt;%\n  filter(mean == max(mean))\n\n\n\n#g11 &lt;- ggplot(myers_briggs_mean_notability) + geom_bar(aes(x = myers_briggs, fill = myers_briggs)) + theme(  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=6), panel.grid.major.x = element_blank(), legend.position = \"none\") + scale_y_continuous(breaks = scales::breaks_width(2), expand = expand_scale(c(0,0), c(0,4))) + labs(title=\"Count of the myers-briggs type correlated to the highest mean notability scores\", subtitle=\"From every universe\", x = \"Myers Briggs Personality Type\", y = \"Count\") + geom_text( aes( label=after_stat(count), x = myers_briggs, y = after_stat(count)), vjust=-1, size = 3, stat=\"count\")\n#g11\n\n\nmyers_briggs_mean_notability &lt;- myers_briggs_mean_notability %&gt;%\n  mutate(Network = case_when(\n    uni_name %in% c(\"Game of Thrones\", \"True Detective\", \"Euphoria\", \"The Sopranos\", \"Westworld\", \"The Wire\", \"Watchmen\", \"Succession\", \"Silicon Valley\") ~ \"HBO\",\n    uni_name %in% c(\"Breaking Bad\", \"Better Call Saul\", \"Mad Men\", \"The Walking Dead\", \"\") ~ \"AMC\",\n    TRUE ~ \"Other\"\n  ))\n\n\n\nmyers_briggs_grouped_notability &lt;- myers_briggs_linked %&gt;%\n group_by(uni_name, myers_briggs) %&gt;%\n  summarise(\n      notability = (notability),\n      socialisation = socialisation,\n      empiricism = empiricism\n  )\n\nmyers_briggs_grouped_notability &lt;- myers_briggs_grouped_notability %&gt;%\n  mutate(Network = case_when(\n    uni_name %in% c(\"Game of Thrones\", \"True Detective\", \"Euphoria\", \"The Sopranos\", \"Westworld\", \"The Wire\", \"Watchmen\", \"Succession\", \"Silicon Valley\") ~ \"HBO\",\n    uni_name %in% c(\"Breaking Bad\", \"Better Call Saul\", \"Mad Men\", \"The Walking Dead\") ~ \"AMC\",\n    TRUE ~ \"Other\"\n  ))\n\n\n\ng12 &lt;- ggplot(myers_briggs_grouped_notability) + geom_bar(aes(x = myers_briggs, fill = Network, y = notability), stat=\"summary\", fun = \"mean\", position = position_dodge(.9), width = .5, colour=\"black\", size = 0.2) + theme_minimal() + theme(plot.background = element_rect(color = \"white\"),  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=9), panel.grid.major.x = element_blank(), ) + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,4))) + labs(title=\"Count of the myers-briggs type correlated to\\nthe highest mean notability scores\", subtitle=\"From every universe\", x = \"Myers Briggs Personality Type\", y = \"Mean notability\") + facet_wrap2(vars(socialisation), scales = \"free_x\", nrow = 2) + scale_fill_brewer(palette = \"YlOrRd\") + scale_x_discrete(expand=(c(.1,.1))) + geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color=\"#FFAAFF\", alpha = .5)\ng12\n\n\n\n\n\n\n\nCode\ncategorize_personality &lt;- function(personality_trait) {\n  # Convert personality trait to lowercase\n  personality_trait &lt;- tolower(personality_trait)\n  \n  # Define categories and corresponding personality traits\n  categories &lt;- c(\n    \"Social Traits\",\n    \"Emotional Traits\",\n    \"Intellectual Traits\",\n    \"Assertive Traits\",\n    \"Adventurous Traits\",\n    \"Balanced Traits\",\n    \"Other Traits\"\n  )\n  category_map &lt;- list(\n    \"Social Traits\" = c(\n      \"friendly\", \"sociable\", \"warm-hearted\", \"kind\", \"sympathetic\", \n      \"compassionate\", \"understanding\", \"tolerant\", \"patient\", \"generous\", \n      \"helpful\", \"considerate\", \"cooperative\", \"empathetic\", \"supportive\", \n      \"cheerful\", \"humorous\", \"optimistic\", \"enthusiastic\", \"affectionate\"\n    ),\n    \"Emotional Traits\" = c(\n      \"calm\", \"confident\", \"self-confident\", \"self-disciplined\", \"patient\", \n      \"perceptive\", \"sensitive\", \"thoughtful\", \"insightful\", \"intuitive\", \n      \"open-minded\", \"honest\", \"trustworthy\", \"dependable\", \"reliable\", \n      \"responsible\", \"mature\", \"modest\", \"humble\", \"sincere\"\n    ),\n    \"Intellectual Traits\" = c(\n      \"analytical\", \"creative\", \"innovative\", \"intelligent\", \"curious\", \n      \"imaginative\", \"logical\", \"rational\", \"thoughtful\", \"knowledgeable\", \n      \"insightful\", \"wise\", \"intellectual\", \"independent\", \"introspective\", \n      \"methodical\", \"organized\", \"practical\", \"resourceful\"\n    ),\n    \"Assertive Traits\" = c(\n      \"assertive\", \"determined\", \"ambitious\", \"tenacious\", \"resilient\", \n      \"goal-oriented\", \"driven\", \"confident\", \"courageous\"\n    ),\n    \"Adventurous Traits\" = c(\n      \"adventurous\", \"daring\", \"bold\", \"risk-taker\", \"spontaneous\", \"energetic\"\n    ),\n    \"Balanced Traits\" = c(\n      \"balanced\", \"flexible\", \"adaptable\", \"versatile\", \"well-rounded\"\n    ),\n    \"Other Traits\" = c(\n      \"eccentric\", \"quirky\", \"unique\", \"eccentric\", \"unconventional\", \"nonconformist\"\n    )\n  )\n  \n  # Find the category for the given personality trait\n  for (category in categories) {\n    if (personality_trait %in% category_map[[category]]) {\n      return(category)\n    }\n  }\n  \n  return(\"Unknown\")  # Return \"Unknown\" if the personality trait doesn't match any category\n}\n\n\n\n\nCode\n# characters\n# psych_stats\n\n\ncharacters$char_id = characters$id\n\npsych_stats$personality_category &lt;- sapply(psych_stats$personality, categorize_personality)\n\npersonalityDistribution &lt;- psych_stats |&gt;\n  count(personality_category)\n\npersonalityDistribution = subset(personalityDistribution, personality_category != \"Unknown\")\n\ncharactersFiltered = characters |&gt;\n  select(char_id, notability)\n\npsychStatsFiltered = psych_stats |&gt;\n  select(char_id, personality_category, avg_rating)\n\npsychStatsCharacters = merge(charactersFiltered, psychStatsFiltered, by = \"char_id\")\n\npsychStatsCharactersSubset = subset(psychStatsCharacters, personality_category != \"Unknown\")\n\navgRating = psychStatsCharacters |&gt;\n  group_by(personality_category) |&gt;\n  summarise(avg_rating = mean(avg_rating))\n\navgNotability = psychStatsCharacters |&gt;\n  group_by(personality_category) |&gt;\n  summarise(avg_notability = mean(notability))\n\n\npsychStatsCharactersMerged = merge(personalityDistribution, \n                                   avgRating, \n                                   by = \"personality_category\")\n\npsychStatsCharactersMerged = merge(psychStatsCharactersMerged,\n                                   avgNotability,\n                                   by = \"personality_category\")\n\npacman::p_load(RColorBrewer)\n\n\npersonalityDistribution &lt;- subset(personalityDistribution, personality_category != \"Unknown\")\navgRating &lt;- subset(avgRating, personality_category != \"Unknown\")\navgNotability &lt;- subset(avgNotability, personality_category != \"Unknown\")\n\n\n\nggplot(personalityDistribution, aes(x = factor(fct_rev(fct_inorder(personality_category))), \n                                    y = n)) +\n  geom_bar(stat = \"identity\", aes(fill=(personality_category)), color = \"black\") + scale_fill_brewer(palette = \"Reds\") + labs(title = \"Frequency distribution of character personality traits\",\n       x = \"Personality Traits\",\n       y = \"Frequency\")  +\n  coord_flip() +\n  theme_minimal()+\n  theme(axis.text.x = element_text( hjust = 1),\n        plot.title = element_text(hjust = 0.5), legend.position = \"none\") + geom_label(aes(x=(factor(fct_rev(fct_inorder(personality_category)))),    y = n, label=floor(n), hjust = ifelse(personality_category==\"Intellectual Traits\",1.2, -.1)), , color = \"black\", alpha = .7)\n\n\n\n\n\nCode\nggplot(avgRating, aes(x = factor(fct_rev(fct_inorder(personality_category))), y = avg_rating)) +\n  geom_bar(stat = \"identity\", aes(fill= (personality_category)), color = \"black\") +\n  labs(title = \"Average rating by character personality traits\",\n       x = \"Personality Traits\",\n       y = \"Average Rating\")  +\n  coord_flip() +\n  theme_minimal() + scale_fill_brewer(palette = \"YlOrBr\")+\n  theme(axis.text.x = element_text(hjust = 1),\n        plot.title = element_text(hjust = 0.5), legend.position = \"none\")+ geom_label(aes(x=(factor(fct_rev(fct_inorder(personality_category)))),    y = avg_rating, label=floor(avg_rating)), hjust = 2.5, color = \"black\", alpha = .7)\n\n\n\n\n\nCode\nggplot(avgNotability, aes(x = factor(fct_rev(fct_inorder(personality_category))), y = avg_notability)) +\n  geom_bar(stat = \"identity\", aes(fill= (personality_category)), color = \"black\") +\n  labs(title = \"Average notability by character personality traits\",\n       x = \"Personality Traits\",\n       y = \"Average Notability\")  +\n  coord_flip() +\n  theme_minimal() + scale_fill_brewer(palette = \"Purples\")+\n  theme(axis.text.x = element_text( hjust = 1),\n        plot.title = element_text(hjust = 0.5), legend.position = \"none\") + geom_label(aes(x=(factor(fct_rev(fct_inorder(personality_category)))),    y = avg_notability, label=floor(avg_notability)), hjust = 2.5, color = \"black\", alpha = .7)\n\n\n\n\n\nCode\nggplot(psychStatsCharactersSubset, aes(x = avg_rating)) +\n  geom_density(aes(fill = personality_category), alpha = .7) +\n  facet_wrap(~personality_category, dir = \"v\") +\n  theme_minimal() + scale_fill_brewer(palette = \"Greens\") + scale_y_continuous(breaks = seq(0,0.04, 0.04)) + theme(legend.position = \"none\", axis.text.x=element_text(angle = c(45,rep(0,4),45))) + labs(title=\"Density plot of grouped personality traits\", x=\"Average Rating\", y=\"Density\")\n\n\n\n\n\nCode\nggplot(psychStatsCharactersSubset, aes(x = avg_rating, y=factor(fct_rev((personality_category))))) +\n  geom_density_ridges(aes(fill = factor(fct_rev(personality_category))), alpha = .6) + theme_minimal() + theme(legend.position = \"none\", plot.background = element_rect(color=\"white\")) + labs(title=\"Density ridges plot of grouped personality traits\", x=\"Average Rating\", y=\"Grouped Personality Traits\") + scale_fill_brewer(palette = \"Greens\") + geom_vline(xintercept=100 ,color=\"black\", alpha = .7, linetype = \"dashed\")"
   }
 ]
