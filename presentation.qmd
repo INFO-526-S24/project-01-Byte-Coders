@@ -16,7 +16,15 @@ execute:
   echo: false
 ---
 
+```{r}
+#| label: load-packages
+#| include: false
 
+# Load packages here
+pacman::p_load(tidymodels,
+               tidyverse)
+
+```
 
 ```{r}
 #| label: setup
@@ -34,8 +42,15 @@ knitr::opts_chunk$set(
   )
 ```
 
+```{r}
+#| label: load-data
+#| include: false
+# Load data here
+data(mtcars)
+mtcars$speed <- mtcars$hp / mtcars$wt
 
-
+data("penguins")
+```
 
 # Using Quarto for presentations
 
@@ -145,6 +160,6 @@ Limitations:
 
 ## Feeling adventurous?
 
--   You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
+-   You are welcomed to use the default styling of the slides. In fact, that\'s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
 
 -   But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs.
