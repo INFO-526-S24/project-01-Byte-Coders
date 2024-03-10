@@ -16,27 +16,7 @@ execute:
   echo: false
 ---
 
-```{r}
-#| label: load-packages
-#| include: false
 
-# Load packages here
-pacman::p_load(tidymodels,
-               tidyverse)
-
-pacman::p_load(devtools) 
-
-pacman::p_load(tidyverse,
-           openintro,
-           gtable,
-           ggrepel,
-           patchwork,
-           units,
-           readr,
-           gt,
-           ggh4x)
-
-```
 
 ```{r}
 #| label: setup
@@ -54,16 +34,6 @@ knitr::opts_chunk$set(
   )
 ```
 
-```{r}
-#| label: load-data
-#| include: false
-# Load data here
-characters <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv')
-
-myers_briggs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv')
-
-psych_stats <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv')
-```
 
 
 
