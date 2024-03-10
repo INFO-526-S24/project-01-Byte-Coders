@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -80,7 +80,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -89,6 +95,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -102,9 +109,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Project Title</span>
     </a>
@@ -116,32 +123,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Project</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./proposal.html" rel="" target="" aria-current="page">
- <span class="menu-text">Proposal</span></a>
+    <a class="nav-link active" href="./proposal.html" aria-current="page"> 
+<span class="menu-text">Proposal</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./presentation.html" rel="" target="">
- <span class="menu-text">Presentation</span></a>
+    <a class="nav-link" href="./presentation.html"> 
+<span class="menu-text">Presentation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/INFO526-DataViz/project-01" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/INFO526-DataViz/project-01"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -189,10 +196,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
 
+
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"pacman"</span>)) </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">"pacman"</span>)</span>
@@ -217,7 +226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>characters <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -233,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv">Psych-Stats</a></p></li>
 </ul>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>charactersTop <span class="ot">&lt;-</span> <span class="fu">head</span>(characters)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>myers_briggsTop <span class="ot">&lt;-</span> <span class="fu">head</span>(myers_briggs)</span>
@@ -255,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-
+<div>
 <div id="roomaxwrit" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#roomaxwrit table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -696,69 +705,81 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_heading">
-      <td colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Characters Dataframe</td>
-    </tr>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="id">id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="name">name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_id">uni_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_name">uni_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="notability">notability</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="link">link</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="image_link">image_link</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">79.7</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/2</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/2.jpg</td></tr>
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F1</td>
-<td headers="name" class="gt_row gt_left">Rachel Green</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">76.7</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/1</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/1.jpg</td></tr>
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F5</td>
-<td headers="name" class="gt_row gt_left">Chandler Bing</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">74.4</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/5</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/5.jpg</td></tr>
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F4</td>
-<td headers="name" class="gt_row gt_left">Joey Tribbiani</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">74.3</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/4</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/4.jpg</td></tr>
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F3</td>
-<td headers="name" class="gt_row gt_left">Phoebe Buffay</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">72.6</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/3</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/3.jpg</td></tr>
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F6</td>
-<td headers="name" class="gt_row gt_left">Ross Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">51.6</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/6</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/6.jpg</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border">Characters Dataframe</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">id</th>
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">name</th>
+<th id="uni_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_id</th>
+<th id="uni_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_name</th>
+<th id="notability" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">notability</th>
+<th id="link" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">link</th>
+<th id="image_link" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">image_link</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">79.7</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/2</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/2.jpg</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F1</td>
+<td class="gt_row gt_left" headers="name">Rachel Green</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">76.7</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/1</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/1.jpg</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F5</td>
+<td class="gt_row gt_left" headers="name">Chandler Bing</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">74.4</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/5</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/5.jpg</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F4</td>
+<td class="gt_row gt_left" headers="name">Joey Tribbiani</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">74.3</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/4</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/4.jpg</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F3</td>
+<td class="gt_row gt_left" headers="name">Phoebe Buffay</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">72.6</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/3</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/3.jpg</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F6</td>
+<td class="gt_row gt_left" headers="name">Ross Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">51.6</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/6</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/6.jpg</td>
+</tr>
+</tbody>
 </table>
+
+</div>
 </div>
 </div>
 </div>
@@ -810,7 +831,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>myers_briggsTop <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">"Myers-Briggs Dataframe"</span>) <span class="sc">%&gt;%</span></span>
@@ -825,7 +846,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-
+<div>
 <div id="cidcdejtrz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#cidcdejtrz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -1266,69 +1287,81 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_heading">
-      <td colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Myers-Briggs Dataframe</td>
-    </tr>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="char_id">char_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="char_name">char_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_id">uni_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_name">uni_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="myers_briggs">myers_briggs</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="avg_match_perc">avg_match_perc</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="number_users">number_users</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ESTJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">66.8</td>
-<td headers="number_users" class="gt_row gt_right">547</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ISTJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">63.3</td>
-<td headers="number_users" class="gt_row gt_right">1475</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ENTJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">63.1</td>
-<td headers="number_users" class="gt_row gt_right">2286</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ESFJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">62.8</td>
-<td headers="number_users" class="gt_row gt_right">592</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ENFJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">61.0</td>
-<td headers="number_users" class="gt_row gt_right">3842</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ISFJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">60.7</td>
-<td headers="number_users" class="gt_row gt_right">1602</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border">Myers-Briggs Dataframe</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="char_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">char_id</th>
+<th id="char_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">char_name</th>
+<th id="uni_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_id</th>
+<th id="uni_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_name</th>
+<th id="myers_briggs" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">myers_briggs</th>
+<th id="avg_match_perc" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">avg_match_perc</th>
+<th id="number_users" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">number_users</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ESTJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">66.8</td>
+<td class="gt_row gt_right" headers="number_users">547</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ISTJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">63.3</td>
+<td class="gt_row gt_right" headers="number_users">1475</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ENTJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">63.1</td>
+<td class="gt_row gt_right" headers="number_users">2286</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ESFJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">62.8</td>
+<td class="gt_row gt_right" headers="number_users">592</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ENFJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">61.0</td>
+<td class="gt_row gt_right" headers="number_users">3842</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ISFJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">60.7</td>
+<td class="gt_row gt_right" headers="number_users">1602</td>
+</tr>
+</tbody>
 </table>
+
+</div>
 </div>
 </div>
 </div>
@@ -1380,7 +1413,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>psych_statsTop <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">"Psych Evaluation Dataframe"</span>) <span class="sc">%&gt;%</span></span>
@@ -1395,7 +1428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-
+<div>
 <div id="folkdyluhm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#folkdyluhm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -1836,90 +1869,102 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_heading">
-      <td colspan="10" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Psych Evaluation Dataframe</td>
-    </tr>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="char_id">char_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="char_name">char_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_id">uni_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_name">uni_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="question">question</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="personality">personality</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="avg_rating">avg_rating</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="rank">rank</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="rating_sd">rating_sd</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="number_ratings">number_ratings</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">messy/neat</td>
-<td headers="personality" class="gt_row gt_left">neat</td>
-<td headers="avg_rating" class="gt_row gt_right">95.7</td>
-<td headers="rank" class="gt_row gt_right">9</td>
-<td headers="rating_sd" class="gt_row gt_right">11.7</td>
-<td headers="number_ratings" class="gt_row gt_right">1079</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">disorganized/self-disciplined</td>
-<td headers="personality" class="gt_row gt_left">self-disciplined</td>
-<td headers="avg_rating" class="gt_row gt_right">95.2</td>
-<td headers="rank" class="gt_row gt_right">27</td>
-<td headers="rating_sd" class="gt_row gt_right">11.2</td>
-<td headers="number_ratings" class="gt_row gt_right">1185</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">diligent/lazy</td>
-<td headers="personality" class="gt_row gt_left">diligent</td>
-<td headers="avg_rating" class="gt_row gt_right">93.9</td>
-<td headers="rank" class="gt_row gt_right">87</td>
-<td headers="rating_sd" class="gt_row gt_right">10.4</td>
-<td headers="number_ratings" class="gt_row gt_right">1166</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">on-time/tardy</td>
-<td headers="personality" class="gt_row gt_left">on-time</td>
-<td headers="avg_rating" class="gt_row gt_right">93.8</td>
-<td headers="rank" class="gt_row gt_right">34</td>
-<td headers="rating_sd" class="gt_row gt_right">14.3</td>
-<td headers="number_ratings" class="gt_row gt_right">236</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">competitive/cooperative</td>
-<td headers="personality" class="gt_row gt_left">competitive</td>
-<td headers="avg_rating" class="gt_row gt_right">93.6</td>
-<td headers="rank" class="gt_row gt_right">56</td>
-<td headers="rating_sd" class="gt_row gt_right">13.4</td>
-<td headers="number_ratings" class="gt_row gt_right">1168</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">scheduled/spontaneous</td>
-<td headers="personality" class="gt_row gt_left">scheduled</td>
-<td headers="avg_rating" class="gt_row gt_right">93.4</td>
-<td headers="rank" class="gt_row gt_right">23</td>
-<td headers="rating_sd" class="gt_row gt_right">14.5</td>
-<td headers="number_ratings" class="gt_row gt_right">1173</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="10" class="gt_heading gt_title gt_font_normal gt_bottom_border">Psych Evaluation Dataframe</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="char_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">char_id</th>
+<th id="char_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">char_name</th>
+<th id="uni_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_id</th>
+<th id="uni_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_name</th>
+<th id="question" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">question</th>
+<th id="personality" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">personality</th>
+<th id="avg_rating" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">avg_rating</th>
+<th id="rank" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">rank</th>
+<th id="rating_sd" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">rating_sd</th>
+<th id="number_ratings" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">number_ratings</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">messy/neat</td>
+<td class="gt_row gt_left" headers="personality">neat</td>
+<td class="gt_row gt_right" headers="avg_rating">95.7</td>
+<td class="gt_row gt_right" headers="rank">9</td>
+<td class="gt_row gt_right" headers="rating_sd">11.7</td>
+<td class="gt_row gt_right" headers="number_ratings">1079</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">disorganized/self-disciplined</td>
+<td class="gt_row gt_left" headers="personality">self-disciplined</td>
+<td class="gt_row gt_right" headers="avg_rating">95.2</td>
+<td class="gt_row gt_right" headers="rank">27</td>
+<td class="gt_row gt_right" headers="rating_sd">11.2</td>
+<td class="gt_row gt_right" headers="number_ratings">1185</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">diligent/lazy</td>
+<td class="gt_row gt_left" headers="personality">diligent</td>
+<td class="gt_row gt_right" headers="avg_rating">93.9</td>
+<td class="gt_row gt_right" headers="rank">87</td>
+<td class="gt_row gt_right" headers="rating_sd">10.4</td>
+<td class="gt_row gt_right" headers="number_ratings">1166</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">on-time/tardy</td>
+<td class="gt_row gt_left" headers="personality">on-time</td>
+<td class="gt_row gt_right" headers="avg_rating">93.8</td>
+<td class="gt_row gt_right" headers="rank">34</td>
+<td class="gt_row gt_right" headers="rating_sd">14.3</td>
+<td class="gt_row gt_right" headers="number_ratings">236</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">competitive/cooperative</td>
+<td class="gt_row gt_left" headers="personality">competitive</td>
+<td class="gt_row gt_right" headers="avg_rating">93.6</td>
+<td class="gt_row gt_right" headers="rank">56</td>
+<td class="gt_row gt_right" headers="rating_sd">13.4</td>
+<td class="gt_row gt_right" headers="number_ratings">1168</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">scheduled/spontaneous</td>
+<td class="gt_row gt_left" headers="personality">scheduled</td>
+<td class="gt_row gt_right" headers="avg_rating">93.4</td>
+<td class="gt_row gt_right" headers="rank">23</td>
+<td class="gt_row gt_right" headers="rating_sd">14.5</td>
+<td class="gt_row gt_right" headers="number_ratings">1173</td>
+</tr>
+</tbody>
 </table>
+
+</div>
 </div>
 </div>
 </div>
@@ -2007,7 +2052,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://openpsychometrics.org/tests/characters/test-resources/pics/GOT/1.jpg" class="img-fluid figure-img" width="313"></p>
+<p><img src="https://openpsychometrics.org/tests/characters/test-resources/pics/GOT/1.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="313"></p>
 </figure>
 </div>
 </div>
@@ -2179,10 +2224,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2192,8 +2236,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2206,6 +2259,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2249,6 +2421,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2274,6 +2447,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2334,6 +2533,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
