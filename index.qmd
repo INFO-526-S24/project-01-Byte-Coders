@@ -65,7 +65,7 @@ What is the frequency distribution of character personality traits across all ch
 
 pacman::p_load(viridis, RColorBrewer)
 pacman::p_load(magick, nflplotR)
-
+pacman::p_load(RColorBrewer)
 
 
 
@@ -288,10 +288,6 @@ categorize_personality <- function(personality_trait) {
 
 ```{r question 2}
 
-# characters
-# psych_stats
-
-
 characters$char_id = characters$id
 
 psych_stats$personality_category <- sapply(psych_stats$personality, categorize_personality)
@@ -328,17 +324,18 @@ psychStatsCharactersMerged = merge(psychStatsCharactersMerged,
                                    avgNotability,
                                    by = "personality_category")
 
-pacman::p_load(RColorBrewer)
+
 
 
 personalityDistribution <- subset(personalityDistribution, personality_category != "Unknown")
+
 avgRating <- subset(avgRating, personality_category != "Unknown")
+
 avgNotability <- subset(avgNotability, personality_category != "Unknown")
 
-
-
-ggplot(personalityDistribution, aes(x = factor(fct_rev(fct_inorder(personality_category))), 
-                                    y = n)) +
+ggplot(personalityDistribution, 
+       aes(x = factor(
+fct_rev(fct_inorder(personality_category))), y = n)) +
   geom_bar(stat = "identity", aes(fill=(personality_category)), color = "black") + scale_fill_brewer(palette = "Reds") + labs(title = "Frequency distribution of character personality traits",
        x = "Personality Traits",
        y = "Frequency")  +
@@ -348,17 +345,32 @@ ggplot(personalityDistribution, aes(x = factor(fct_rev(fct_inorder(personality_c
         plot.title = element_text(hjust = 0.5), legend.position = "none") + geom_label(aes(x=(factor(fct_rev(fct_inorder(personality_category)))),    y = n, label=floor(n), hjust = ifelse(personality_category=="Intellectual Traits",1.2, -.1)), , color = "black", alpha = .7)
 
 
-
-
-ggplot(avgRating, aes(x = factor(fct_rev(fct_inorder(personality_category))), y = avg_rating)) +
-  geom_bar(stat = "identity", aes(fill= (personality_category)), color = "black") +
+ggplot(avgRating, aes(x = factor(
+                            fct_rev(
+                              fct_inorder(
+                                personality_category))), 
+                      y = avg_rating)) +
+  geom_bar(stat = "identity", 
+           aes(fill = (personality_category)), 
+           color = "black") +
   labs(title = "Average rating by character personality traits",
        x = "Personality Traits",
        y = "Average Rating")  +
   coord_flip() +
-  theme_minimal() + scale_fill_brewer(palette = "YlOrBr")+
+  theme_minimal() + 
+  scale_fill_brewer(palette = "YlOrBr")+
   theme(axis.text.x = element_text(hjust = 1),
-        plot.title = element_text(hjust = 0.5), legend.position = "none")+ geom_label(aes(x=(factor(fct_rev(fct_inorder(personality_category)))),    y = avg_rating, label=floor(avg_rating)), hjust = 2.5, color = "black", alpha = .7)
+        plot.title = element_text(hjust = 0.5), 
+        legend.position = "none") + 
+  geom_label(aes(x = (
+                  factor(
+                    fct_rev(
+                      fct_inorder(
+                        personality_category)))), 
+                  y = avg_rating, 
+                  label = floor(avg_rating)), 
+             hjust = 2.5, color = "black", 
+             alpha = .7)
 
 
 ggplot(avgNotability, aes(x = factor(fct_rev(fct_inorder(personality_category))), y = avg_notability)) +
