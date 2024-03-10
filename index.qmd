@@ -300,6 +300,18 @@ categorize_personality <- function(personality_trait) {
 }
 ```
 
+## Question 2:
+
+What is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?
+
+### **Introduction**
+
+Intriguing insights into the dynamics of character perception and storytelling impact can be gained by examining the frequency distribution of personality qualities in characters and how they relate to average ratings. One could explore whether a character that is commonly perceived as honourable or righteous has a resonance with the audience, or even a more fulfilling character arc. Tying this to the real-world it could be utilised to determine whether traits such as lazy correlate to a lesser perception of an individual from their peers.
+
+**Approach**
+
+To address these problems comprehensively, we will conduct a multifaceted analysis of the Psychometrics Project dataset. Initially, we will scrutinize the frequency distribution of character personality traits across the entire dataset. This examination will involve quantifying the occurrence of each personality trait and visualizing the distribution using appropriate graphical representations, such as bar charts or radar charts.Subsequently, we will delve into exploring the correlation between character personality traits and their average ratings. This analytical pursuit necessitates calculating the correlation coefficient to ascertain the degree of association between personality trait scores and average ratings. Visualization techniques, such as scatter plots coupled with regression analysis, will aid in elucidating the nature and strength of this correlation, we will investigate the potential variability of character notability scores contingent upon their respective personality traits. Employing statistical methodologies( write what methods did you use)Moreover, we will assess whether there exist significant differences in notability scores across distinct personality trait categories. Visual aids such as density plots and bar plots will complement this analysis, providing clear illustrations of any discernible variations in notability scores among different personality trait cohorts. By meticulously examining these facets of the dataset, we aim to derive profound insights into the interplay between character personality traits, average ratings, and notability scores. Such insights hold the dynamics underlying character portrayal and reception within the dataset, thereby contributing to a deeper understanding of human behavior and perception in the context of fictional character depiction.
+
 ```{r question 2}
 
 characters$char_id = characters$id
