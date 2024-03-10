@@ -83,15 +83,22 @@ Team Byte Coders: Mobolaji Adewale, Srinivasan Poonkundran, Tanya Evita George, 
 How do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?
 
 ## 
+
 # Plot 1
 
-##
-# Insights
+![Image Credit: Byte Coders.](data/universePlot.png){fig-align="center" width="500"}
 
-##
+# Insights
+-   The plot highlights the vast differences between Myers-Briggs personality type occurrences in different universes.
+-   To exemplify, "Buffy the Vampire Slayer" has a larger amount of introverted characters than extroverted which contrasts with "Downton Abbey" which appears to contain more extroverted characters than introverted.
+-   This could allow for inferences concerning whether specific genres of media are inherently built with introverted or extroverted characters (i.e. action should presumably comprise of more extroverts).
+
+## 
+
 #Plot 2
 
-##
+## 
+
 # Insights
 
 ## Question 2:
@@ -101,24 +108,25 @@ How do Myers-Briggs personality types distribute across different universes, and
 What is the frequency distribution of character personality traits across all characters, and how does it correlate with their average rating? Furthermore, do character notability scores vary significantly based on their personality traits?
 
 ## 
+
 # Plot 1
 
 
-##
+## 
+
 # Insights
 
+## 
 
-##
 #Plot 2
 
-##
-# Insights
+## 
 
+# Insights
 
 ## Conclusion
 
-##
--   
+## \##
 
 # Using Quarto for presentations
 
@@ -204,7 +212,7 @@ penguins |>
 
 ## Images
 
-![Image credit: Danielle Navarro, Percolate.](images/watercolour_sys02_img34_teacup-ocean.png){fig-align="center" width="500"}
+![Image credit: Danielle Navarro, Percolate.](data/universePlot.png){fig-align="center" width="500"}
 
 ## Math Expressions {.smaller}
 
