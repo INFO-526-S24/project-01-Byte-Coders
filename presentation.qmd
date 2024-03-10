@@ -133,8 +133,8 @@ What is the frequency distribution of character personality traits across all ch
 
 #### Insights
 
-- kjscnsjknj
-- vndkkj
+- This plot shows the distribution of average rating of different groups of personality.
+- While every group is zero skewed, only 'balanced' and 'other' traits are right skewed.
 
 ::: 
 
@@ -142,18 +142,23 @@ What is the frequency distribution of character personality traits across all ch
 
 ::: {.panel-tabset}
 
-#### Plot 
+#### Plot
 
 ![ ](images/question2Part2Plot1.png){width="850"}
 
 #### Insights
+From the plot it is clear that there are very insignificant differences in the average notability score across the personality groups of different characters. 
 
 :::
 
 
-## Conclusion
+# Conclusion
+##
+- 
 
 ## 
+
+![](images/thanksfallon2.gif)
 
 # Using Quarto for presentations
 
