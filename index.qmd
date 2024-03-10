@@ -114,10 +114,10 @@ myersBriggsUniversePlot4 <- ggplot(myers_briggs_linked[starts_with(LETTERS[20:26
 
 
 
-ggsave("plot.png", myersBriggsUniversePlot1, width = 20, height = 15, units = c("in"))
-ggsave("plot2.png", myersBriggsUniversePlot2, width = 20, height = 15, units = c("in"))
-ggsave("plo3.png", myersBriggsUniversePlot3, width = 20, height = 15, units = c("in"))
-ggsave("plot4.png", myersBriggsUniversePlot4, width = 20, height = 15, units = c("in"))
+ggsave("data/universePlot.png", myersBriggsUniversePlot1, width = 20, height = 15, units = c("in"))
+ggsave("data/universePlot2.png", myersBriggsUniversePlot2, width = 20, height = 15, units = c("in"))
+ggsave("data/universePlot3.png", myersBriggsUniversePlot3, width = 20, height = 15, units = c("in"))
+ggsave("data/universePlot4.png", myersBriggsUniversePlot4, width = 20, height = 15, units = c("in"))
 
 
 
