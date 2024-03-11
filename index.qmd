@@ -146,7 +146,6 @@ ggsave("images/universePlot5.png", myersBriggsUniversePlot5, width = 20, height 
 
 ```
 
-
 ```{r}
 #| label: Question-One-B
 
