@@ -165,12 +165,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1:</a>
   <ul class="collapse">
-  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1">Introduction</a></li>
+  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1"><strong>Introduction</strong></a></li>
+  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach"><strong>Approach</strong></a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><strong>Analysis </strong></a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><strong>Discussion </strong></a></li>
   </ul></li>
   <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2:</a>
   <ul class="collapse">
   <li><a href="#introduction-2" id="toc-introduction-2" class="nav-link" data-scroll-target="#introduction-2"><strong>Introduction</strong></a></li>
+  <li><a href="#approach-1" id="toc-approach-1" class="nav-link" data-scroll-target="#approach-1"><strong>Approach</strong></a></li>
+  <li><a href="#analysis-1" id="toc-analysis-1" class="nav-link" data-scroll-target="#analysis-1"><strong>Analysis </strong></a></li>
+  <li><a href="#discussion-1" id="toc-discussion-1" class="nav-link" data-scroll-target="#discussion-1"><strong>Discussion </strong></a></li>
   </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion:</a></li>
   </ul>
 </nav>
     </div>
@@ -239,10 +246,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="question-1">Question 1:</h2>
 <p>How do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?</p>
 <section id="introduction-1" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-1">Introduction</h3>
+<h3 class="anchored" data-anchor-id="introduction-1"><strong>Introduction</strong></h3>
 <p>Question one is primarily an exploration of the varying personality types that exist across cultural media. It looks to investigate the differences in character personalities and motivations across differing universes, potentially identifying correlations between genres or settings. Additionally, an attempt to uncover a relationship between popular opinion of characters and their in-universe personas will be made: are anti-heroes liked more? Are villains viewed more negatively than heroes? These questions will be answered providing information about the prevalence and celebration of particular personality types, which enhance our comprehension of audience engagement and storytelling dynamics.</p>
-<p><strong>Approach</strong></p>
+</section>
+<section id="approach" class="level3">
+<h3 class="anchored" data-anchor-id="approach"><strong>Approach</strong></h3>
 <p>Initially the dataset was loaded from the “TidyTuesday” source using the <code>read.csv</code> function in R. The date and location columns were verified to ensure that they are in the correct data types. The dataset containing information about characters is where the Data Collected to visualise various universes and their personality traits from the Open Psychometrics Project website (or you can provide the link), By exploring the data and examining the structure of the dataset to understand its variables and general content. This includes inspecting the Characters, Psychology Stats, and Myers-Briggs tables which performs preprocessing of any necessary data steps, such as handling missing values, data type conversion, and cleaning up variable names Moreover, one of it could be exploring data analysis, distribution of character notability scores across different universes, inquire the distribution of personality traits among characters, including the most common traits and any notable patterns or trends analyzing the average ratings and standard deviations of personality traits to understand the variability within each trait, Exploring the distribution of Myers-Briggs personality types across characters and universes examining the percentage match of Myers-Briggs types and the number of user respondents for each character. To create visualizations to represent key findings from the exploring of data analysis. This could include bar plots, scatter plots, and radar plots to visualize distributions, correlations, and patterns with the notability scores for different types of Myer Briggs personality type, Through interpretation of statistical analysis tests to determine if there are momentous differences in character notability scores between universes there have been some statistical tests conducted to determine each character notability scores and personaltiy traits for Myers-Briggs types.</p>
+</section>
+<section id="analysis" class="level3">
+<h3 class="anchored" data-anchor-id="analysis"><strong>Analysis </strong></h3>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -336,7 +348,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>notabilityScores_TheWalkingDead</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/Question-One-BandC-1.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>Code</summary>
@@ -345,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>notabilityMeans_TheWalkingDead</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/Question-One-BandC-2.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>Code</summary>
@@ -355,7 +367,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>notabilityScores_GameOfThrones</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/Question-One-BandC-3.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>Code</summary>
@@ -365,7 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>notabilityMeans_GameOfThrones</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-3-4.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/Question-One-BandC-4.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>Code</summary>
@@ -424,13 +436,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>perNetwork_MeanNotability </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/plot4-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/Question-One-D-1.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"images/perNetwork_MeanNotability.png"</span>, perNetwork_MeanNotability, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">7</span>, <span class="at">units =</span> <span class="fu">c</span>(<span class="st">"in"</span>)) <span class="co">#</span><span class="re">END</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+</section>
+<section id="discussion" class="level3">
+<h3 class="anchored" data-anchor-id="discussion"><strong>Discussion </strong></h3>
 <p>A multiplicity of insights can be garnered from the multitude of graphs displayed while evaluating the myer-briggs personality types of various characters across media. To begin, a wide variation exists between almost every television show and film included within the data, showcasing that some universes hold more introverted characters, some more judging, some more perceptive and so on. While the data is far from exhaustive of all popular television, these insights did allow for further srutiny and comparison - such as recognising that Game of Thrones actually contains a large number of introverted characters, potentially attributed to its setting in the medieval period.</p>
 <p>Similarly, a closer inspection of The Walking Dead and Game of Thrones yielded interesting results. Based on the percentage match scores, which determine how close a character fitted their predominant personality type, it can be discerned that no one character held a strong enough percentage match average to declare that they held one, strict personality type: although some were close (above 70% percentage match average). In continuation, the mean notability scores yielded knowledge on which personalities resonated more with audiences in certain settings. The Walking Dead’s dystopian society may have had an impact on the popularity of ESFJ, ESTJ and INTJ types:</p>
 <ul>
@@ -510,8 +525,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction-2" class="level3">
 <h3 class="anchored" data-anchor-id="introduction-2"><strong>Introduction</strong></h3>
 <p>Intriguing insights into the dynamics of character perception and storytelling impact can be gained by examining the frequency distribution of personality qualities in characters and how they relate to average ratings. One could explore whether a character that is commonly perceived as honourable or righteous has a resonance with the audience, or even a more fulfilling character arc. Tying this to the real-world it could be utilised to determine whether traits such as lazy correlate to a lesser perception of an individual from their peers.</p>
-<p><strong>Approach</strong></p>
+</section>
+<section id="approach-1" class="level3">
+<h3 class="anchored" data-anchor-id="approach-1"><strong>Approach</strong></h3>
 <p>To address these problems comprehensively, we will conduct a multifaceted analysis of the Psychometrics Project dataset. Initially, we will scrutinize the frequency distribution of character personality traits across the entire dataset. This examination will involve quantifying the occurrence of each personality trait and visualizing the distribution using appropriate graphical representations, such as bar charts or radar charts.Subsequently, we will delve into exploring the correlation between character personality traits and their average ratings. This analytical pursuit necessitates calculating the correlation coefficient to ascertain the degree of association between personality trait scores and average ratings. Visualization techniques, such as scatter plots coupled with regression analysis, will aid in elucidating the nature and strength of this correlation, we will investigate the potential variability of character notability scores contingent upon their respective personality traits. Employing statistical methodologies( write what methods did you use)Moreover, we will assess whether there exist significant differences in notability scores across distinct personality trait categories. Visual aids such as density plots and bar plots will complement this analysis, providing clear illustrations of any discernible variations in notability scores among different personality trait cohorts. By meticulously examining these facets of the dataset, we aim to derive profound insights into the interplay between character personality traits, average ratings, and notability scores. Such insights hold the dynamics underlying character portrayal and reception within the dataset, thereby contributing to a deeper understanding of human behavior and perception in the context of fictional character depiction.</p>
+</section>
+<section id="analysis-1" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-1"><strong>Analysis </strong></h3>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -675,37 +695,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a>question2Part1Plot1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/question 2-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/Question-Two-Analysis-1.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>question2Part1Plot2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/question 2-2.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/Question-Two-Analysis-2.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>question2Part1Plot3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/question 2-3.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/Question-Two-Analysis-3.png" class="img-fluid" width="672"></p>
 </div>
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>question2Part2Plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/question 2-4.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/Question-Two-Analysis-4.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+</section>
+<section id="discussion-1" class="level3">
+<h3 class="anchored" data-anchor-id="discussion-1"><strong>Discussion </strong></h3>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
 <p>To sum up, the examination of Myers-Briggs personality types in different universes shows some interesting trends. Every universe displays a distinct distribution of personality types, indicating possible associations with media genres or topics. For example, whilst “Downton Abbey” features more outgoing characters, “Buffy the Vampire Slayer” tends to include more reclusive ones. This finding raises more questions about how preferences for storytelling could affect the characteristics of characters across genres.</p>
 <p>Furthermore, there is no discernible relationship between the average rating and the frequency distribution of character personality traits across all worlds. Characters generally obtain average ratings that are comparable regardless of their personality type. This implies that other elements, such as plot, character development, and acting ability, may have a greater impact on audience reaction than certain personality qualities.</p>
 <p>Moreover, there is little variation in character notability scores according to personality factors. The data shows that the average notability scores of the various personality categories don’t differ all that much. This suggests that a character’s relevance and impact within their own universe might have less to do with their personality attributes and more to do with how they are portrayed, role-played, and given weight in the story.</p>
 <p>In general, personality types and qualities seem to have less of an impact on audience perception and character notability than other aspects, even though they may add to the diversity and complexity of characters in different media universes. This emphasizes how difficult it is to develop characters and hold an audience’s interest in pop culture and entertainment.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
