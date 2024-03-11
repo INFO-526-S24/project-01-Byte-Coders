@@ -78,23 +78,63 @@ data("penguins")
 
 How do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?
 
-# Plot 1
+## Question 1 - Part 1 
 
-The number of characters that hold the highest correlation to a respective Myers-Briggs personality type:
+::: {.panel-tabset}
 
-![Image Credit: Byte Coders.](data/universePlot.png){fig-align="center" width="500"}
+#### Plot A
 
-# Insights
+![The number of characters that hold the highest correlation to a respective Myers-Briggs personality type:](data/universePlot.png){fig-align="center" width="500"}
 
+#### Plot B
+
+![THe number of characters that hold that highest correlation to a Myers-Briggs type: ](data/universePlot5.png){fig-align="center" width="500"}
+
+#### Insights
+::: {style = "font-size:14px"}
 -   The plot highlights the vast differences between Myers-Briggs personality type occurrences in different universes.
 -   To exemplify, "Buffy the Vampire Slayer" has a larger amount of introverted characters than extroverted which contrasts with "Downton Abbey" which appears to contain more extroverted characters than introverted.
 -   This could allow for inferences concerning whether specific genres of media are inherently built with introverted or extroverted characters (i.e. action should presumably comprise of more extroverts).
 
-## 
+:::
 
-# Plot 2
 
-# Insights
+## Question 1 - Part 2
+
+::: {.panel-tabset}
+
+#### Plot A
+
+![Notability scores of each character in The Walking Dead by personality type:](images/notabilityScores_TheWalkingDead.png){fig-align="center" width="700"}
+
+#### Plot B
+
+![Notability scores of each character in The Game of Thrones by personality type: ](images/notabilityScores_GameOfThrones.png){fig-align="center" width="700"}
+
+#### Insights
+
+- njfdndf
+
+:::
+
+
+## Question 1 - Part 3
+
+::: {.panel-tabset}
+
+#### Plot A
+
+![Notability mean in The Walking Dead by personality type:](images/notabilityMeans_TheWalkingDead.png){fig-align="center" width="700"}
+
+#### Plot B
+
+![Notability mean in The Game of Thrones by personality type: ](images/notabilityMeans_GameOfThrones.png){fig-align="center" width="700"}
+
+#### Insights
+
+- yoooooo
+
+:::
 
 ## Question 2:
 
