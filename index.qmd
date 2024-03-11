@@ -368,7 +368,7 @@ question2Part1Plot1 = ggplot(personalityDistribution,
                         coord_flip() +
                         theme_minimal()+
                         theme(axis.text.x = element_text( hjust = 1),
-                              plot.title = element_text(hjust = 0.5), legend.position = "none") + geom_label(aes(x=(factor(fct_rev(fct_inorder(personality_category)))),    y = n, label=floor(n), hjust = ifelse(personality_category=="Intellectual Traits",1.2, -.1)), , color = "black", alpha = .7)
+                              plot.title = element_text(hjust = 0.5), legend.position = "none", plot.background = element_rect(color = "white")) + geom_label(aes(x=(factor(fct_rev(fct_inorder(personality_category)))),    y = n, label=floor(n), hjust = ifelse(personality_category=="Intellectual Traits",1.2, -.1)), , color = "black", alpha = .7)
 
 
 question2Part1Plot2 = ggplot(avgRating, aes(x = factor(
@@ -387,7 +387,7 @@ question2Part1Plot2 = ggplot(avgRating, aes(x = factor(
                       scale_fill_brewer(palette = "YlOrBr")+
                       theme(axis.text.x = element_text(hjust = 1),
                             plot.title = element_text(hjust = 0.5), 
-                            legend.position = "none") + 
+                            legend.position = "none", plot.background = element_rect(color = "white")) + 
                       geom_label(aes(x = (
                                       factor(
                                         fct_rev(
@@ -407,7 +407,7 @@ question2Part2Plot = ggplot(avgNotability, aes(x = factor(fct_rev(fct_inorder(pe
                       coord_flip() +
                       theme_minimal() + scale_fill_brewer(palette = "Purples")+
                       theme(axis.text.x = element_text( hjust = 1),
-                            plot.title = element_text(hjust = 0.5), legend.position = "none") + geom_label(aes(x=(factor(fct_rev(fct_inorder(personality_category)))),    y = avg_notability, label=floor(avg_notability)), hjust = 2.5, color = "black", alpha = .7)
+                            plot.title = element_text(hjust = 0.5), legend.position = "none", plot.background = element_rect(color = "white")) + geom_label(aes(x=(factor(fct_rev(fct_inorder(personality_category)))),    y = avg_notability, label=floor(avg_notability)), hjust = 2.5, color = "black", alpha = .7)
 
 
 
@@ -424,7 +424,7 @@ oldPlot = ggplot(psychStatsCharactersSubset, aes(x = avg_rating)) +
 
 # saving the plots in png
 
-ggsave("images/question2Part1Plot1.png", question2Part1Plot1, width = 9, height = 5, units = c("in"))
+ggsave("images/question2Part1Plot1.png", question2Part1Plot1, width = 9, height = 5, units = c("in"), dpi = 14000)
 ggsave("images/question2Part1Plot2.png", question2Part1Plot2, width = 9, height = 5, units = c("in"))
 ggsave("images/question2Part1Plot3.png", question2Part1Plot3, width = 9, height = 5, units = c("in"))
 ggsave("images/question2Part2Plot1.png", question2Part2Plot, width = 9, height = 5, units = c("in"))

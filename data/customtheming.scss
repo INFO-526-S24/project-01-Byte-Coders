@@ -1,3 +1,7 @@
 /*-- scss:defaults --*/
 
-$body-bg: #ffffff;
+$body-bg: black;
+:root {
+    --r-main-color: #ffffff !important;
+    --r-heading-color: #ffffff !important;
+  }

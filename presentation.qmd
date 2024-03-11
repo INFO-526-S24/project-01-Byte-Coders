@@ -3,13 +3,13 @@ title: "Psychometric Analysis"
 subtitle: "INFO 526 - Fall 2023 - Project 1"
 author: "Team Byte Coders- Mobolaji Adewale, Srinivasan Poonkundran, Tanya Evita George, Rohit Vatsava Kalakala, Noureen Mithaigar"
 title-slide-attributes:
-  data-background-image: images/brain-2062057_1280.jpg
+  data-background-image: images/coverimg4.jpg
   data-background-size: stretch
-  data-background-opacity: "0.7"
+  data-background-opacity: "0.7 "
   data-slide-number: none
 format:
   revealjs:
-    theme:  ['data/customtheming.scss']
+    theme:  [white, 'data/customtheming.scss']
     transition: concave
     background-transition: fade
   
