@@ -3,7 +3,7 @@ title: "Psychometric Analysis"
 subtitle: "INFO 526 - Fall 2023 - Project 1"
 author: "Team Byte Coders- Mobolaji Adewale, Srinivasan Poonkundran, Tanya Evita George, Rohit Vatsava Kalakala, Noureen Mithaigar"
 title-slide-attributes:
-  data-background-image: images/coverimg4.jpg
+  data-background-image: images/coverimage6.jpg
   data-background-size: stretch
   data-background-opacity: "0.7 "
   data-slide-number: none
@@ -119,7 +119,7 @@ What is the frequency distribution of character personality traits across all ch
 - Different personality traits have been classified into different groups.
 - The frequency distribution of characters across multiple universes have been plotted along with their average rating from a score out of 100.
 - Regardless of the type of personality traits, the average rating remains similar.
-- The correlation between 
+- After looking into the data, it seems that there is no correlation between frequency distribution and average rating. 
 
 :::
 
