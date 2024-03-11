@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Byte Coders">
 
-<title>Project Title - Psychometric Analysis</title>
+<title>Byte Coders - Psychometric Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,22 +65,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./images/logo.webp" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -89,6 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -102,11 +112,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images\logo.webp" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Project Title</span>
+    <span class="navbar-title">Byte Coders</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -116,32 +129,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Project</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./proposal.html" rel="" target="" aria-current="page">
- <span class="menu-text">Proposal</span></a>
+    <a class="nav-link active" href="./proposal.html" aria-current="page"> 
+<span class="menu-text">Proposal</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./presentation.html" rel="" target="">
- <span class="menu-text">Presentation</span></a>
+    <a class="nav-link" href="./presentation.html"> 
+<span class="menu-text">Presentation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/INFO526-DataViz/project-01" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/INFO526-DataViz/project-01"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -189,10 +203,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
 
+
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"pacman"</span>)) </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">"pacman"</span>)</span>
@@ -217,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>characters <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -233,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/psych_stats.csv">Psych-Stats</a></p></li>
 </ul>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>charactersTop <span class="ot">&lt;-</span> <span class="fu">head</span>(characters)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>myers_briggsTop <span class="ot">&lt;-</span> <span class="fu">head</span>(myers_briggs)</span>
@@ -255,24 +271,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-
-<div id="roomaxwrit" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#roomaxwrit table {
+<div>
+<div id="bozcucptyc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bozcucptyc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#roomaxwrit thead, #roomaxwrit tbody, #roomaxwrit tfoot, #roomaxwrit tr, #roomaxwrit td, #roomaxwrit th {
+#bozcucptyc thead, #bozcucptyc tbody, #bozcucptyc tfoot, #bozcucptyc tr, #bozcucptyc td, #bozcucptyc th {
   border-style: none;
 }
 
-#roomaxwrit p {
+#bozcucptyc p {
   margin: 0;
   padding: 0;
 }
 
-#roomaxwrit .gt_table {
+#bozcucptyc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -298,12 +314,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_caption {
+#bozcucptyc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#roomaxwrit .gt_title {
+#bozcucptyc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -315,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#roomaxwrit .gt_subtitle {
+#bozcucptyc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -327,7 +343,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#roomaxwrit .gt_heading {
+#bozcucptyc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -339,13 +355,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_bottom_border {
+#bozcucptyc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_col_headings {
+#bozcucptyc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -360,7 +376,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_col_heading {
+#bozcucptyc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -380,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#roomaxwrit .gt_column_spanner_outer {
+#bozcucptyc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -392,15 +408,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#roomaxwrit .gt_column_spanner_outer:first-child {
+#bozcucptyc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#roomaxwrit .gt_column_spanner_outer:last-child {
+#bozcucptyc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#roomaxwrit .gt_column_spanner {
+#bozcucptyc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -412,11 +428,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#roomaxwrit .gt_spanner_row {
+#bozcucptyc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#roomaxwrit .gt_group_heading {
+#bozcucptyc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -442,7 +458,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#roomaxwrit .gt_empty_group_heading {
+#bozcucptyc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -457,15 +473,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#roomaxwrit .gt_from_md > :first-child {
+#bozcucptyc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#roomaxwrit .gt_from_md > :last-child {
+#bozcucptyc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#roomaxwrit .gt_row {
+#bozcucptyc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -484,7 +500,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#roomaxwrit .gt_stub {
+#bozcucptyc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -497,7 +513,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#roomaxwrit .gt_stub_row_group {
+#bozcucptyc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -511,15 +527,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#roomaxwrit .gt_row_group_first td {
+#bozcucptyc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#roomaxwrit .gt_row_group_first th {
+#bozcucptyc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#roomaxwrit .gt_summary_row {
+#bozcucptyc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -529,16 +545,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#roomaxwrit .gt_first_summary_row {
+#bozcucptyc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_first_summary_row.thick {
+#bozcucptyc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#roomaxwrit .gt_last_summary_row {
+#bozcucptyc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -548,7 +564,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_grand_summary_row {
+#bozcucptyc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -558,7 +574,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#roomaxwrit .gt_first_grand_summary_row {
+#bozcucptyc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -568,7 +584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_last_grand_summary_row_top {
+#bozcucptyc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -578,11 +594,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_striped {
+#bozcucptyc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#roomaxwrit .gt_table_body {
+#bozcucptyc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -591,7 +607,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_footnotes {
+#bozcucptyc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -605,7 +621,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_footnote {
+#bozcucptyc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -614,7 +630,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#roomaxwrit .gt_sourcenotes {
+#bozcucptyc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -628,7 +644,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#roomaxwrit .gt_sourcenote {
+#bozcucptyc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -636,129 +652,141 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#roomaxwrit .gt_left {
+#bozcucptyc .gt_left {
   text-align: left;
 }
 
-#roomaxwrit .gt_center {
+#bozcucptyc .gt_center {
   text-align: center;
 }
 
-#roomaxwrit .gt_right {
+#bozcucptyc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#roomaxwrit .gt_font_normal {
+#bozcucptyc .gt_font_normal {
   font-weight: normal;
 }
 
-#roomaxwrit .gt_font_bold {
+#bozcucptyc .gt_font_bold {
   font-weight: bold;
 }
 
-#roomaxwrit .gt_font_italic {
+#bozcucptyc .gt_font_italic {
   font-style: italic;
 }
 
-#roomaxwrit .gt_super {
+#bozcucptyc .gt_super {
   font-size: 65%;
 }
 
-#roomaxwrit .gt_footnote_marks {
+#bozcucptyc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#roomaxwrit .gt_asterisk {
+#bozcucptyc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#roomaxwrit .gt_indent_1 {
+#bozcucptyc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#roomaxwrit .gt_indent_2 {
+#bozcucptyc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#roomaxwrit .gt_indent_3 {
+#bozcucptyc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#roomaxwrit .gt_indent_4 {
+#bozcucptyc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#roomaxwrit .gt_indent_5 {
+#bozcucptyc .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_heading">
-      <td colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Characters Dataframe</td>
-    </tr>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="id">id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="name">name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_id">uni_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_name">uni_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="notability">notability</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="link">link</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="image_link">image_link</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">79.7</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/2</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/2.jpg</td></tr>
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F1</td>
-<td headers="name" class="gt_row gt_left">Rachel Green</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">76.7</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/1</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/1.jpg</td></tr>
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F5</td>
-<td headers="name" class="gt_row gt_left">Chandler Bing</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">74.4</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/5</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/5.jpg</td></tr>
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F4</td>
-<td headers="name" class="gt_row gt_left">Joey Tribbiani</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">74.3</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/4</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/4.jpg</td></tr>
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F3</td>
-<td headers="name" class="gt_row gt_left">Phoebe Buffay</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">72.6</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/3</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/3.jpg</td></tr>
-    <tr><td headers="id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F6</td>
-<td headers="name" class="gt_row gt_left">Ross Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="notability" class="gt_row gt_right">51.6</td>
-<td headers="link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/stats/F/6</td>
-<td headers="image_link" class="gt_row gt_left">https://openpsychometrics.org/tests/characters/test-resources/pics/F/6.jpg</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border">Characters Dataframe</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">id</th>
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">name</th>
+<th id="uni_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_id</th>
+<th id="uni_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_name</th>
+<th id="notability" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">notability</th>
+<th id="link" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">link</th>
+<th id="image_link" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">image_link</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">79.7</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/2</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/2.jpg</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F1</td>
+<td class="gt_row gt_left" headers="name">Rachel Green</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">76.7</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/1</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/1.jpg</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F5</td>
+<td class="gt_row gt_left" headers="name">Chandler Bing</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">74.4</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/5</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/5.jpg</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F4</td>
+<td class="gt_row gt_left" headers="name">Joey Tribbiani</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">74.3</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/4</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/4.jpg</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F3</td>
+<td class="gt_row gt_left" headers="name">Phoebe Buffay</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">72.6</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/3</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/3.jpg</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="id" style="background-color: #B2F7EF; font-weight: bold">F6</td>
+<td class="gt_row gt_left" headers="name">Ross Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_right" headers="notability">51.6</td>
+<td class="gt_row gt_left" headers="link">https://openpsychometrics.org/tests/characters/stats/F/6</td>
+<td class="gt_row gt_left" headers="image_link">https://openpsychometrics.org/tests/characters/test-resources/pics/F/6.jpg</td>
+</tr>
+</tbody>
 </table>
+
+</div>
 </div>
 </div>
 </div>
@@ -810,7 +838,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>myers_briggsTop <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">"Myers-Briggs Dataframe"</span>) <span class="sc">%&gt;%</span></span>
@@ -825,24 +853,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-
-<div id="cidcdejtrz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cidcdejtrz table {
+<div>
+<div id="fuyuekjmsl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fuyuekjmsl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cidcdejtrz thead, #cidcdejtrz tbody, #cidcdejtrz tfoot, #cidcdejtrz tr, #cidcdejtrz td, #cidcdejtrz th {
+#fuyuekjmsl thead, #fuyuekjmsl tbody, #fuyuekjmsl tfoot, #fuyuekjmsl tr, #fuyuekjmsl td, #fuyuekjmsl th {
   border-style: none;
 }
 
-#cidcdejtrz p {
+#fuyuekjmsl p {
   margin: 0;
   padding: 0;
 }
 
-#cidcdejtrz .gt_table {
+#fuyuekjmsl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -868,12 +896,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_caption {
+#fuyuekjmsl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cidcdejtrz .gt_title {
+#fuyuekjmsl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -885,7 +913,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#cidcdejtrz .gt_subtitle {
+#fuyuekjmsl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -897,7 +925,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#cidcdejtrz .gt_heading {
+#fuyuekjmsl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -909,13 +937,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_bottom_border {
+#fuyuekjmsl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_col_headings {
+#fuyuekjmsl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -930,7 +958,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_col_heading {
+#fuyuekjmsl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -950,7 +978,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#cidcdejtrz .gt_column_spanner_outer {
+#fuyuekjmsl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -962,15 +990,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#cidcdejtrz .gt_column_spanner_outer:first-child {
+#fuyuekjmsl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cidcdejtrz .gt_column_spanner_outer:last-child {
+#fuyuekjmsl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cidcdejtrz .gt_column_spanner {
+#fuyuekjmsl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -982,11 +1010,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#cidcdejtrz .gt_spanner_row {
+#fuyuekjmsl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cidcdejtrz .gt_group_heading {
+#fuyuekjmsl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1012,7 +1040,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#cidcdejtrz .gt_empty_group_heading {
+#fuyuekjmsl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1027,15 +1055,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#cidcdejtrz .gt_from_md > :first-child {
+#fuyuekjmsl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cidcdejtrz .gt_from_md > :last-child {
+#fuyuekjmsl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cidcdejtrz .gt_row {
+#fuyuekjmsl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1054,7 +1082,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#cidcdejtrz .gt_stub {
+#fuyuekjmsl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1067,7 +1095,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#cidcdejtrz .gt_stub_row_group {
+#fuyuekjmsl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1081,15 +1109,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#cidcdejtrz .gt_row_group_first td {
+#fuyuekjmsl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cidcdejtrz .gt_row_group_first th {
+#fuyuekjmsl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cidcdejtrz .gt_summary_row {
+#fuyuekjmsl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1099,16 +1127,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#cidcdejtrz .gt_first_summary_row {
+#fuyuekjmsl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_first_summary_row.thick {
+#fuyuekjmsl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cidcdejtrz .gt_last_summary_row {
+#fuyuekjmsl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1118,7 +1146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_grand_summary_row {
+#fuyuekjmsl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1128,7 +1156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#cidcdejtrz .gt_first_grand_summary_row {
+#fuyuekjmsl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1138,7 +1166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_last_grand_summary_row_top {
+#fuyuekjmsl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1148,11 +1176,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_striped {
+#fuyuekjmsl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cidcdejtrz .gt_table_body {
+#fuyuekjmsl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1161,7 +1189,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_footnotes {
+#fuyuekjmsl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1175,7 +1203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_footnote {
+#fuyuekjmsl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1184,7 +1212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#cidcdejtrz .gt_sourcenotes {
+#fuyuekjmsl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1198,7 +1226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#cidcdejtrz .gt_sourcenote {
+#fuyuekjmsl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1206,129 +1234,141 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#cidcdejtrz .gt_left {
+#fuyuekjmsl .gt_left {
   text-align: left;
 }
 
-#cidcdejtrz .gt_center {
+#fuyuekjmsl .gt_center {
   text-align: center;
 }
 
-#cidcdejtrz .gt_right {
+#fuyuekjmsl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cidcdejtrz .gt_font_normal {
+#fuyuekjmsl .gt_font_normal {
   font-weight: normal;
 }
 
-#cidcdejtrz .gt_font_bold {
+#fuyuekjmsl .gt_font_bold {
   font-weight: bold;
 }
 
-#cidcdejtrz .gt_font_italic {
+#fuyuekjmsl .gt_font_italic {
   font-style: italic;
 }
 
-#cidcdejtrz .gt_super {
+#fuyuekjmsl .gt_super {
   font-size: 65%;
 }
 
-#cidcdejtrz .gt_footnote_marks {
+#fuyuekjmsl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cidcdejtrz .gt_asterisk {
+#fuyuekjmsl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cidcdejtrz .gt_indent_1 {
+#fuyuekjmsl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cidcdejtrz .gt_indent_2 {
+#fuyuekjmsl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cidcdejtrz .gt_indent_3 {
+#fuyuekjmsl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cidcdejtrz .gt_indent_4 {
+#fuyuekjmsl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cidcdejtrz .gt_indent_5 {
+#fuyuekjmsl .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_heading">
-      <td colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Myers-Briggs Dataframe</td>
-    </tr>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="char_id">char_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="char_name">char_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_id">uni_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_name">uni_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="myers_briggs">myers_briggs</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="avg_match_perc">avg_match_perc</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="number_users">number_users</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ESTJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">66.8</td>
-<td headers="number_users" class="gt_row gt_right">547</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ISTJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">63.3</td>
-<td headers="number_users" class="gt_row gt_right">1475</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ENTJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">63.1</td>
-<td headers="number_users" class="gt_row gt_right">2286</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ESFJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">62.8</td>
-<td headers="number_users" class="gt_row gt_right">592</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ENFJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">61.0</td>
-<td headers="number_users" class="gt_row gt_right">3842</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="myers_briggs" class="gt_row gt_left">ISFJ</td>
-<td headers="avg_match_perc" class="gt_row gt_right">60.7</td>
-<td headers="number_users" class="gt_row gt_right">1602</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="7" class="gt_heading gt_title gt_font_normal gt_bottom_border">Myers-Briggs Dataframe</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="char_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">char_id</th>
+<th id="char_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">char_name</th>
+<th id="uni_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_id</th>
+<th id="uni_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_name</th>
+<th id="myers_briggs" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">myers_briggs</th>
+<th id="avg_match_perc" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">avg_match_perc</th>
+<th id="number_users" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">number_users</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ESTJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">66.8</td>
+<td class="gt_row gt_right" headers="number_users">547</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ISTJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">63.3</td>
+<td class="gt_row gt_right" headers="number_users">1475</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ENTJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">63.1</td>
+<td class="gt_row gt_right" headers="number_users">2286</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ESFJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">62.8</td>
+<td class="gt_row gt_right" headers="number_users">592</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ENFJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">61.0</td>
+<td class="gt_row gt_right" headers="number_users">3842</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="myers_briggs">ISFJ</td>
+<td class="gt_row gt_right" headers="avg_match_perc">60.7</td>
+<td class="gt_row gt_right" headers="number_users">1602</td>
+</tr>
+</tbody>
 </table>
+
+</div>
 </div>
 </div>
 </div>
@@ -1380,7 +1420,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <div class="cell">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>psych_statsTop <span class="sc">%&gt;%</span> <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">"Psych Evaluation Dataframe"</span>) <span class="sc">%&gt;%</span></span>
@@ -1395,24 +1435,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-
-<div id="folkdyluhm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#folkdyluhm table {
+<div>
+<div id="gbwidxpqbl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gbwidxpqbl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#folkdyluhm thead, #folkdyluhm tbody, #folkdyluhm tfoot, #folkdyluhm tr, #folkdyluhm td, #folkdyluhm th {
+#gbwidxpqbl thead, #gbwidxpqbl tbody, #gbwidxpqbl tfoot, #gbwidxpqbl tr, #gbwidxpqbl td, #gbwidxpqbl th {
   border-style: none;
 }
 
-#folkdyluhm p {
+#gbwidxpqbl p {
   margin: 0;
   padding: 0;
 }
 
-#folkdyluhm .gt_table {
+#gbwidxpqbl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1438,12 +1478,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_caption {
+#gbwidxpqbl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#folkdyluhm .gt_title {
+#gbwidxpqbl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1455,7 +1495,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#folkdyluhm .gt_subtitle {
+#gbwidxpqbl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1467,7 +1507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#folkdyluhm .gt_heading {
+#gbwidxpqbl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1479,13 +1519,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_bottom_border {
+#gbwidxpqbl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_col_headings {
+#gbwidxpqbl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1500,7 +1540,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_col_heading {
+#gbwidxpqbl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1520,7 +1560,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#folkdyluhm .gt_column_spanner_outer {
+#gbwidxpqbl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1532,15 +1572,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#folkdyluhm .gt_column_spanner_outer:first-child {
+#gbwidxpqbl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#folkdyluhm .gt_column_spanner_outer:last-child {
+#gbwidxpqbl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#folkdyluhm .gt_column_spanner {
+#gbwidxpqbl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1552,11 +1592,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#folkdyluhm .gt_spanner_row {
+#gbwidxpqbl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#folkdyluhm .gt_group_heading {
+#gbwidxpqbl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1582,7 +1622,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#folkdyluhm .gt_empty_group_heading {
+#gbwidxpqbl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1597,15 +1637,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#folkdyluhm .gt_from_md > :first-child {
+#gbwidxpqbl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#folkdyluhm .gt_from_md > :last-child {
+#gbwidxpqbl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#folkdyluhm .gt_row {
+#gbwidxpqbl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1624,7 +1664,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#folkdyluhm .gt_stub {
+#gbwidxpqbl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1637,7 +1677,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#folkdyluhm .gt_stub_row_group {
+#gbwidxpqbl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1651,15 +1691,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#folkdyluhm .gt_row_group_first td {
+#gbwidxpqbl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#folkdyluhm .gt_row_group_first th {
+#gbwidxpqbl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#folkdyluhm .gt_summary_row {
+#gbwidxpqbl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1669,16 +1709,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#folkdyluhm .gt_first_summary_row {
+#gbwidxpqbl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_first_summary_row.thick {
+#gbwidxpqbl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#folkdyluhm .gt_last_summary_row {
+#gbwidxpqbl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1688,7 +1728,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_grand_summary_row {
+#gbwidxpqbl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1698,7 +1738,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#folkdyluhm .gt_first_grand_summary_row {
+#gbwidxpqbl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1708,7 +1748,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_last_grand_summary_row_top {
+#gbwidxpqbl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1718,11 +1758,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_striped {
+#gbwidxpqbl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#folkdyluhm .gt_table_body {
+#gbwidxpqbl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1731,7 +1771,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_footnotes {
+#gbwidxpqbl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1745,7 +1785,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_footnote {
+#gbwidxpqbl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1754,7 +1794,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#folkdyluhm .gt_sourcenotes {
+#gbwidxpqbl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1768,7 +1808,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#folkdyluhm .gt_sourcenote {
+#gbwidxpqbl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1776,150 +1816,162 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#folkdyluhm .gt_left {
+#gbwidxpqbl .gt_left {
   text-align: left;
 }
 
-#folkdyluhm .gt_center {
+#gbwidxpqbl .gt_center {
   text-align: center;
 }
 
-#folkdyluhm .gt_right {
+#gbwidxpqbl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#folkdyluhm .gt_font_normal {
+#gbwidxpqbl .gt_font_normal {
   font-weight: normal;
 }
 
-#folkdyluhm .gt_font_bold {
+#gbwidxpqbl .gt_font_bold {
   font-weight: bold;
 }
 
-#folkdyluhm .gt_font_italic {
+#gbwidxpqbl .gt_font_italic {
   font-style: italic;
 }
 
-#folkdyluhm .gt_super {
+#gbwidxpqbl .gt_super {
   font-size: 65%;
 }
 
-#folkdyluhm .gt_footnote_marks {
+#gbwidxpqbl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#folkdyluhm .gt_asterisk {
+#gbwidxpqbl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#folkdyluhm .gt_indent_1 {
+#gbwidxpqbl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#folkdyluhm .gt_indent_2 {
+#gbwidxpqbl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#folkdyluhm .gt_indent_3 {
+#gbwidxpqbl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#folkdyluhm .gt_indent_4 {
+#gbwidxpqbl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#folkdyluhm .gt_indent_5 {
+#gbwidxpqbl .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_heading">
-      <td colspan="10" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Psych Evaluation Dataframe</td>
-    </tr>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="char_id">char_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="char_name">char_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_id">uni_id</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="uni_name">uni_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="question">question</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="personality">personality</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="avg_rating">avg_rating</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="rank">rank</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="rating_sd">rating_sd</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="number_ratings">number_ratings</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">messy/neat</td>
-<td headers="personality" class="gt_row gt_left">neat</td>
-<td headers="avg_rating" class="gt_row gt_right">95.7</td>
-<td headers="rank" class="gt_row gt_right">9</td>
-<td headers="rating_sd" class="gt_row gt_right">11.7</td>
-<td headers="number_ratings" class="gt_row gt_right">1079</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">disorganized/self-disciplined</td>
-<td headers="personality" class="gt_row gt_left">self-disciplined</td>
-<td headers="avg_rating" class="gt_row gt_right">95.2</td>
-<td headers="rank" class="gt_row gt_right">27</td>
-<td headers="rating_sd" class="gt_row gt_right">11.2</td>
-<td headers="number_ratings" class="gt_row gt_right">1185</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">diligent/lazy</td>
-<td headers="personality" class="gt_row gt_left">diligent</td>
-<td headers="avg_rating" class="gt_row gt_right">93.9</td>
-<td headers="rank" class="gt_row gt_right">87</td>
-<td headers="rating_sd" class="gt_row gt_right">10.4</td>
-<td headers="number_ratings" class="gt_row gt_right">1166</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">on-time/tardy</td>
-<td headers="personality" class="gt_row gt_left">on-time</td>
-<td headers="avg_rating" class="gt_row gt_right">93.8</td>
-<td headers="rank" class="gt_row gt_right">34</td>
-<td headers="rating_sd" class="gt_row gt_right">14.3</td>
-<td headers="number_ratings" class="gt_row gt_right">236</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">competitive/cooperative</td>
-<td headers="personality" class="gt_row gt_left">competitive</td>
-<td headers="avg_rating" class="gt_row gt_right">93.6</td>
-<td headers="rank" class="gt_row gt_right">56</td>
-<td headers="rating_sd" class="gt_row gt_right">13.4</td>
-<td headers="number_ratings" class="gt_row gt_right">1168</td></tr>
-    <tr><td headers="char_id" class="gt_row gt_left" style="background-color: #B2F7EF; font-weight: bold;">F2</td>
-<td headers="char_name" class="gt_row gt_left">Monica Geller</td>
-<td headers="uni_id" class="gt_row gt_left">F</td>
-<td headers="uni_name" class="gt_row gt_left">Friends</td>
-<td headers="question" class="gt_row gt_left">scheduled/spontaneous</td>
-<td headers="personality" class="gt_row gt_left">scheduled</td>
-<td headers="avg_rating" class="gt_row gt_right">93.4</td>
-<td headers="rank" class="gt_row gt_right">23</td>
-<td headers="rating_sd" class="gt_row gt_right">14.5</td>
-<td headers="number_ratings" class="gt_row gt_right">1173</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="10" class="gt_heading gt_title gt_font_normal gt_bottom_border">Psych Evaluation Dataframe</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="char_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">char_id</th>
+<th id="char_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">char_name</th>
+<th id="uni_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_id</th>
+<th id="uni_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">uni_name</th>
+<th id="question" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">question</th>
+<th id="personality" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">personality</th>
+<th id="avg_rating" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">avg_rating</th>
+<th id="rank" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">rank</th>
+<th id="rating_sd" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">rating_sd</th>
+<th id="number_ratings" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">number_ratings</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">messy/neat</td>
+<td class="gt_row gt_left" headers="personality">neat</td>
+<td class="gt_row gt_right" headers="avg_rating">95.7</td>
+<td class="gt_row gt_right" headers="rank">9</td>
+<td class="gt_row gt_right" headers="rating_sd">11.7</td>
+<td class="gt_row gt_right" headers="number_ratings">1079</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">disorganized/self-disciplined</td>
+<td class="gt_row gt_left" headers="personality">self-disciplined</td>
+<td class="gt_row gt_right" headers="avg_rating">95.2</td>
+<td class="gt_row gt_right" headers="rank">27</td>
+<td class="gt_row gt_right" headers="rating_sd">11.2</td>
+<td class="gt_row gt_right" headers="number_ratings">1185</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">diligent/lazy</td>
+<td class="gt_row gt_left" headers="personality">diligent</td>
+<td class="gt_row gt_right" headers="avg_rating">93.9</td>
+<td class="gt_row gt_right" headers="rank">87</td>
+<td class="gt_row gt_right" headers="rating_sd">10.4</td>
+<td class="gt_row gt_right" headers="number_ratings">1166</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">on-time/tardy</td>
+<td class="gt_row gt_left" headers="personality">on-time</td>
+<td class="gt_row gt_right" headers="avg_rating">93.8</td>
+<td class="gt_row gt_right" headers="rank">34</td>
+<td class="gt_row gt_right" headers="rating_sd">14.3</td>
+<td class="gt_row gt_right" headers="number_ratings">236</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">competitive/cooperative</td>
+<td class="gt_row gt_left" headers="personality">competitive</td>
+<td class="gt_row gt_right" headers="avg_rating">93.6</td>
+<td class="gt_row gt_right" headers="rank">56</td>
+<td class="gt_row gt_right" headers="rating_sd">13.4</td>
+<td class="gt_row gt_right" headers="number_ratings">1168</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="char_id" style="background-color: #B2F7EF; font-weight: bold">F2</td>
+<td class="gt_row gt_left" headers="char_name">Monica Geller</td>
+<td class="gt_row gt_left" headers="uni_id">F</td>
+<td class="gt_row gt_left" headers="uni_name">Friends</td>
+<td class="gt_row gt_left" headers="question">scheduled/spontaneous</td>
+<td class="gt_row gt_left" headers="personality">scheduled</td>
+<td class="gt_row gt_right" headers="avg_rating">93.4</td>
+<td class="gt_row gt_right" headers="rank">23</td>
+<td class="gt_row gt_right" headers="rating_sd">14.5</td>
+<td class="gt_row gt_right" headers="number_ratings">1173</td>
+</tr>
+</tbody>
 </table>
+
+</div>
 </div>
 </div>
 </div>
@@ -2007,7 +2059,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://openpsychometrics.org/tests/characters/test-resources/pics/GOT/1.jpg" class="img-fluid figure-img" width="313"></p>
+<p><img src="https://openpsychometrics.org/tests/characters/test-resources/pics/GOT/1.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="313"></p>
 </figure>
 </div>
 </div>
@@ -2120,6 +2172,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -2179,10 +2375,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2192,8 +2387,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2206,6 +2410,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2249,6 +2572,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2274,6 +2598,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2334,6 +2684,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
