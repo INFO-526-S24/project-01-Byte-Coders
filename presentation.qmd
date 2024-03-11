@@ -83,11 +83,11 @@ How do Myers-Briggs personality types distribute across different universes, and
 ::: panel-tabset
 #### Plot A
 
-![The number of characters that hold the highest correlation to a respective Myers-Briggs personality type:](images/universePlot.png){fig-align="center" width="500"}
+![The number of characters that hold the highest correlation to a respective Myers-Briggs personality type:](images/universePlot.png){fig-align="center" width="660"}
 
 #### Plot B
 
-![The number of characters that hold that highest correlation to a Myers-Briggs type:](images/universePlot5.png){fig-align="center" width="500"}
+![The number of characters that hold that highest correlation to a Myers-Briggs type:](images/universePlot5.png){fig-align="center" width="750"}
 
 #### Insights
 

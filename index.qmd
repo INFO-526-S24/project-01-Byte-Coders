@@ -111,7 +111,7 @@ myers_briggs_linked <- myers_briggs_linked %>%
   arrange(by = uni_name)
 
 
-myersBriggsUniversePlot1 <- ggplot(myers_briggs_linked[starts_with(LETTERS[1:6], vars=myers_briggs_linked$uni_name),])+ theme_minimal() + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.05, color="black", position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled A - F") + coord_polar() + facet_wrap2(vars(uni_name))
+myersBriggsUniversePlot1 <- ggplot(myers_briggs_linked[starts_with(LETTERS[1:6], vars=myers_briggs_linked$uni_name),])+ theme_minimal() + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.05, color="black", position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled A - F", x = "Myers-Briggs Personality Type") + coord_polar() + facet_wrap2(vars(uni_name))
 
 
 myersBriggsUniversePlot2 <- ggplot(myers_briggs_linked[starts_with(LETTERS[7:13], vars=myers_briggs_linked$uni_name),]) + theme_minimal()+ geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.05, color="black", position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled G - M") + coord_polar() + facet_wrap2(vars(uni_name))
@@ -126,7 +126,7 @@ myersBriggsUniversePlot4 <- ggplot(myers_briggs_linked[starts_with(LETTERS[20:26
 
 
 
-myersBriggsUniversePlotZoomed <- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c("Brooklyn Nine-Nine", "Friends", "Game of Thrones", "The Walking Dead"),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.05, color="black", position=position_dodge()) + theme_minimal() + theme(axis.title.y = element_blank(), axis.text = element_text(size=10), panel.grid.minor=element_blank(), title = element_text(size=15), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="For four universes") + coord_polar() + facet_wrap2(vars(uni_name)) + scale_fill_brewer("PRGn")
+myersBriggsUniversePlotZoomed <- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c("Brooklyn Nine-Nine", "Friends", "Game of Thrones", "The Walking Dead"),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.05, color="black", position=position_dodge()) + theme_minimal() + theme(axis.title.y = element_blank(), axis.text = element_text(size=10), panel.grid.minor=element_blank(), title = element_text(size=15), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to\na respective Myers-Briggs Personality Type: ", subtitle="For four universes", x = "Myers-Briggs Personality Type") + coord_polar() + facet_wrap2(vars(uni_name)) + scale_fill_brewer("PRGn")
 
 
 
@@ -153,6 +153,7 @@ myersBriggsUniversePlot1
 
 ggsave("images/universePlot5.png", myersBriggsUniversePlotZoomed, width = 20, height = 10, units = c("in"))
 myersBriggsUniversePlotZoomed
+
 
 
 ```
@@ -247,7 +248,7 @@ myers_briggs_grouped_notability <- myers_briggs_grouped_notability %>%
 
 
 
-perNetwork_MeanNotability <- ggplot(myers_briggs_grouped_notability) + geom_bar(aes(x = myers_briggs, fill = Network, y = notability), stat="summary", fun = "mean", position = position_dodge(.9), width = .5, colour="black", size = 0.2) + theme_minimal() + theme(plot.background = element_rect(color = "white"), panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=9), panel.grid.major.x = element_blank(), ) + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,4))) + labs(title="Count of the myers-briggs type correlated to\nthe highest mean notability scores", subtitle="From every universe", x = "Myers Briggs Personality Type", y = "Mean notability") + facet_wrap2(vars(socialisation), scales = "free_x", nrow = 2) + scale_fill_brewer(palette = "YlOrRd") + scale_x_discrete(expand=(c(.1,.1))) + geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5) 
+perNetwork_MeanNotability <- ggplot(myers_briggs_grouped_notability) + geom_bar(aes(x = myers_briggs, fill = Network, y = notability), stat="summary", fun = "mean", position = position_dodge(.9), width = .5, colour="black", size = 0.2) + theme_minimal() + theme(plot.background = element_rect(color = "white"), panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=9), panel.grid.major.x = element_blank(), ) + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,4))) + labs(title="Mean of the Myers-Briggs personality types by Network", subtitle="From every universe", x = "Myers Briggs Personality Type", y = "Mean notability") + facet_wrap2(vars(socialisation), scales = "free_x", nrow = 2) + scale_fill_brewer(palette = "YlOrRd") + scale_x_discrete(expand=(c(.1,.1))) + geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5) 
 
 perNetwork_MeanNotability 
 
@@ -255,6 +256,21 @@ ggsave("images/perNetwork_MeanNotability.png", perNetwork_MeanNotability, width 
 
 
 ```
+A multiplicity of insights can be garnered from the multitude of graphs displayed while evaluating the myer-briggs personality types of various characters across media. To begin, a wide variation exists between almost every television show and film included within the data, showcasing that some universes hold more introverted characters, some more judging, some more perceptive and so on. While the data is far from exhaustive of all popular television, these insights did allow for further srutiny and comparison - such as recognising that Game of Thrones actually contains a large number of introverted characters, potentially attributed to its setting in the medieval period.
+
+Similarly, a closer inspection of The Walking Dead and Game of Thrones yielded interesting results. Based on the percentage match scores, which determine how close a character fitted their predominant personality type, it can be discerned that no one character held a strong enough percentage match average to declare that they held one, strict personality type: although some were close (above 70% percentage match average). In continuation, the mean notability scores yielded knowledge on which personalities resonated more with audiences in certain settings. The Walking Dead's dystopian society may have had an impact on the popularity of ESFJ, ESTJ and INTJ types: 
+
+-   ESFJ or Consuls, who are extremely social, generous and reliable
+-   ESTJ or Executives, who are diplomatic in nature and are diligent and efficient
+-   INTJ or Architects, who are complicated, introverts with high intellects that are straight-forward and rationale
+
+On the other hand, Game of Thrones' characterisations have yet to reveal drastic differences between character notability. This may reveal hidden factors that affect an audience's perception of characters and thus, their perceived noteworthiness.
+
+Finally, the mean notability of characters divided by network allows one to make a number of potential conclusions. From the data alone, AMC is better at producing Judging characters, while HBO and AMC have yet to create characters that fit every major personality type available.
+
+
+
+
 
 ```{r}
 categorize_personality <- function(personality_trait) {
