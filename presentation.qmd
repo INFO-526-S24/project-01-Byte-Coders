@@ -83,24 +83,28 @@ How do Myers-Briggs personality types distribute across different universes, and
 ::: panel-tabset
 #### Plot A
 
-![The number of characters that hold the highest correlation to a respective Myers-Briggs personality type:](data/universePlot.png){fig-align="center" width="500"}
+![The number of characters that hold the highest correlation to a respective Myers-Briggs personality type:](images/universePlot.png){fig-align="center" width="500"}
 
 #### Plot B
 
-![THe number of characters that hold that highest correlation to a Myers-Briggs type:](data/universePlot5.png){fig-align="center" width="500"}
+![The number of characters that hold that highest correlation to a Myers-Briggs type:](images/universePlot5.png){fig-align="center" width="500"}
 
 #### Insights
 
 ::: {#smallerTxt}
-- The plot highlights the vast differences between Myers-Briggs personality type occurrences in different universes. 
-- To exemplify, "Buffy the Vampire Slayer" has a larger amount of introverted characters than extroverted which contrasts with "Downton Abbey" which appears to contain more extroverted characters than introverted. 
-- This could allow for inferences concerning whether specific genres of media are inherently built with introverted or extroverted characters (i.e. action should presumably comprise of more extroverts).
+-   The plot highlights the vast differences between Myers-Briggs personality type occurrences in different universes.
+-   To exemplify, "Buffy the Vampire Slayer" has a larger amount of introverted characters than extroverted which contrasts with "Downton Abbey" which appears to contain more extroverted characters than introverted.
+-   This could allow for inferences concerning whether specific genres of media are inherently built with introverted or extroverted characters (i.e. action should presumably comprise of more extroverts).
 :::
+
+
 :::
+
 
 ## Question 1 - Part 2
 
 ::: panel-tabset
+
 #### Plot A
 
 ![Notability scores of each character in The Walking Dead by personality type:](images/notabilityScores_TheWalkingDead.png){fig-align="center" width="700"}
@@ -111,12 +115,15 @@ How do Myers-Briggs personality types distribute across different universes, and
 
 #### Insights
 
--   njfdndf
+-   Shows the notability scores for each character within their universe, grouped by their dominant personality type.
+-   The plot includes the percentage match value: which is by how much the character matches their dominant personality type - a confidence rating of sorts.
+-   From this information one can infer that: as only one character has a percentage match \> 70%, most characters do not entirely fit into one set personality type.
 :::
 
 ## Question 1 - Part 3
 
 ::: panel-tabset
+
 #### Plot A
 
 ![Notability mean in The Walking Dead by personality type:](images/notabilityMeans_TheWalkingDead.png){fig-align="center" width="700"}
@@ -127,7 +134,32 @@ How do Myers-Briggs personality types distribute across different universes, and
 
 #### Insights
 
--   yoooooo
+:::{#smallerTxt}
+-   The mean notability scores per personality type, which provides valuable information on universe's and how their characters are portrayed
+-   The most notable The Walking Dead characters, on average, are of the type ESJF (Extroverted, Observant, Feeling and Judging): commonly known as consuls, who prefer to include others in everything they do
+-   Noticeable from Game of Thrones is the apparent notability of almost every personality type, which could be a testament good character portrayal on-screen
+:::
+
+
+
+:::
+
+
+## Question 1 - Part 4
+
+::: panel-tabset
+
+#### Plot A
+
+![Mean notability of personality types, by television network:](images/perNetwork_MeanNotability.png){fig-align="center" height="500"}
+
+#### Insights
+
+-   The seperation of means into television networks provides interesting insights
+-   For starters: AMC and HBO fail to represent every single major personality type across all of their shows
+-   Also, HBO produces more notable characters amongst those that are both Introverted and Judging, but fails at producing characters that prospect (deal with problems only as they arise) well
+
+
 :::
 
 ## Question 2:
@@ -177,12 +209,16 @@ What is the frequency distribution of character personality traits across all ch
 
 #### Insights
 
-From the plot it is clear that there are very insignificant differences in the average notability score across the personality groups of different characters.
+-   From the plot it is clear that there are very insignificant differences in the average notability score across the personality groups of different characters.
 :::
 
 # Conclusion
 
-## \##
+-   Different universes have different Myers-Briggs distributions, which could be influenced by different genres.
+-   There was no discernible relationship between average rating and personality groups.
+-   There is little variation in character notability scores according to personality traits.
+
+## \#
 
 ## 
 

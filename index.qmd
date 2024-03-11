@@ -68,7 +68,7 @@ Question one is primarily an exploration of the varying personality types that e
 Initially the dataset was loaded from the "TidyTuesday" source using the `read.csv` function in R. The date and location columns were verified to ensure that they are in the correct data types. The dataset containing information about characters is where the Data Collected to visualise various universes and their personality traits from the Open Psychometrics Project website (or you can provide the link), By exploring the data and examining the structure of the dataset to understand its variables and general content. This includes inspecting the Characters, Psychology Stats, and Myers-Briggs tables which performs preprocessing of any necessary data steps, such as handling missing values, data type conversion, and cleaning up variable names Moreover, one of it could be exploring data analysis, distribution of character notability scores across different universes, inquire the distribution of personality traits among characters, including the most common traits and any notable patterns or trends analyzing the average ratings and standard deviations of personality traits to understand the variability within each trait, Exploring the distribution of Myers-Briggs personality types across characters and universes examining the percentage match of Myers-Briggs types and the number of user respondents for each character. To create visualizations to represent key findings from the exploring of data analysis. This could include bar plots, scatter plots, and radar plots to visualize distributions, correlations, and patterns with the notability scores for different types of Myer Briggs personality type, Through interpretation of statistical analysis tests to determine if there are momentous differences in character notability scores between universes there have been some statistical tests conducted to determine each character notability scores and personaltiy traits for Myers-Briggs types.
 
 ```{r}
-#| label: Question-One-A
+#| label: Question-One-A-i
 #| fig-height: 10
 #| fig-width: 11
  
@@ -135,10 +135,23 @@ ggsave("images/universePlot.png", myersBriggsUniversePlot1, width = 20, height =
 ggsave("images/universePlot2.png", myersBriggsUniversePlot2, width = 20, height = 15, units = c("in"))
 ggsave("images/universePlot3.png", myersBriggsUniversePlot3, width = 20, height = 15, units = c("in"))
 ggsave("images/universePlot4.png", myersBriggsUniversePlot4, width = 20, height = 15, units = c("in"))
-ggsave("images/universePlot5.png", myersBriggsUniversePlot4, width = 20, height = 15, units = c("in"))
+
 
 
 myersBriggsUniversePlot1
+
+
+
+
+
+```
+
+```{r}
+#| label: Question-One-A-ii
+#| fig-height: 8
+#| fig-width: 10
+
+ggsave("images/universePlot5.png", myersBriggsUniversePlotZoomed, width = 20, height = 10, units = c("in"))
 myersBriggsUniversePlotZoomed
 
 
