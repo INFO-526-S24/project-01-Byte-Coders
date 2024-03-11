@@ -468,7 +468,7 @@ oldPlot = ggplot(psychStatsCharactersSubset, aes(x = avg_rating)) +
 
 # saving the plots in png
 
-ggsave("images/question2Part1Plot1.png", question2Part1Plot1, width = 9, height = 5, units = c("in"), dpi = 14000)
+ggsave("images/question2Part1Plot1.png", question2Part1Plot1, width = 9, height = 5, units = c("in"))
 ggsave("images/question2Part1Plot2.png", question2Part1Plot2, width = 9, height = 5, units = c("in"))
 ggsave("images/question2Part1Plot3.png", question2Part1Plot3, width = 9, height = 5, units = c("in"))
 ggsave("images/question2Part2Plot1.png", question2Part2Plot, width = 9, height = 5, units = c("in"))

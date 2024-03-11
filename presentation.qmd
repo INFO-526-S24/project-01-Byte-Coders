@@ -78,62 +78,56 @@ data("penguins")
 
 How do Myers-Briggs personality types distribute across different universes, and how does the average match percentage vary within each universe? Additionally, is there any correlation between character notability scores and their Myers-Briggs types within each universe?
 
-## Question 1 - Part 1 
+## Question 1 - Part 1
 
-::: {.panel-tabset}
-
+::: panel-tabset
 #### Plot A
 
 ![The number of characters that hold the highest correlation to a respective Myers-Briggs personality type:](data/universePlot.png){fig-align="center" width="500"}
 
 #### Plot B
 
-![THe number of characters that hold that highest correlation to a Myers-Briggs type: ](data/universePlot5.png){fig-align="center" width="500"}
+![THe number of characters that hold that highest correlation to a Myers-Briggs type:](data/universePlot5.png){fig-align="center" width="500"}
 
 #### Insights
-::: {style = "font-size:14px"}
--   The plot highlights the vast differences between Myers-Briggs personality type occurrences in different universes.
--   To exemplify, "Buffy the Vampire Slayer" has a larger amount of introverted characters than extroverted which contrasts with "Downton Abbey" which appears to contain more extroverted characters than introverted.
--   This could allow for inferences concerning whether specific genres of media are inherently built with introverted or extroverted characters (i.e. action should presumably comprise of more extroverts).
 
+::: {#smallerTxt}
+- The plot highlights the vast differences between Myers-Briggs personality type occurrences in different universes. 
+- To exemplify, "Buffy the Vampire Slayer" has a larger amount of introverted characters than extroverted which contrasts with "Downton Abbey" which appears to contain more extroverted characters than introverted. 
+- This could allow for inferences concerning whether specific genres of media are inherently built with introverted or extroverted characters (i.e. action should presumably comprise of more extroverts).
 :::
-
+:::
 
 ## Question 1 - Part 2
 
-::: {.panel-tabset}
-
+::: panel-tabset
 #### Plot A
 
 ![Notability scores of each character in The Walking Dead by personality type:](images/notabilityScores_TheWalkingDead.png){fig-align="center" width="700"}
 
 #### Plot B
 
-![Notability scores of each character in The Game of Thrones by personality type: ](images/notabilityScores_GameOfThrones.png){fig-align="center" width="700"}
+![Notability scores of each character in The Game of Thrones by personality type:](images/notabilityScores_GameOfThrones.png){fig-align="center" width="700"}
 
 #### Insights
 
-- njfdndf
-
+-   njfdndf
 :::
-
 
 ## Question 1 - Part 3
 
-::: {.panel-tabset}
-
+::: panel-tabset
 #### Plot A
 
 ![Notability mean in The Walking Dead by personality type:](images/notabilityMeans_TheWalkingDead.png){fig-align="center" width="700"}
 
 #### Plot B
 
-![Notability mean in The Game of Thrones by personality type: ](images/notabilityMeans_GameOfThrones.png){fig-align="center" width="700"}
+![Notability mean in The Game of Thrones by personality type:](images/notabilityMeans_GameOfThrones.png){fig-align="center" width="700"}
 
 #### Insights
 
-- yoooooo
-
+-   yoooooo
 :::
 
 ## Question 2:
@@ -144,57 +138,51 @@ What is the frequency distribution of character personality traits across all ch
 
 ## Question 2 - Part 1
 
-::: {.panel-tabset}
-
+::: panel-tabset
 #### Plot A
 
-![ ](images/question2Part1Plot1.png){width="850"}
+![](images/question2Part1Plot1.png){width="850"}
 
 #### Plot B
 
-![ ](images/question2Part1Plot2.png){width="850"}
+![](images/question2Part1Plot2.png){width="850"}
 
 #### Insights
 
-- Different personality traits have been classified into different groups.
-- The frequency distribution of characters across multiple universes have been plotted along with their average rating from a score out of 100.
-- Regardless of the type of personality traits, the average rating remains similar.
-- After looking into the data, it seems that there is no correlation between frequency distribution and average rating. 
-
+-   Different personality traits have been classified into different groups.
+-   The frequency distribution of characters across multiple universes have been plotted along with their average rating from a score out of 100.
+-   Regardless of the type of personality traits, the average rating remains similar.
+-   After looking into the data, it seems that there is no correlation between frequency distribution and average rating.
 :::
 
 ## Question 2 - Part 1
 
-::: {.panel-tabset}
-
+::: panel-tabset
 #### Plot C
 
-![ ](images/question2Part1Plot3.png){width="850"}
+![](images/question2Part1Plot3.png){width="850"}
 
 #### Insights
 
-- This plot shows the distribution of average rating of different groups of personality.
-- While every group is zero skewed, only 'balanced' and 'other' traits are right skewed.
-
-::: 
+-   This plot shows the distribution of average rating of different groups of personality.
+-   While every group is zero skewed, only 'balanced' and 'other' traits are right skewed.
+:::
 
 ## Question 2 - Part 2
 
-::: {.panel-tabset}
-
+::: panel-tabset
 #### Plot
 
-![ ](images/question2Part2Plot1.png){width="850"}
+![](images/question2Part2Plot1.png){width="850"}
 
 #### Insights
-From the plot it is clear that there are very insignificant differences in the average notability score across the personality groups of different characters. 
 
+From the plot it is clear that there are very insignificant differences in the average notability score across the personality groups of different characters.
 :::
 
-
 # Conclusion
-##
-- 
+
+## \##
 
 ## 
 
