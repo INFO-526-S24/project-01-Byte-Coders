@@ -634,6 +634,7 @@ To address these problems comprehensively, we will conduct a multifaceted analys
 ```{r question 2}
 #| label: Question-Two-Analysis
 
+# Data Wrangling
 characters$char_id = characters$id
 
 psych_stats$personality_category <- sapply(psych_stats$personality, categorize_personality)
@@ -679,6 +680,7 @@ avgRating = subset(avgRating, personality_category != "Unknown")
 
 avgNotability = subset(avgNotability, personality_category != "Unknown")
 
+# Frequency distribution of character grouped personality traits
 question2Part1Plot1 = ggplot(personalityDistribution, 
                             aes(x = factor(
                       fct_rev(fct_inorder(personality_category))), y = n)) +
@@ -700,7 +702,9 @@ question2Part1Plot1 = ggplot(personalityDistribution,
                                       color = "black", 
                                       alpha = 0.7)
 
+question2Part1Plot1
 
+# "Average rating by character grouped personality traits
 question2Part1Plot2 = ggplot(avgRating, aes(x = factor(
                                                 fct_rev(
                                                   fct_inorder(
@@ -730,7 +734,30 @@ question2Part1Plot2 = ggplot(avgRating, aes(x = factor(
                                 color = "black", 
                                 alpha = 0.7)
 
+question2Part1Plot2
 
+
+
+# Density ridges plot of grouped personality traits
+question2Part1Plot3 = ggplot(psychStatsCharactersSubset, 
+                              aes(x = avg_rating, 
+                                  y = factor(fct_rev(personality_category)))) +
+                      geom_density_ridges(aes(fill = factor(fct_rev(
+                                                              personality_category))), 
+                                                              alpha = 0.6) + 
+                      theme_minimal() + 
+                      theme(legend.position = "none", 
+                            plot.background = element_rect(color = "white")) + 
+                      labs(title = "Density ridges plot of grouped personality traits", 
+                      x = "Average Rating", y = "Grouped Personality Traits") + scale_fill_brewer(palette = "Greens") + 
+                      geom_vline(xintercept = 100, 
+                                  color = "black", 
+                                  alpha = 0.7, 
+                                  linetype = "dashed")
+
+question2Part1Plot3
+
+# Average notability by character grouped personality traits
 question2Part2Plot = ggplot(avgNotability, aes(x = factor(
                                                     fct_rev(
                                                       fct_inorder(
@@ -757,46 +784,17 @@ question2Part2Plot = ggplot(avgNotability, aes(x = factor(
                                             color = "black", 
                                             alpha = 0.7)
 
-
-
-
-question2Part1Plot3 = ggplot(psychStatsCharactersSubset, 
-                              aes(x = avg_rating, 
-                                  y = factor(fct_rev(personality_category)))) +
-                      geom_density_ridges(aes(fill = factor(fct_rev(
-                                                              personality_category))), 
-                                                              alpha = 0.6) + 
-                      theme_minimal() + 
-                      theme(legend.position = "none", 
-                            plot.background = element_rect(color = "white")) + 
-                      labs(title="Density ridges plot of grouped personality traits", 
-                      x = "Average Rating", y = "Grouped Personality Traits") + scale_fill_brewer(palette = "Greens") + 
-                      geom_vline(xintercept = 100, 
-                                  color = "black", 
-                                  alpha = 0.7, 
-                                  linetype = "dashed")
-
-# old plot q2p2
-oldPlot = ggplot(psychStatsCharactersSubset, aes(x = avg_rating)) +
-                      geom_density(aes(fill = personality_category), alpha = .7) +
-                      facet_wrap(~personality_category, dir = "v") +
-                      theme_minimal() + scale_fill_brewer(palette = "Greens") + scale_y_continuous(breaks = seq(0,0.04, 0.04)) + theme(legend.position = "none", axis.text.x=element_text(angle = c(45,rep(0,4),45))) + labs(title="Density plot of grouped personality traits", x="Average Rating", y="Density")
-
+question2Part2Plot
 
 # saving the plots in png
-
 ggsave("images/question2Part1Plot1.png", question2Part1Plot1, width = 9, height = 5, units = c("in"))
 ggsave("images/question2Part1Plot2.png", question2Part1Plot2, width = 9, height = 5, units = c("in"))
 ggsave("images/question2Part1Plot3.png", question2Part1Plot3, width = 9, height = 5, units = c("in"))
 ggsave("images/question2Part2Plot1.png", question2Part2Plot, width = 9, height = 5, units = c("in"))
 
-
-question2Part1Plot1
-question2Part1Plot2
-question2Part1Plot3
-question2Part2Plot
-
 ```
+
+
 ### **Discussion **
 
 
