@@ -65,7 +65,7 @@ Question one is primarily an exploration of the varying personality types that e
 
 **Approach**
 
-Initially the dataset was loaded from the \"TidyTuesday\" source using the `read.csv` function in R. The date and location columns were verified to ensure that they are in the correct data types. The dataset containing information about characters is where the Data Collected to visualise various universes and their personality traits from the Open Psychometrics Project website (or you can provide the link), By exploring the data and examining the structure of the dataset to understand its variables and general content. This includes inspecting the Characters, Psychology Stats, and Myers-Briggs tables which performs preprocessing of any necessary data steps, such as handling missing values, data type conversion, and cleaning up variable names Moreover, one of it could be exploring data analysis, distribution of character notability scores across different universes, inquire the distribution of personality traits among characters, including the most common traits and any notable patterns or trends analyzing the average ratings and standard deviations of personality traits to understand the variability within each trait, Exploring the distribution of Myers-Briggs personality types across characters and universes examining the percentage match of Myers-Briggs types and the number of user respondents for each character. To create visualizations to represent key findings from the exploring of data analysis. This could include bar plots, scatter plots, and radar plots to visualize distributions, correlations, and patterns with the notability scores for different types of Myer Briggs personality type, Through interpretation of statistical analysis tests to determine if there are momentous differences in character notability scores between universes there have been some statistical tests conducted to determine each character notability scores and personaltiy traits for Myers-Briggs types.
+Initially the dataset was loaded from the "TidyTuesday" source using the `read.csv` function in R. The date and location columns were verified to ensure that they are in the correct data types. The dataset containing information about characters is where the Data Collected to visualise various universes and their personality traits from the Open Psychometrics Project website (or you can provide the link), By exploring the data and examining the structure of the dataset to understand its variables and general content. This includes inspecting the Characters, Psychology Stats, and Myers-Briggs tables which performs preprocessing of any necessary data steps, such as handling missing values, data type conversion, and cleaning up variable names Moreover, one of it could be exploring data analysis, distribution of character notability scores across different universes, inquire the distribution of personality traits among characters, including the most common traits and any notable patterns or trends analyzing the average ratings and standard deviations of personality traits to understand the variability within each trait, Exploring the distribution of Myers-Briggs personality types across characters and universes examining the percentage match of Myers-Briggs types and the number of user respondents for each character. To create visualizations to represent key findings from the exploring of data analysis. This could include bar plots, scatter plots, and radar plots to visualize distributions, correlations, and patterns with the notability scores for different types of Myer Briggs personality type, Through interpretation of statistical analysis tests to determine if there are momentous differences in character notability scores between universes there have been some statistical tests conducted to determine each character notability scores and personaltiy traits for Myers-Briggs types.
 
 ```{r}
 #| label: Question-One-A
@@ -117,37 +117,38 @@ myers_briggs_linked <- myers_briggs_linked %>%
 
 
 
+myersBriggsUniversePlot1 <- ggplot(myers_briggs_linked[starts_with(LETTERS[1:6], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), position=position_dodge(), color = "black", size = 0.05) + theme_minimal() + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled A - F") + coord_polar() + facet_wrap2(vars(uni_name))
+
+
+myersBriggsUniversePlot2 <- ggplot(myers_briggs_linked[starts_with(LETTERS[7:13], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), position=position_dodge(), color = "black", size = 0.05) + theme_minimal() + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled G - M") + coord_polar() + facet_wrap2(vars(uni_name))
+
+
+myersBriggsUniversePlot3 <- ggplot(myers_briggs_linked[starts_with(LETTERS[14:19], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), position=position_dodge(), color = "black", size = 0.05) + theme_minimal() + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled N - S") + coord_polar() + facet_wrap2(vars(uni_name))
+
+
+myersBriggsUniversePlot4 <- ggplot(myers_briggs_linked[starts_with(LETTERS[20:26], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), position=position_dodge(), color = "black", size = 0.05) + theme_minimal() + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled T - Z") + coord_polar() + facet_wrap2(vars(uni_name))
 
 
 
 
 
-myersBriggsUniversePlot1 <- ggplot(myers_briggs_linked[starts_with(LETTERS[1:6], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled A - F") + coord_polar() + facet_wrap2(vars(uni_name))
-
-
-myersBriggsUniversePlot2 <- ggplot(myers_briggs_linked[starts_with(LETTERS[7:13], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled G - M") + coord_polar() + facet_wrap2(vars(uni_name))
-
-
-myersBriggsUniversePlot3 <- ggplot(myers_briggs_linked[starts_with(LETTERS[14:19], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled N - S") + coord_polar() + facet_wrap2(vars(uni_name))
-
-
-myersBriggsUniversePlot4 <- ggplot(myers_briggs_linked[starts_with(LETTERS[20:26], vars=myers_briggs_linked$uni_name),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.8, position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled T - Z") + coord_polar() + facet_wrap2(vars(uni_name))
+ggsave("images/universePlot.png", myersBriggsUniversePlot1, width = 20, height = 15, units = c("in"))
+ggsave("images/universePlot2.png", myersBriggsUniversePlot2, width = 20, height = 15, units = c("in"))
+ggsave("images/universePlot3.png", myersBriggsUniversePlot3, width = 20, height = 15, units = c("in"))
+ggsave("images/universePlot4.png", myersBriggsUniversePlot4, width = 20, height = 15, units = c("in"))
 
 
 
+myersBriggsUniversePlot5 <- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c("The Walking Dead", "Friends", "Game of Thrones", "Brooklyn Nine-Nine"),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), position=position_dodge(), color = "black", size = 0.05) + theme_minimal() + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled The Walking Dead, Friends, Game of Thrones and Brooklyn Nine-Nine") + coord_polar() + facet_wrap2(vars(uni_name)) + scale_fill_brewer(palette="PRGn")
 
 
-ggsave("data/universePlot.png", myersBriggsUniversePlot1, width = 20, height = 15, units = c("in"))
-ggsave("data/universePlot2.png", myersBriggsUniversePlot2, width = 20, height = 15, units = c("in"))
-ggsave("data/universePlot3.png", myersBriggsUniversePlot3, width = 20, height = 15, units = c("in"))
-ggsave("data/universePlot4.png", myersBriggsUniversePlot4, width = 20, height = 15, units = c("in"))
+ggsave("images/universePlot5.png", myersBriggsUniversePlot5, width = 20, height = 15, units = c("in"))
+
+```
 
 
-
-
-
-
-
+```{r}
+#| label: Question-One-B
 
 notabilityScores_TheWalkingDead <- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c("The Walking Dead"),], aes()) + theme_minimal() + geom_jitter(aes(x = myers_briggs, y = notability, pch=socialisation), position = position_jitter(seed=3))  + theme(plot.background = element_rect(color = "white"), axis.text = element_text(size=6), panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text.x = element_text(), panel.grid.major.x = element_blank()) + scale_y_continuous(breaks = scales::breaks_width(10)) + labs(title="Plot of the number of characters that are\npredominantly of a chosen personality type: ", subtitle="From The Walking Dead universe, with percentage match to said personality type highlighted", x = "Myers Briggs Personality Type", y = "Notability Score", caption="pm = Percentage match for that character", pch = "Socialisation") + geom_text_repel( aes( label=paste("pm=",avg_match_perc), x = myers_briggs, y = notability), size=3, vjust=-1, position = position_jitter(seed=3)) +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5)
 
@@ -180,16 +181,16 @@ notabilityMeans_GameOfThrones
 
 
 
-ggsave("data/notabilityScores_TheWalkingDead.png", notabilityScores_TheWalkingDead, width = 9, height = 5, units = c("in"))
-ggsave("data/notabilityMeans_TheWalkingDead.png", notabilityMeans_TheWalkingDead, width = 9, height = 5, units = c("in"))
-ggsave("data/notabilityScores_GameOfThrones.png", notabilityScores_GameOfThrones,width = 9, height = 5, units = c("in"))
-ggsave("data/notabilityMeans_GameOfThrones.png", notabilityMeans_GameOfThrones, width = 9, height = 5, units = c("in"))
+ggsave("images/notabilityScores_TheWalkingDead.png", notabilityScores_TheWalkingDead, width = 9, height = 5, units = c("in"))
+ggsave("images/notabilityMeans_TheWalkingDead.png", notabilityMeans_TheWalkingDead, width = 9, height = 5, units = c("in"))
+ggsave("images/notabilityScores_GameOfThrones.png", notabilityScores_GameOfThrones,width = 9, height = 5, units = c("in"))
+ggsave("images/notabilityMeans_GameOfThrones.png", notabilityMeans_GameOfThrones, width = 9, height = 5, units = c("in"))
 
 
 ```
 
 ```{r}
-#| label: plot4
+#| label: Question-One-C
 #| fig-height: 8
 #| fig-width: 7
 
@@ -234,8 +235,12 @@ myers_briggs_grouped_notability <- myers_briggs_grouped_notability %>%
 
 
 
-g12 <- ggplot(myers_briggs_grouped_notability) + geom_bar(aes(x = myers_briggs, fill = Network, y = notability), stat="summary", fun = "mean", position = position_dodge(.9), width = .5, colour="black", size = 0.2) + theme_minimal() + theme(plot.background = element_rect(color = "white"),  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=9), panel.grid.major.x = element_blank(), ) + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,4))) + labs(title="Count of the myers-briggs type correlated to\nthe highest mean notability scores", subtitle="From every universe", x = "Myers Briggs Personality Type", y = "Mean notability") + facet_wrap2(vars(socialisation), scales = "free_x", nrow = 2) + scale_fill_brewer(palette = "YlOrRd") + scale_x_discrete(expand=(c(.1,.1))) + geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5)
-g12
+perNetwork_MeanNotability <- ggplot(myers_briggs_grouped_notability) + geom_bar(aes(x = myers_briggs, fill = Network, y = notability), stat="summary", fun = "mean", position = position_dodge(.9), width = .5, colour="black", size = 0.2) + theme_minimal() + theme(plot.background = element_rect(color = "white"),  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=9), panel.grid.major.x = element_blank(), ) + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,4))) + labs(title="Count of the myers-briggs type correlated to\nthe highest mean notability scores", subtitle="From every universe", x = "Myers Briggs Personality Type", y = "Mean notability") + facet_wrap2(vars(socialisation), scales = "free_x", nrow = 2) + scale_fill_brewer(palette = "YlOrRd") + scale_x_discrete(expand=(c(.1,.1))) + geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5)
+perNetwork_MeanNotability
+
+
+ggsave("images/perNetwork_MeanNotability.png", perNetwork_MeanNotability, width = 8, height = 7, units = c("in"))
+
 
 
 ```
