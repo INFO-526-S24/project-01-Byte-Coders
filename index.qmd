@@ -797,7 +797,13 @@ ggsave("images/question2Part2Plot1.png", question2Part2Plot, width = 9, height =
 
 ### **Discussion **
 
+Character personality trait distribution, average ratings, and notability scores are interestingly shown by analyzing the attributes over multiple universes. The frequency distribution of characters within each trait group does not seem to significantly correspond with their average rating, despite the variety of personality types. This implies that a character's success and attraction are influenced by factors other than just their personality.
 
+Furthermore, the research shows that only the "balanced" and "other" traits exhibit a right skew, with the distribution of characters across personality traits generally being zero-skewed. This implies that some personality groups might be more common or favored in narrative, maybe because of their relatability or adaptability to different tale situations.
+
+Nevertheless, the statistics show negligible variations when notability ratings are compared throughout personality categories. This suggests that a character's personality qualities could not have a big influence on how important or prominent they are seen to be in a story. Character notability may instead be more heavily influenced by elements including character arc, role importance, and impact on the plot.
+
+All things considered, personality qualities add to the complexity of characters and the depth of the story, but they may have a less impact on audience reaction and character prominence than other elements. Subsequent investigations may explore the intricate relationship among personality characteristics, character progression, and audience perception to acquire a more all-encompassing comprehension of the factors influencing character triumph in narrative.
 
 ## Conclusion:
 
