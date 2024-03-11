@@ -38,6 +38,9 @@ pacman::p_load(tidyverse,
 
 ```{r load dataset}
 #| echo: false
+
+
+#READING IN THE DATA SETS - ALSO PRESENT IN DATA FOLDER
 characters <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/characters.csv')
 
 myers_briggs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-08-16/myers_briggs.csv')
@@ -86,6 +89,9 @@ pacman::p_load(magick, nflplotR)
 pacman::p_load(RColorBrewer)
 
 
+
+
+#FUNCTION TO TAKE ATTRIBUTE THE PERSONALITY TYPE OF EACH CHARACTER BASED ON WHICH THEY MATCH WITH THE MOST
 myers_briggs_grouped <- myers_briggs %>%
   group_by(char_name) %>%
     #summarise(max = max(avg_match_perc, na.rm=TRUE))
@@ -93,7 +99,7 @@ myers_briggs_grouped <- myers_briggs %>%
 
 
 # introverted versus extroverted; sensing versus intuitive; thinking versus feeling; and perceiving versus judging.
-
+#SUB GROUPING OF DATA BY ADDING TWO NEW COLUMNS FOR SOCIALISATION AND HOW THEY PERCEIVE THE WORLD
 myers_briggs_grouped <- myers_briggs_grouped %>%
   mutate(
     socialisation = case_when(
@@ -107,11 +113,17 @@ myers_briggs_grouped <- myers_briggs_grouped %>%
   )
 
 
+#LINKING OF THE MYERS_BRIGGS.CSV AND CHARACTERS.CSV TO JOIN PERSONALITY TYPES AND NOTABILITY SCORES - THEN ARRANGED BY UNIVERSE NAME IN ALPHABETICAL ORDER
 myers_briggs_linked <- left_join(myers_briggs_grouped, characters, by=c("char_name" = "name", "char_id" = "id", "uni_id" = "uni_id", "uni_name" = "uni_name"))
 
 myers_briggs_linked <- myers_briggs_linked %>%
   arrange(by = uni_name)
 
+
+
+#FOUR UNIVERSE PLOTS TO MAP THE 99 UNIVERSES COUNTS OF CHARACTERS OF GIVEN PERSONALITY TYPES
+#EACH PLOT TAKES A SUBSECTION OF THE ALPHABETICALLY-ORDERED UNIVERSES AND APPLIES THE FOLLOWING ELEMENTS
+#CREATES A RADIAL COLUMN PLOT OF MYERS-BRIGGS AGAINST NOTABILITY, FACET WRAPPED BY UNIVERSE NAME
 
 myersBriggsUniversePlot1 <- ggplot(myers_briggs_linked[starts_with(LETTERS[1:6], vars=myers_briggs_linked$uni_name),])+ theme_minimal() + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.05, color="black", position=position_dodge()) + theme(axis.title.y = element_blank(), axis.text = element_text(size=6), panel.grid.minor=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to a respective Myers-Briggs Personality Type: ", subtitle="Per universe, from universes titled A - F", x = "Myers-Briggs Personality Type") + coord_polar() + facet_wrap2(vars(uni_name))
 
@@ -127,11 +139,15 @@ myersBriggsUniversePlot4 <- ggplot(myers_briggs_linked[starts_with(LETTERS[20:26
 
 
 
+#THE FOLLOWING PLOTS OF QUESTION ONE USE VARIOUS COLOUR PALETTES FROM THE RCOLORBREWER PACKAGE
+
+#THIS PLOT FOLLOWS THE SAME FORMAT AS THE PREVIOUS FOUR, BUT DOES NOT DISSECT BASED ON ALPHABETICAL SEQUENCE, AND INSTEAD IS BASED ON FOUR GIVEN UNIVERSES: THE WALKING DEAD, GAME OF THRONES, FRIENDS AND BROOKLYN NINE-NINE - TO SEE HOW THEY COMPARE AND CONTRAST
 
 myersBriggsUniversePlotZoomed <- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c("Brooklyn Nine-Nine", "Friends", "Game of Thrones", "The Walking Dead"),]) + geom_col(aes(x = myers_briggs, y = notability, fill = uni_name), size=.05, color="black", position=position_dodge()) + theme_minimal() + theme(axis.title.y = element_blank(), axis.text = element_text(size=10), panel.grid.minor=element_blank(), title = element_text(size=15), plot.subtitle = element_text(size=10), plot.background = element_rect(color = "white"), legend.text = element_blank(), legend.position = "none", panel.spacing.x = unit(4, "lines"), strip.clip = "off") + scale_y_continuous(breaks = scales::breaks_width(20)) + labs(title="The number of characters that hold the highest correlation to\na respective Myers-Briggs Personality Type: ", subtitle="For four universes", x = "Myers-Briggs Personality Type") + coord_polar() + facet_wrap2(vars(uni_name)) + scale_fill_brewer("PRGn")
 
 
 
+#THEGGSAVE PACKAGE IS EMPLOYED TO SAVE THE BROKEN DOWN UNIVERSE PLOTS AS IMAGES, TO ALLOW FOR EASIER RESIZING
 
 ggsave("images/universePlot.png", myersBriggsUniversePlot1, width = 20, height = 15, units = c("in"))
 ggsave("images/universePlot2.png", myersBriggsUniversePlot2, width = 20, height = 15, units = c("in"))
@@ -153,6 +169,9 @@ myersBriggsUniversePlot1
 #| fig-height: 8
 #| fig-width: 10
 
+
+#GGSAVE IS USED TO SAVE THE UNIVERSE PLOT OF THE FOUR-SELECTED-SHOWS, TO ALLOW FOR EASIER RESIZING
+
 ggsave("images/universePlot5.png", myersBriggsUniversePlotZoomed, width = 20, height = 10, units = c("in"))
 myersBriggsUniversePlotZoomed
 
@@ -163,6 +182,21 @@ myersBriggsUniversePlotZoomed
 
 ```{r}
 #| label: Question-One-BandC
+
+
+#THE FOLLOWING FOUR PLOTS ALTERNATE IN TWOS: THE FIRST AND THIRD OF THE FOUR DEAL WITH INDIVIDUAL CHARACTER NOTABILITY SCORES, WHILE TWO AND FOUR DEAL WITH THEIR MEANED AVERAGES
+
+#PLOTS ONE AND THREE (CONCERNING THE WALKING DEAD AND GAME OF THRONES, RESPECTIVELY) BOTH USE THE SAME APPROACH - A GEOM JITTER PLOT THAT PLACES THE INDIVIDUAL CHARACTERS WITHIN THEIR DOMINANT PERSONALITY TYPE, WITH THE Y-AXIS REPRESENTING THEIR NOTABILITY TO THE AUDIENCE
+#ABOVE EACH CHARACTERS POINT IS THEIR PERCENTAGE MATCH WITH THEIR ASSIGNED DOMINANT PERSONALITY TRAIT, TO SHOW THAT MOST CHRACTERS DO NOT EASILY FIT JUST ONE PERSONALITY CATEGORY
+#THE VISUALISATION LAYOUT IS: A GEOM JITTER | A BLANK THEME | GEOM REPELLED TEXT (TO ENSURE TEXT LABELS DONT OVERLAP) | VERTICAL LINES TO SEPARATE THE PERSONALITY TYPES
+
+
+#PLOTS TWO AND FOUR TAKE THE AVERAGED MEANS OF NOTABILITY FOR THEIR ENTIRE PERSONALITY TYPES AND VISUALISE THESE VALUES - ALLOWING FOR AN AVERAGED UNDERSTANDING OF WHICH CHARACTERS TYPES ARE MORE NOTABLE WITHIN CERTAIN GENRES OF MEDIA
+#THE VISUALISATION LAYOUT IS: A GEOM BARPLOT USING STATISTICAL MEAN | A BLANK THEME | GEOM TEXT | VERTICAL LINES TO SEPARATE THE PERSONALITY TYPES
+
+
+
+#THE WALKING DEAD
 
 notabilityScores_TheWalkingDead <- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c("The Walking Dead"),], aes()) + theme_minimal() + geom_jitter(aes(x = myers_briggs, y = notability, pch=socialisation), position = position_jitter(seed=3))  + theme(plot.background = element_rect(color = "white"), axis.text = element_text(size=6), panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text.x = element_text(), panel.grid.major.x = element_blank()) + scale_y_continuous(breaks = scales::breaks_width(10)) + labs(title="Plot of the number of The Walking Dead characters that\nare predominantly of a chosen personality type: ", subtitle="with percentage match to said personality type highlighted", x = "Myers Briggs Personality Type", y = "Notability Score", caption="pm = Percentage match for that character", pch = "Socialisation") + geom_text_repel( aes( label=paste("pm=",avg_match_perc), x = myers_briggs, y = notability), size=3, vjust=-1, position = position_jitter(seed=3)) +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5)
 
@@ -176,7 +210,7 @@ notabilityMeans_TheWalkingDead
 
  
 
-
+#GAME OF THRONES
 
 
 notabilityScores_GameOfThrones <- ggplot(myers_briggs_linked[myers_briggs_linked$uni_name %in% c("Game of Thrones"),], aes()) + theme_minimal() + geom_jitter(aes(x = myers_briggs, y = notability, pch=socialisation), position = position_jitter(seed=3))  + theme(plot.background = element_rect(color = "white"), axis.text = element_text(size=6), panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text.x = element_text(), panel.grid.major.x = element_blank()) + scale_y_continuous(breaks = scales::breaks_width(10)) + labs(title="Plot of the number of Game of Thrones characters that\nare predominantly of a chosen personality type: ", subtitle="with percentage match to said personality type highlighted", x = "Myers Briggs Personality Type", y = "Notability Score", caption="pm = Percentage match for that character", pch = "Socialisation") + geom_text_repel( aes( label=paste("pm=",avg_match_perc), x = myers_briggs, y = notability), size=3, vjust=-1, position = position_jitter(seed=3)) +geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5)
@@ -194,6 +228,7 @@ notabilityMeans_GameOfThrones
 
 
 
+#GGSAVE TO PRODUCE IMAGES OF THE FOUR PLOTS FOR RESIZING
 
 ggsave("data/notabilityScores_TheWalkingDead.png", notabilityScores_TheWalkingDead, width = 9, height = 5, units = c("in"))
 ggsave("data/notabilityMeans_TheWalkingDead.png", notabilityMeans_TheWalkingDead, width = 9, height = 5, units = c("in"))
@@ -207,6 +242,10 @@ ggsave("data/notabilityMeans_GameOfThrones.png", notabilityMeans_GameOfThrones, 
 #| label: Question-One-D
 #| fig-height: 8
 #| fig-width: 7
+
+
+
+#CODE USED TO TEST THE VIABILITY OF GROUPING MEAN NOTABILITY VALUES
 
 myers_briggs_mean_notability <- myers_briggs_linked %>%
  group_by(uni_name, myers_briggs) %>%
@@ -222,6 +261,7 @@ myers_briggs_mean_notability <- myers_briggs_linked %>%
 #g11 <- ggplot(myers_briggs_mean_notability) + geom_bar(aes(x = myers_briggs, fill = myers_briggs)) + theme(  panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=6), panel.grid.major.x = element_blank(), legend.position = "none") + scale_y_continuous(breaks = scales::breaks_width(2), expand = expand_scale(c(0,0), c(0,4))) + labs(title="Count of the myers-briggs type correlated to the highest mean notability scores", subtitle="From every universe", x = "Myers Briggs Personality Type", y = "Count") + geom_text( aes( label=after_stat(count), x = myers_briggs, y = after_stat(count)), vjust=-1, size = 3, stat="count")
 #g11
 
+#CODE USED TO TEST THE VIABILITY OF GROUPING MEAN NOTABILITY VALUES
 
 myers_briggs_mean_notability <- myers_briggs_mean_notability %>%
   mutate(Network = case_when(
@@ -232,6 +272,10 @@ myers_briggs_mean_notability <- myers_briggs_mean_notability %>%
 
 
 
+
+#THE MEAN NOTABILITY SCORES OF EACH PERSONALITY TYPE, FOR EVERY UNIVERSE ARE MAPPED TO A NEW DATASET, ALONGSIDE THEIR SOCIALISATION AND PERCEPTION TYPES
+
+
 myers_briggs_grouped_notability <- myers_briggs_linked %>%
  group_by(uni_name, myers_briggs) %>%
   summarise(
@@ -239,6 +283,10 @@ myers_briggs_grouped_notability <- myers_briggs_linked %>%
       socialisation = socialisation,
       empiricism = empiricism
   )
+
+
+
+#MEDIA NETWORKS OF HBO AND AMC ARE ADDED TO INCLUDE THEIR MOST POPULAR SHOWS WITHIN THE DATASET, VIA APPENDING THE NEW DATASET
 
 myers_briggs_grouped_notability <- myers_briggs_grouped_notability %>%
   mutate(Network = case_when(
@@ -248,6 +296,7 @@ myers_briggs_grouped_notability <- myers_briggs_grouped_notability %>%
   ))
 
 
+#THE MEAN NOTABILITY PER NETWORK FOR EACH PERSONALITY TYPE IS VISUALISED VIA A BAR PLOT THAT HAS A MAXIMUM OF THREE BARS PER PERSONALITY TYPE FOR HBO, AMC AND ALL OTHER NETWORKS - THIS IS THEN SAVED AS AN IMAGE VIA GGSAVE
 
 perNetwork_MeanNotability <- ggplot(myers_briggs_grouped_notability) + geom_bar(aes(x = myers_briggs, fill = Network, y = notability), stat="summary", fun = "mean", position = position_dodge(.9), width = .5, colour="black", size = 0.2) + theme_minimal() + theme(plot.background = element_rect(color = "white"), panel.grid.minor.y=element_blank(), title = element_text(size=11), plot.subtitle = element_text(size=10), axis.text = element_text(size=9), panel.grid.major.x = element_blank(), ) + scale_y_continuous(breaks = scales::breaks_width(10), expand = expand_scale(c(0,0), c(0,4))) + labs(title="Mean of the Myers-Briggs personality types by Network", subtitle="From every universe", x = "Myers Briggs Personality Type", y = "Mean notability") + facet_wrap2(vars(socialisation), scales = "free_x", nrow = 2) + scale_fill_brewer(palette = "YlOrRd") + scale_x_discrete(expand=(c(.1,.1))) + geom_vline(xintercept=seq(0.5,after_stat(nrow(myers_briggs)),1),color="#FFAAFF", alpha = .5) 
 
